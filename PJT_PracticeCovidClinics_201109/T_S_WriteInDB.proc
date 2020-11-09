@@ -1,0 +1,433 @@
+
+<Process id="0e8e1274-49f4-4148-bdd5-6486e9ac5dd1" type="task" workType="foreground" name="T_S_WriteInDB" version="1.0" designerVersion="1.6.500.09031" isValid="true">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="178" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-03 17:49:45" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-05 23:59:35" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="inDBConn" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="inExcelData2DArr" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varExcelHandle" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varSheetName" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varDBSource" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="var1" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varTenRows" scope="Normal" valueType="Any" formatType="Any" initValue="1" desc="" />
+    <Variable name="varRow" scope="Normal" valueType="Any" formatType="Any" initValue="1" desc="" />
+    <Variable name="varTenDataSQL" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="10개씩 끊은 정보 기입 sql문" />
+    <Variable name="varPausedRow" scope="Normal" valueType="Any" formatType="Any" initValue="1" desc="" />
+    <Variable name="varResult" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+  </Variables>
+  <Steps>
+    <Step id="S761668df970a47069491ebb9d1135569" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="7f84c509-62c9-418f-ae44-d58a5139e6da" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varTenDataSQL" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'(\''+this.inExcelData2DArr[0][0]+'\', \''+this.inExcelData2DArr[0][1]+'\', \''+this.inExcelData2DArr[0][2]+'\', \''+this.inExcelData2DArr[0][3]+'\', \''+this.inExcelData2DArr[0][4]+'\', \''+this.inExcelData2DArr[0][5]+'\', \''+this.inExcelData2DArr[0][6]+'\', \''+this.inExcelData2DArr[0][7]+'\', \''+this.inExcelData2DArr[0][8]+'\'), '" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varTenDataSQL = '(\''+this.inExcelData2DArr[0][0]+'\', \''+this.inExcelData2DArr[0][1]+'\', \''+this.inExcelData2DArr[0][2]+'\', \''+this.inExcelData2DArr[0][3]+'\', \''+this.inExcelData2DArr[0][4]+'\', \''+this.inExcelData2DArr[0][5]+'\', \''+this.inExcelData2DArr[0][6]+'\', \''+this.inExcelData2DArr[0][7]+'\', \''+this.inExcelData2DArr[0][8]+'\'), ';]]></Script>
+    </Step>
+    <Step id="Sdae400c2ef1946c298dc091ad144039d" ver="200825001" createVer="200825001" type="Flow" name="Block" apptitle="" tag="" depth="1" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="62f75b52-b492-4f3b-bc54-ee93c96e72e0" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Title" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="SeperateBy100" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S149a3b9a0e2446bfa4350c912e247e87" type="Flow" name="EndBlock" />
+      </RelatedSteps>
+      <Script><![CDATA[{]]></Script>
+    </Step>
+    <Step id="S8a29e1230dec4b6dbbc84ed67b57276a" ver="200825001" createVer="200825001" type="Flow" name="UntilLoop" apptitle="" tag="" depth="2" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="1c8f0c5e-535d-4c3c-b93f-709d20e9530a" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Expression" controlType="PropertyItemTextEditorView" valueType="System.Object" formatType="Condition" required="True" visible="False" readonly="True" encrypted="False" isChanged="Y" value="true" order="1" />
+        <Property type="Flow" key="Conditions_CombineCondition" controlType="PropertyItemCombineConditionView" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" order="2" />
+        <Property type="Flow" key="Conditions_Expression1" controlType="PropertyItemExpressionView" valueType="System.Object" formatType="Condition" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="true" order="3" />
+        <Property type="Flow" key="Conditions_AddCondition" controlType="PropertyItemAddConditionView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="Seba048f9b548414e89c6225da26603dc" type="Flow" name="EndLoop" />
+      </RelatedSteps>
+      <Script><![CDATA[while (true) {]]></Script>
+    </Step>
+    <Step id="S69416a50573c486d96ddc80aaaf7efff" ver="200825001" createVer="200825001" type="Flow" name="Loop" apptitle="" tag="" depth="3" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="22dd89f2-6ba4-415a-83c4-4f5b9b718ad2" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_InitializeIndex" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.i = this.varRow" />
+        <Property type="Flow" key="Conditions_LoopCondition" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.i &lt; this.varTenRows*10" />
+        <Property type="Flow" key="Conditions_UpdateIndex" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.i++" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S50fbfc46801e403084727a0d0a4c6a8a" type="Flow" name="EndLoop" />
+      </RelatedSteps>
+      <Script><![CDATA[for (this.i = this.varRow; this.i < this.varTenRows*10; this.i++) {]]></Script>
+    </Step>
+    <Step id="Sc8e38f2ec6e24ed2a8c1fb7026aa671e" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="4" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="8da09386-9336-4660-9e49-2763bd5f36b1" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varTenDataSQL" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varTenDataSQL+'(\''+this.inExcelData2DArr[this.varRow][0]+'\', \''+this.inExcelData2DArr[this.varRow][1]+'\', \''+this.inExcelData2DArr[this.varRow][2]+'\', \''+this.inExcelData2DArr[this.varRow][3]+'\', \''+this.inExcelData2DArr[this.varRow][4]+'\', \''+this.inExcelData2DArr[this.varRow][5]+'\', \''+this.inExcelData2DArr[this.varRow][6]+'\', \''+this.inExcelData2DArr[this.varRow][7]+'\', \''+this.inExcelData2DArr[this.varRow][8]+'\')'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varTenDataSQL = this.varTenDataSQL+'(\''+this.inExcelData2DArr[this.varRow][0]+'\', \''+this.inExcelData2DArr[this.varRow][1]+'\', \''+this.inExcelData2DArr[this.varRow][2]+'\', \''+this.inExcelData2DArr[this.varRow][3]+'\', \''+this.inExcelData2DArr[this.varRow][4]+'\', \''+this.inExcelData2DArr[this.varRow][5]+'\', \''+this.inExcelData2DArr[this.varRow][6]+'\', \''+this.inExcelData2DArr[this.varRow][7]+'\', \''+this.inExcelData2DArr[this.varRow][8]+'\')';]]></Script>
+    </Step>
+    <Step id="S49588d07a45249fabbe86d1bc1af817e" ver="200825001" createVer="200825001" type="Flow" name="Decision" apptitle="" tag="" depth="4" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="9a0fa02d-451f-4685-9b7c-dae3c92371b0" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="마지막 문장?" />
+        <Property type="Flow" key="Conditions_Expression" controlType="PropertyItemTextEditorView" valueType="System.Object" formatType="Condition" required="True" visible="True" readonly="True" encrypted="False" isChanged="Y" value="(this.i == this.inExcelData2DArr.length - 1) || (this.i == this.varTenRows*10)" order="1" />
+        <Property type="Flow" key="Conditions_CombineCondition" controlType="PropertyItemCombineConditionView" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="False" order="2" />
+        <Property type="Flow" key="Conditions_Expression1" controlType="PropertyItemExpressionView" valueType="System.Object" formatType="Condition" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.i == this.inExcelData2DArr.length - 1" order="3" />
+        <Property type="Flow" key="Conditions_AddCondition" controlType="PropertyItemAddConditionView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="If_Condition2" controlType="PropertyItemExpressionView" valueType="System.Object" formatType="Condition" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.i == this.varTenRows*10" order="4" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S299eea14c3e940578d9aa604462bb6a0" type="Flow" name="Else" />
+        <RelatedStep id="S890e1ff6031f45a090493db2b9868c46" type="Flow" name="EndDecision" />
+      </RelatedSteps>
+      <Script><![CDATA[if ((this.i == this.inExcelData2DArr.length - 1) || (this.i == this.varTenRows*10)) {]]></Script>
+    </Step>
+    <Step id="S8ff40bffd7fe430882be9ec5c48f86ab" ver="200825001" createVer="200825001" type="Desktop" name="SendDBCommand" apptitle="" tag="" depth="5" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="7991a8f8-48ea-4cc0-a12c-d1cc6322513f" type="Desktop">
+        <Property type="Desktop" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="" />
+        <Property type="Desktop" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Connection_Connection" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.inDBConn" />
+        <Property type="Desktop" key="DataSource_Output" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varResult" />
+        <Property type="Desktop" key="DataSource_Command" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'INSERT INTO covidclinics(checkedat, checkupposs, sido, goongu, clinicname, address, openclose, telnum, pmalert) VALUES '+this.varTenDataSQL+';'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varResult = SystemLib.SendDBCommand(this.senddbcommand_info_7);]]></Script>
+    </Step>
+    <Step id="Scb5f3078eacb4167b6286fe918a21cdc" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="5" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="785db2fc-0681-4f40-a291-bc90116c9859" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varTenDataSQL" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="''" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varTenDataSQL = '';]]></Script>
+    </Step>
+    <Step id="S299eea14c3e940578d9aa604462bb6a0" ver="200825001" createVer="200825001" type="Flow" name="Else" apptitle="" tag="" depth="5" stmttype="CloseOpenBlock" enabled="True" mainSet="0">
+      <Properties id="9dc23656-4a72-47d9-9f27-46c28528d5bb" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S49588d07a45249fabbe86d1bc1af817e" type="Flow" name="Decision" />
+      </RelatedSteps>
+      <Script><![CDATA[}else{]]></Script>
+    </Step>
+    <Step id="Sc20f28158dbc44ff8a273844f3f38aad" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="5" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="8da09386-9336-4660-9e49-2763bd5f36b1" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varTenDataSQL" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varTenDataSQL+', '" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varTenDataSQL = this.varTenDataSQL+', ';]]></Script>
+    </Step>
+    <Step id="S890e1ff6031f45a090493db2b9868c46" ver="200825001" createVer="200825001" type="Flow" name="EndDecision" apptitle="" tag="" depth="5" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="6f1a6217-cba4-41e2-9ea7-ca0315e98a1e" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S49588d07a45249fabbe86d1bc1af817e" type="Flow" name="Decision" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
+    <Step id="Sc9c1c0e857b746c1994f1fc54ae8bb34" ver="200825001" createVer="200825001" type="Flow" name="DecisionThen" apptitle="" tag="" depth="4" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="676de47d-f06e-4817-8cb8-19dc28e80f84" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="마지막 열까지 입력 후 Break" />
+        <Property type="Flow" key="Conditions_Expression" controlType="PropertyItemTextEditorView" valueType="System.Object" formatType="Condition" required="True" visible="False" readonly="True" encrypted="False" isChanged="Y" value="this.i &gt;= this.inExcelData2DArr.length - 1" order="1" />
+        <Property type="Flow" key="Conditions_CombineCondition" controlType="PropertyItemCombineConditionView" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" order="2" />
+        <Property type="Flow" key="Conditions_Expression1" controlType="PropertyItemExpressionView" valueType="System.Object" formatType="Condition" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.i &gt;= this.inExcelData2DArr.length - 1" order="3" />
+        <Property type="Flow" key="Conditions_AddCondition" controlType="PropertyItemAddConditionView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S278b5eb36a424ffcab408fbc2959fad6" type="Flow" name="EndDecisionThen" />
+      </RelatedSteps>
+      <Script><![CDATA[if (this.i >= this.inExcelData2DArr.length - 1) {]]></Script>
+    </Step>
+    <Step id="S4c5ead5be4374b4b9d733a5592304875" ver="200825001" createVer="200825001" type="Flow" name="Break" apptitle="" tag="" depth="5" stmttype="Jump" enabled="True" mainSet="0">
+      <Properties id="5a4b974a-adf2-43f2-8288-8821d8206e06" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[break;]]></Script>
+    </Step>
+    <Step id="S278b5eb36a424ffcab408fbc2959fad6" ver="200825001" createVer="200825001" type="Flow" name="EndDecisionThen" apptitle="" tag="" depth="5" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="97b53b59-b65b-4642-8d8e-0f99671de9fd" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="Sc9c1c0e857b746c1994f1fc54ae8bb34" type="Flow" name="DecisionThen" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
+    <Step id="Sdb8b1ff8d7d14825ab28755fd57969fe" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="4" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="87204cf5-60c5-4d88-84f8-1805f9d0d6c9" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varRow" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varRow++" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varRow = this.varRow++;]]></Script>
+    </Step>
+    <Step id="S50fbfc46801e403084727a0d0a4c6a8a" ver="200825001" createVer="200825001" type="Flow" name="EndLoop" apptitle="" tag="" depth="4" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="d6480946-f64e-4e43-b0c3-847b3a7d4888" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S69416a50573c486d96ddc80aaaf7efff" type="Flow" name="Loop" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
+    <Step id="S66184ac65159429d9240d7da602967bf" ver="200825001" createVer="200825001" type="Flow" name="DecisionThen" apptitle="" tag="" depth="3" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="676de47d-f06e-4817-8cb8-19dc28e80f84" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="마지막 열까지 입력 후 Break" />
+        <Property type="Flow" key="Conditions_Expression" controlType="PropertyItemTextEditorView" valueType="System.Object" formatType="Condition" required="True" visible="False" readonly="True" encrypted="False" isChanged="Y" value="this.varRow &gt;= this.inExcelData2DArr.length - 1" order="1" />
+        <Property type="Flow" key="Conditions_CombineCondition" controlType="PropertyItemCombineConditionView" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" order="2" />
+        <Property type="Flow" key="Conditions_Expression1" controlType="PropertyItemExpressionView" valueType="System.Object" formatType="Condition" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varRow &gt;= this.inExcelData2DArr.length - 1" order="3" />
+        <Property type="Flow" key="Conditions_AddCondition" controlType="PropertyItemAddConditionView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S605b83ba53194541b378d997d1493637" type="Flow" name="EndDecisionThen" />
+      </RelatedSteps>
+      <Script><![CDATA[if (this.varRow >= this.inExcelData2DArr.length - 1) {]]></Script>
+    </Step>
+    <Step id="S34da6a11144f49fbaab6534d39393748" ver="200825001" createVer="200825001" type="Flow" name="Break" apptitle="" tag="" depth="4" stmttype="Jump" enabled="True" mainSet="0">
+      <Properties id="5a4b974a-adf2-43f2-8288-8821d8206e06" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[break;]]></Script>
+    </Step>
+    <Step id="S605b83ba53194541b378d997d1493637" ver="200825001" createVer="200825001" type="Flow" name="EndDecisionThen" apptitle="" tag="" depth="4" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="97b53b59-b65b-4642-8d8e-0f99671de9fd" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S66184ac65159429d9240d7da602967bf" type="Flow" name="DecisionThen" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
+    <Step id="Se886da86287f49b2ae67ea676b36123a" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="73bff8b5-5c42-4e95-b809-592d089f77f1" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varTenRows" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varTenRows++" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varTenRows = this.varTenRows++;]]></Script>
+    </Step>
+    <Step id="Seba048f9b548414e89c6225da26603dc" ver="200825001" createVer="200825001" type="Flow" name="EndLoop" apptitle="" tag="" depth="3" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="c695772c-8f1f-4b65-b8a1-3f7244109675" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S8a29e1230dec4b6dbbc84ed67b57276a" type="Flow" name="UntilLoop" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
+    <Step id="S149a3b9a0e2446bfa4350c912e247e87" ver="200825001" createVer="200825001" type="Flow" name="EndBlock" apptitle="" tag="" depth="2" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="6c6799ce-ff83-49af-bf5b-a43f5ffb447f" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="Sdae400c2ef1946c298dc091ad144039d" type="Flow" name="Block" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function T_S_WriteInDB(args) {
+
+    this.inDBConn = (typeof args != 'undefined') ? args.inDBConn : null;
+    this.inExcelData2DArr = (typeof args != 'undefined') ? args.inExcelData2DArr : null;
+    this.varExcelHandle;
+    this.varSheetName;
+    this.varDBSource;
+    this.var1;
+    this.varTenRows = 1;
+    this.varRow = 1;
+    this.varTenDataSQL;
+    this.varPausedRow = 1;
+    this.varResult;
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('S761668df970a47069491ebb9d1135569', '[1] Assign');
+        this.varTenDataSQL = '(\''+this.inExcelData2DArr[0][0]+'\', \''+this.inExcelData2DArr[0][1]+'\', \''+this.inExcelData2DArr[0][2]+'\', \''+this.inExcelData2DArr[0][3]+'\', \''+this.inExcelData2DArr[0][4]+'\', \''+this.inExcelData2DArr[0][5]+'\', \''+this.inExcelData2DArr[0][6]+'\', \''+this.inExcelData2DArr[0][7]+'\', \''+this.inExcelData2DArr[0][8]+'\'), ';
+
+        //------------------------------------------------
+        STEP('Sdae400c2ef1946c298dc091ad144039d', '[2] Block');
+        {
+
+            //------------------------------------------------
+            STEP('S8a29e1230dec4b6dbbc84ed67b57276a', '[3] While');
+            while (true) {
+
+                //------------------------------------------------
+                STEP('S69416a50573c486d96ddc80aaaf7efff', '[4] For');
+                for (this.i = this.varRow; this.i < this.varTenRows*10; this.i++) {
+
+                    //------------------------------------------------
+                    STEP('Sc8e38f2ec6e24ed2a8c1fb7026aa671e', '[5] Assign');
+                    this.varTenDataSQL = this.varTenDataSQL+'(\''+this.inExcelData2DArr[this.varRow][0]+'\', \''+this.inExcelData2DArr[this.varRow][1]+'\', \''+this.inExcelData2DArr[this.varRow][2]+'\', \''+this.inExcelData2DArr[this.varRow][3]+'\', \''+this.inExcelData2DArr[this.varRow][4]+'\', \''+this.inExcelData2DArr[this.varRow][5]+'\', \''+this.inExcelData2DArr[this.varRow][6]+'\', \''+this.inExcelData2DArr[this.varRow][7]+'\', \''+this.inExcelData2DArr[this.varRow][8]+'\')';
+
+                    //------------------------------------------------
+                    STEP('S49588d07a45249fabbe86d1bc1af817e', '[6] If');
+                    if ((this.i == this.inExcelData2DArr.length - 1) || (this.i == this.varTenRows*10)) {
+
+                        //------------------------------------------------
+                        STEP('S8ff40bffd7fe430882be9ec5c48f86ab', '[7] SendDBCommand');
+                        this.varResult = SystemLib.SendDBCommand(this.senddbcommand_info_7);
+
+                        //------------------------------------------------
+                        STEP('Scb5f3078eacb4167b6286fe918a21cdc', '[8] Assign');
+                        this.varTenDataSQL = '';
+
+                    //------------------------------------------------
+                    }else{
+                        STEP('S299eea14c3e940578d9aa604462bb6a0', '[9] Else');
+
+                        //------------------------------------------------
+                        STEP('Sc20f28158dbc44ff8a273844f3f38aad', '[10] Assign');
+                        this.varTenDataSQL = this.varTenDataSQL+', ';
+
+                    //------------------------------------------------
+                    }
+                    STEP('S890e1ff6031f45a090493db2b9868c46', '[11] End-If');
+
+                    //------------------------------------------------
+                    STEP('Sc9c1c0e857b746c1994f1fc54ae8bb34', '[12] IfThen');
+                    if (this.i >= this.inExcelData2DArr.length - 1) {
+
+                        //------------------------------------------------
+                        STEP('S4c5ead5be4374b4b9d733a5592304875', '[13] Break');
+                        break;
+
+                    //------------------------------------------------
+                    }
+                    STEP('S278b5eb36a424ffcab408fbc2959fad6', '[14] End-IfThen');
+
+                    //------------------------------------------------
+                    STEP('Sdb8b1ff8d7d14825ab28755fd57969fe', '[15] Assign');
+                    this.varRow = this.varRow++;
+
+                //------------------------------------------------
+                }
+                STEP('S50fbfc46801e403084727a0d0a4c6a8a', '[16] End-For');
+
+                //------------------------------------------------
+                STEP('S66184ac65159429d9240d7da602967bf', '[17] IfThen');
+                if (this.varRow >= this.inExcelData2DArr.length - 1) {
+
+                    //------------------------------------------------
+                    STEP('S34da6a11144f49fbaab6534d39393748', '[18] Break');
+                    break;
+
+                //------------------------------------------------
+                }
+                STEP('S605b83ba53194541b378d997d1493637', '[19] End-IfThen');
+
+                //------------------------------------------------
+                STEP('Se886da86287f49b2ae67ea676b36123a', '[20] Assign');
+                this.varTenRows = this.varTenRows++;
+
+            //------------------------------------------------
+            }
+            STEP('Seba048f9b548414e89c6225da26603dc', '[21] End-While');
+
+        //------------------------------------------------
+        }
+        STEP('S149a3b9a0e2446bfa4350c912e247e87', '[22] End-Block');
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+    }
+}
+]]></JScript>
+  <Diagram version="1.200" layout="Horizontal" nodesize="Normal">
+    <Nodes>
+      <Node id="0" step_id="" container_id="" order="" type="StartNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="START" bounds="30,54,56,56" />
+      <Node id="1" step_id="" container_id="" order="" type="EndNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="END" bounds="3094,227,56,56" />
+      <Node id="2" step_id="Sdae400c2ef1946c298dc091ad144039d" container_id="" order="" type="BlockNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="366,45.5,35,73" />
+      <Node id="3" step_id="S149a3b9a0e2446bfa4350c912e247e87" container_id="" order="" type="EndBlockNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="3029,218.5,35,73" />
+      <Node id="4" step_id="S8a29e1230dec4b6dbbc84ed67b57276a" container_id="" order="" type="LoopNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="431,54,76,56" />
+      <Node id="5" step_id="Seba048f9b548414e89c6225da26603dc" container_id="" order="" type="EndLoopNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="2923,227,76,56" />
+      <Node id="6" step_id="S69416a50573c486d96ddc80aaaf7efff" container_id="" order="" type="LoopNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="537,54,76,56" />
+      <Node id="7" step_id="S50fbfc46801e403084727a0d0a4c6a8a" container_id="" order="" type="EndLoopNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="2105,227,76,56" />
+      <Node id="8" step_id="2b7cb212-aba3-4439-83f7-5dd9f54babc9" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="2317,203,220,104" />
+      <Node id="9" step_id="S34da6a11144f49fbaab6534d39393748" container_id="8" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Break" bounds="2323,227,208,74" />
+      <Node id="10" step_id="S66184ac65159429d9240d7da602967bf" container_id="" order="" type="DecisionThenNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="2211,227,76,56" />
+      <Node id="11" step_id="S605b83ba53194541b378d997d1493637" container_id="" order="" type="EndDecisionThenNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="2567,227,76,56" />
+      <Node id="12" step_id="3f059068-a838-4e02-a10b-7bc549f28cd2" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="VALUE SQL문 추가" bounds="643,30,220,104" />
+      <Node id="13" step_id="Sc8e38f2ec6e24ed2a8c1fb7026aa671e" container_id="12" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="649,54,208,74" />
+      <Node id="14" step_id="S49588d07a45249fabbe86d1bc1af817e" container_id="" order="" type="DecisionNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="965,54,76,56" />
+      <Node id="15" step_id="S890e1ff6031f45a090493db2b9868c46" container_id="" order="" type="EndDecisionNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="1215,227,76,56" />
+      <Node id="16" step_id="d6a2da43-013b-4c6e-bd49-9774be5ba77f" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="VALUE SQL문 뒤 ; 추가" bounds="893,164,220,182" />
+      <Node id="17" step_id="5b4698d3-ae36-4d3d-8bdb-88d4982c4804" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="VALUE SQL문 뒤 , 추가" bounds="1143,30,220,104" />
+      <Node id="18" step_id="Sc20f28158dbc44ff8a273844f3f38aad" container_id="17" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="1149,54,208,74" />
+      <Node id="19" step_id="S8ff40bffd7fe430882be9ec5c48f86ab" container_id="16" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="SendDBCommand" bounds="899,188,208,74" />
+      <Node id="20" step_id="6e78030a-b07b-4443-ba01-e33166b49c39" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="116,30,220,104" />
+      <Node id="21" step_id="S761668df970a47069491ebb9d1135569" container_id="20" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="122,54,208,74" />
+      <Node id="22" step_id="bfe39d92-8b9f-4781-8816-ef1850403626" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="1855,203,220,104" />
+      <Node id="23" step_id="Sdb8b1ff8d7d14825ab28755fd57969fe" container_id="22" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="1861,227,208,74" />
+      <Node id="24" step_id="66fe33bc-70d9-4872-8768-fdb345a11a46" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="2673,203,220,104" />
+      <Node id="25" step_id="Se886da86287f49b2ae67ea676b36123a" container_id="24" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="2679,227,208,74" />
+      <Node id="26" step_id="Scb5f3078eacb4167b6286fe918a21cdc" container_id="16" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="899,266,208,74" />
+      <Node id="27" step_id="Sc9c1c0e857b746c1994f1fc54ae8bb34" container_id="" order="" type="DecisionThenNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="1393,227,76,56" />
+      <Node id="28" step_id="1a66381d-beb9-4fba-9294-1242177e7040" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="1499,203,220,104" />
+      <Node id="29" step_id="S4c5ead5be4374b4b9d733a5592304875" container_id="28" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Break" bounds="1505,227,208,74" />
+      <Node id="30" step_id="S278b5eb36a424ffcab408fbc2959fad6" container_id="" order="" type="EndDecisionThenNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="1749,227,76,56" />
+    </Nodes>
+    <Links>
+      <Link id="31" color="#FF888888" origin_node_id="3" dest_node_id="1" text="" bounds="3061,252,36,6" points="3064,255;3094,255" />
+      <Link id="32" color="#FF888888" origin_node_id="2" dest_node_id="4" text="" bounds="398,79,36,6" points="401,82;431,82" />
+      <Link id="33" color="#FF888888" origin_node_id="5" dest_node_id="3" text="" bounds="2996,252,36,6" points="2999,255;3029,255" />
+      <Link id="34" color="#FF0DB2AD" origin_node_id="10" dest_node_id="8" text="" bounds="2284,252,36,6" points="2287,255;2317,255" />
+      <Link id="35" color="#FF888888" origin_node_id="8" dest_node_id="11" text="" bounds="2534,252,36,6" points="2537,255;2567,255" />
+      <Link id="36" color="#FF888888" origin_node_id="16" dest_node_id="15" text="" bounds="1110,252,108,6" points="1113,255;1215,255" />
+      <Link id="37" color="#FF888888" origin_node_id="17" dest_node_id="15" text="" bounds="1250,131,6,99" points="1253,134;1253,227" />
+      <Link id="38" color="#FF888888" origin_node_id="20" dest_node_id="2" text="" bounds="333,79,36,6" points="336,82;366,82" />
+      <Link id="39" color="#FF888888" origin_node_id="22" dest_node_id="7" text="" bounds="2072,252,36,6" points="2075,255;2105,255" />
+      <Link id="40" color="#FF888888" origin_node_id="24" dest_node_id="5" text="" bounds="2890,252,36,6" points="2893,255;2923,255" />
+      <Link id="41" color="#FF888888" origin_node_id="11" dest_node_id="24" text="" bounds="2640,252,36,6" points="2643,255;2673,255" />
+      <Link id="42" color="#FF0DB2AD" origin_node_id="27" dest_node_id="28" text="" bounds="1466,252,36,6" points="1469,255;1499,255" />
+      <Link id="43" color="#FF888888" origin_node_id="28" dest_node_id="30" text="" bounds="1716,252,36,6" points="1719,255;1749,255" />
+      <Link id="44" color="#FF888888" origin_node_id="15" dest_node_id="27" text="" bounds="1288,252,108,6" points="1291,255;1393,255" />
+      <Link id="45" color="#FF888888" origin_node_id="30" dest_node_id="22" text="" bounds="1822,252,36,6" points="1825,255;1855,255" />
+      <Link id="46" color="#FF888888" origin_node_id="0" dest_node_id="20" text="" bounds="83,79,36,6" points="86,82;116,82" />
+      <Link id="47" color="#FF6868E1" origin_node_id="4" dest_node_id="6" text="" bounds="504,79,36,6" points="507,82;537,82" />
+      <Link id="48" color="#FF6868E1" origin_node_id="6" dest_node_id="12" text="" bounds="610,79,36,6" points="613,82;643,82" />
+      <Link id="49" color="#FF888888" origin_node_id="12" dest_node_id="14" text="" bounds="860,79,108,6" points="863,82;965,82" />
+      <Link id="50" color="#FF0DB2AD" origin_node_id="14" dest_node_id="17" text="FALSE" bounds="1038,79,108,6" points="1041,82;1143,82" />
+      <Link id="51" color="#FF0DB2AD" origin_node_id="14" dest_node_id="16" text="TRUE" bounds="1000,107,6,60" points="1003,110;1003,164" />
+      <Link id="52" color="#FF888888" origin_node_id="7" dest_node_id="10" text="" bounds="2178,252,36,6" points="2181,255;2211,255" />
+    </Links>
+  </Diagram>
+</Process>

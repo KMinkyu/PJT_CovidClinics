@@ -1,0 +1,195 @@
+
+<Process id="ad8a7906-08aa-48e3-851c-09f3538bf864" type="task" workType="foreground" name="T_DATE" version="1.0" designerVersion="1.6.500.09031" isValid="true">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="11" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-03 09:43:55" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-03 18:07:35" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="varNOWDATE" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="outsomethingvarDAYMONTH" scope="Normal" valueType="Any" formatType="Any" initValue="[]" desc="" />
+    <Variable name="outDraftSheetName" scope="Output" valueType="Any" formatType="Any" initValue="" desc="" />
+  </Variables>
+  <Steps>
+    <Step id="S8cbb1f345d974e4db433a00994af9e6a" ver="200825001" createVer="200825001" type="Flow" name="CustomLibrary" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="f4c29461-23ac-4609-a1d3-612b96351a87" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_LibraryScope" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Project" />
+        <Property type="Flow" key="Conditions_LibraryNamespace" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="JavaScript" />
+        <Property type="Flow" key="Conditions_LibraryName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="DATE_Now" />
+        <Property type="Flow" key="Conditions_LibraryType" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="JavaScript" />
+        <Property type="Flow" key="Conditions_Result" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varNOWDATE" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varNOWDATE = Script.JavaScript.DATE_Now();]]></Script>
+    </Step>
+    <Step id="Sf22f5923bb5b46f2bf6c8169d55ab307" ver="200825001" createVer="200825001" type="Flow" name="CustomLibrary" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="92c703d8-b91f-4911-ae04-eac2116df139" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_LibraryScope" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Project" />
+        <Property type="Flow" key="Conditions_LibraryNamespace" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="JavaScript" />
+        <Property type="Flow" key="Conditions_LibraryName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="DATE_GetDate" />
+        <Property type="Flow" key="Conditions_LibraryType" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="JavaScript" />
+        <Property type="Flow" key="Conditions_Result" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outsomethingvarDAYMONTH[0]" />
+        <Property type="Flow" key="Arguments_date" controlType="String" valueType="System.String" formatType="String_DateTime" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varNOWDATE" order="1" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.outsomethingvarDAYMONTH[0] = Script.JavaScript.DATE_GetDate(this.varNOWDATE);]]></Script>
+    </Step>
+    <Step id="S3e36edd3ca254624b49def2c83aacd72" ver="200825001" createVer="200825001" type="Flow" name="CustomLibrary" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="bc61ff28-769d-4099-9308-9c7ce0c82d21" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_LibraryScope" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Project" />
+        <Property type="Flow" key="Conditions_LibraryNamespace" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="JavaScript" />
+        <Property type="Flow" key="Conditions_LibraryName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="DATE_GetMonth" />
+        <Property type="Flow" key="Conditions_LibraryType" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="JavaScript" />
+        <Property type="Flow" key="Conditions_Result" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outsomethingvarDAYMONTH[1]" />
+        <Property type="Flow" key="Arguments_date" controlType="String" valueType="System.String" formatType="String_DateTime" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varNOWDATE" order="1" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.outsomethingvarDAYMONTH[1] = Script.JavaScript.DATE_GetMonth(this.varNOWDATE);]]></Script>
+    </Step>
+    <Step id="Sc5afe47931f04421bc1b43d36353dc90" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="6a9553dd-5be7-4bc4-ae70-875a0a8cb638" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outsomethingvarDAYMONTH[1]" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outsomethingvarDAYMONTH[1]+1" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.outsomethingvarDAYMONTH[1] = this.outsomethingvarDAYMONTH[1]+1;]]></Script>
+    </Step>
+    <Step id="S0b72a03015a64c8e9d9053c627aab2cd" ver="200825001" createVer="200825001" type="Flow" name="RunTask" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="b55120cd-520c-4355-abc0-48a1eb822e36" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="" />
+        <Property type="Flow" key="Conditions_TaskName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="T_PlusZero" />
+        <Property type="Flow" key="Input_INsometingInt" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outsomethingvarDAYMONTH[1]" />
+        <Property type="Flow" key="Output_outSomethigInt" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outsomethingvarDAYMONTH[1]" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[RunTask(this, 'T_PlusZero', {'INsometingInt':this.outsomethingvarDAYMONTH[1]});]]></Script>
+    </Step>
+    <Step id="S53a1a01d96f54037a2a4142cbb98728c" ver="200825001" createVer="200825001" type="Flow" name="RunTask" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="b55120cd-520c-4355-abc0-48a1eb822e36" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_TaskName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="T_PlusZero" />
+        <Property type="Flow" key="Input_INsometingInt" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outsomethingvarDAYMONTH[0]" />
+        <Property type="Flow" key="Output_outSomethigInt" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outsomethingvarDAYMONTH[0]" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[RunTask(this, 'T_PlusZero', {'INsometingInt':this.outsomethingvarDAYMONTH[0]});]]></Script>
+    </Step>
+    <Step id="Sc1437d3b66374af7a6c1247fc0ae3d59" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="6a9553dd-5be7-4bc4-ae70-875a0a8cb638" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outsomethingvarDAYMONTH[2]" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'선별진료소'+'('+this.outsomethingvarDAYMONTH[1]+'.'+this.outsomethingvarDAYMONTH[0]+'.'+')'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.outsomethingvarDAYMONTH[2] = '선별진료소'+'('+this.outsomethingvarDAYMONTH[1]+'.'+this.outsomethingvarDAYMONTH[0]+'.'+')';]]></Script>
+    </Step>
+    <Step id="S298f29bb088b41dabf209bb4b03ea124" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="374984e1-ce7a-401b-888a-2f35a3a140d9" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftSheetName" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outsomethingvarDAYMONTH[2]" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.outDraftSheetName = this.outsomethingvarDAYMONTH[2];]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function T_DATE() {
+
+    this.varNOWDATE;
+    this.outsomethingvarDAYMONTH = [];
+    this.outDraftSheetName;
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('S8cbb1f345d974e4db433a00994af9e6a', '[1] CustomLibrary');
+        this.varNOWDATE = Script.JavaScript.DATE_Now();
+
+        //------------------------------------------------
+        STEP('Sf22f5923bb5b46f2bf6c8169d55ab307', '[2] CustomLibrary');
+        this.outsomethingvarDAYMONTH[0] = Script.JavaScript.DATE_GetDate(this.varNOWDATE);
+
+        //------------------------------------------------
+        STEP('S3e36edd3ca254624b49def2c83aacd72', '[3] CustomLibrary');
+        this.outsomethingvarDAYMONTH[1] = Script.JavaScript.DATE_GetMonth(this.varNOWDATE);
+
+        //------------------------------------------------
+        STEP('Sc5afe47931f04421bc1b43d36353dc90', '[4] Assign');
+        this.outsomethingvarDAYMONTH[1] = this.outsomethingvarDAYMONTH[1]+1;
+
+        //------------------------------------------------
+        STEP('S0b72a03015a64c8e9d9053c627aab2cd', '[5] RunTask');
+        RunTask(this, 'T_PlusZero', {'INsometingInt':this.outsomethingvarDAYMONTH[1]});
+
+        //------------------------------------------------
+        STEP('S53a1a01d96f54037a2a4142cbb98728c', '[6] RunTask');
+        RunTask(this, 'T_PlusZero', {'INsometingInt':this.outsomethingvarDAYMONTH[0]});
+
+        //------------------------------------------------
+        STEP('Sc1437d3b66374af7a6c1247fc0ae3d59', '[7] Assign');
+        this.outsomethingvarDAYMONTH[2] = '선별진료소'+'('+this.outsomethingvarDAYMONTH[1]+'.'+this.outsomethingvarDAYMONTH[0]+'.'+')';
+
+        //------------------------------------------------
+        STEP('S298f29bb088b41dabf209bb4b03ea124', '[8] Assign');
+        this.outDraftSheetName = this.outsomethingvarDAYMONTH[2];
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+        return {'outDraftSheetName':this.outDraftSheetName};
+    }
+}
+]]></JScript>
+  <Diagram version="1.200" layout="Horizontal" nodesize="Normal">
+    <Nodes>
+      <Node id="0" step_id="" container_id="" order="" type="StartNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="START" bounds="30,171,56,56" />
+      <Node id="1" step_id="" container_id="" order="" type="EndNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="END" bounds="1056,171,56,56" />
+      <Node id="2" step_id="S8cbb1f345d974e4db433a00994af9e6a" container_id="3" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="DATE_Now" bounds="122,54,208,74" />
+      <Node id="3" step_id="79b6a0b4-0ccd-4fff-aead-fe26273794fb" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="116,30,220,338" />
+      <Node id="4" step_id="Sf22f5923bb5b46f2bf6c8169d55ab307" container_id="3" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="DATE_GetDate" bounds="122,132,208,74" />
+      <Node id="5" step_id="S3e36edd3ca254624b49def2c83aacd72" container_id="3" order="2" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="DATE_GetMonth" bounds="122,210,208,74" />
+      <Node id="6" step_id="Sc5afe47931f04421bc1b43d36353dc90" container_id="3" order="3" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="122,288,208,74" />
+      <Node id="7" step_id="a05025d0-264d-40b2-9bf1-f990105a5df2" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="806,108,220,182" />
+      <Node id="8" step_id="Sc1437d3b66374af7a6c1247fc0ae3d59" container_id="7" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="812,132,208,74" />
+      <Node id="9" step_id="S0b72a03015a64c8e9d9053c627aab2cd" container_id="" order="" type="InvokeNode" invoke_type="Process" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="T_PlusZero" bounds="366,143,190,112" />
+      <Node id="10" step_id="S53a1a01d96f54037a2a4142cbb98728c" container_id="" order="" type="InvokeNode" invoke_type="Process" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="T_PlusZero" bounds="586,143,190,112" />
+      <Node id="16" step_id="S298f29bb088b41dabf209bb4b03ea124" container_id="7" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="812,210,208,74" />
+    </Nodes>
+    <Links>
+      <Link id="11" color="#FF888888" origin_node_id="0" dest_node_id="3" text="" bounds="83,196,36,6" points="86,199;116,199" />
+      <Link id="12" color="#FF888888" origin_node_id="3" dest_node_id="9" text="" bounds="333,196,36,6" points="336,199;366,199" />
+      <Link id="13" color="#FF888888" origin_node_id="9" dest_node_id="10" text="" bounds="553,196,36,6" points="556,199;586,199" />
+      <Link id="14" color="#FF888888" origin_node_id="10" dest_node_id="7" text="" bounds="773,196,36,6" points="776,199;806,199" />
+      <Link id="15" color="#FF888888" origin_node_id="7" dest_node_id="1" text="" bounds="1023,196,36,6" points="1026,199;1056,199" />
+    </Links>
+  </Diagram>
+</Process>

@@ -1,0 +1,176 @@
+
+<Process id="88e6b38f-b18d-4da3-b77d-5968f6da0961" type="task" workType="foreground" name="T_S_DeleteData" version="1.0" designerVersion="1.6.500.09031" readonly="false" isValid="true">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="0" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-08 12:34:49" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-08 15:51:08" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="inDBData2DArr" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="inExcelData2DArr" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="inDBConn" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varExcessCols" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varResult" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+  </Variables>
+  <Steps>
+    <Step id="Sc0cf95980a6f4f358d57aa10d4e09311" ver="200825001" createVer="200825001" type="Desktop" name="MessageBox" apptitle="" tag="" depth="1" stmttype="Normal" enabled="False" mainSet="0">
+      <Properties id="8c92c7e7-0a7b-45b0-b588-f8c45dd8b08c" type="Desktop">
+        <Property type="Desktop" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Conditions_Arguments" controlType="Object" valueType="System.Object" formatType="Any" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.inDBData2DArr.length" />
+        <Property type="Desktop" key="Command_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[MsgBox(this.inDBData2DArr.length);]]></Script>
+    </Step>
+    <Step id="S71d89bd2d71d4afd966ae610af2ab423" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="cf5f50ef-3839-471a-964b-2ef1f8bd556d" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varExcessCols" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.inDBData2DArr.length - this.inExcelData2DArr.length" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varExcessCols = this.inDBData2DArr.length - this.inExcelData2DArr.length;]]></Script>
+    </Step>
+    <Step id="S418f14e3e790412e91c7ea98903355e3" ver="200825001" createVer="200825001" type="Flow" name="Loop" apptitle="" tag="" depth="1" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="b8f576e8-a728-464b-97b7-e93019debb11" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_InitializeIndex" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.i = 1" />
+        <Property type="Flow" key="Conditions_LoopCondition" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.i &lt;= this.varExcessCols" />
+        <Property type="Flow" key="Conditions_UpdateIndex" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.i++" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S6b4cade75cdb44389e915daf711985b1" type="Flow" name="EndLoop" />
+      </RelatedSteps>
+      <Script><![CDATA[for (this.i = 1; this.i <= this.varExcessCols; this.i++) {]]></Script>
+    </Step>
+    <Step id="S38cf4be87e7a48d2972f98f1d674fd92" ver="200825001" createVer="200825001" type="Desktop" name="SendDBCommand" apptitle="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="a3dd17b5-7f35-4fb0-93c5-f84faf3c136f" type="Desktop">
+        <Property type="Desktop" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Connection_Connection" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.inDBConn" />
+        <Property type="Desktop" key="DataSource_Output" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varResult" />
+        <Property type="Desktop" key="DataSource_Command" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'DELETE FROM covidclinics WHERE clinicname = \''+this.inDBData2DArr[this.inDBData2DArr.length-this.i][4]+'\';'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varResult = SystemLib.SendDBCommand(this.senddbcommand_info_4);]]></Script>
+    </Step>
+    <Step id="S92d7b1c970d14481804b7ab7d69746a9" ver="200825001" createVer="200825001" type="Desktop" name="MessageBox" apptitle="" tag="" depth="2" stmttype="Normal" enabled="False" mainSet="0">
+      <Properties id="8c92c7e7-0a7b-45b0-b588-f8c45dd8b08c" type="Desktop">
+        <Property type="Desktop" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Conditions_Arguments" controlType="Object" valueType="System.Object" formatType="Any" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.inDBData2DArr.length-this.i+'\nthis.inDBData2DArr.length = '+this.inDBData2DArr.length+'\nthis.i = '+this.i" />
+        <Property type="Desktop" key="Command_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[MsgBox(this.inDBData2DArr.length-this.i+'\nthis.inDBData2DArr.length = '+this.inDBData2DArr.length+'\nthis.i = '+this.i);]]></Script>
+    </Step>
+    <Step id="Sd5647885294342a093c7f2a3d2cefd25" ver="200825001" createVer="200825001" type="Desktop" name="MessageBox" apptitle="" tag="" depth="2" stmttype="Normal" enabled="False" mainSet="0">
+      <Properties id="fd2bf674-6f21-435a-be8f-a687cf11fdcb" type="Desktop">
+        <Property type="Desktop" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Conditions_Arguments" controlType="Object" valueType="System.Object" formatType="Any" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'DELETE FROM covidclinics WHERE clinicname = \''+this.inDBData2DArr[this.inDBData2DArr.length-this.i][4]+'\';'" />
+        <Property type="Desktop" key="Command_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[MsgBox('DELETE FROM covidclinics WHERE clinicname = \''+this.inDBData2DArr[this.inDBData2DArr.length-this.i][4]+'\';');]]></Script>
+    </Step>
+    <Step id="S6b4cade75cdb44389e915daf711985b1" ver="200825001" createVer="200825001" type="Flow" name="EndLoop" apptitle="" tag="" depth="2" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="2793b041-4600-44f6-a10f-287b92839e56" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S418f14e3e790412e91c7ea98903355e3" type="Flow" name="Loop" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function T_S_DeleteData(args) {
+
+    this.inDBData2DArr = (typeof args != 'undefined') ? args.inDBData2DArr : null;
+    this.inExcelData2DArr = (typeof args != 'undefined') ? args.inExcelData2DArr : null;
+    this.inDBConn = (typeof args != 'undefined') ? args.inDBConn : null;
+    this.varExcessCols;
+    this.varResult;
+
+    this.run = function() {
+
+        ////------------------------------------------------
+        //STEP('Sc0cf95980a6f4f358d57aa10d4e09311', '[1] MessageBox');
+        //MsgBox(this.inDBData2DArr.length);
+
+        //------------------------------------------------
+        STEP('S71d89bd2d71d4afd966ae610af2ab423', '[2] Assign');
+        this.varExcessCols = this.inDBData2DArr.length - this.inExcelData2DArr.length;
+
+        //------------------------------------------------
+        STEP('S418f14e3e790412e91c7ea98903355e3', '[3] For');
+        for (this.i = 1; this.i <= this.varExcessCols; this.i++) {
+
+            //------------------------------------------------
+            STEP('S38cf4be87e7a48d2972f98f1d674fd92', '[4] SendDBCommand');
+            this.varResult = SystemLib.SendDBCommand(this.senddbcommand_info_4);
+
+            ////------------------------------------------------
+            //STEP('S92d7b1c970d14481804b7ab7d69746a9', '[5] MessageBox');
+            //MsgBox(this.inDBData2DArr.length-this.i+'\nthis.inDBData2DArr.length = '+this.inDBData2DArr.length+'\nthis.i = '+this.i);
+
+            ////------------------------------------------------
+            //STEP('Sd5647885294342a093c7f2a3d2cefd25', '[6] MessageBox');
+            //MsgBox('DELETE FROM covidclinics WHERE clinicname = \''+this.inDBData2DArr[this.inDBData2DArr.length-this.i][4]+'\';');
+
+        //------------------------------------------------
+        }
+        STEP('S6b4cade75cdb44389e915daf711985b1', '[7] End-For');
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+    }
+}
+]]></JScript>
+  <Diagram version="1.200" layout="Horizontal" nodesize="Normal">
+    <Nodes>
+      <Node id="0" step_id="" container_id="" order="" type="StartNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="START" bounds="30,93,56,56" />
+      <Node id="1" step_id="" container_id="" order="" type="EndNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="END" bounds="1328,93,56,56" />
+      <Node id="2" step_id="S418f14e3e790412e91c7ea98903355e3" container_id="" order="" type="LoopNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="616,93,76,56" />
+      <Node id="3" step_id="S6b4cade75cdb44389e915daf711985b1" container_id="" order="" type="EndLoopNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="1222,93,76,56" />
+      <Node id="4" step_id="827acea9-cb39-46a4-8b39-0c6d280c29a4" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="366,69,220,104" />
+      <Node id="5" step_id="S71d89bd2d71d4afd966ae610af2ab423" container_id="4" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="372,93,208,74" />
+      <Node id="6" step_id="5f309cb7-3abc-4e0f-ad03-d5a82e1b3875" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="722,69,220,104" />
+      <Node id="7" step_id="S38cf4be87e7a48d2972f98f1d674fd92" container_id="6" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="SendDBCommand" bounds="728,93,208,74" />
+      <Node id="8" step_id="d9f53ea9-c039-4b1b-9b8d-0716af17fb39" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="972,30,220,182" />
+      <Node id="9" step_id="S92d7b1c970d14481804b7ab7d69746a9" container_id="8" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="MessageBox" bounds="978,54,208,74" />
+      <Node id="10" step_id="ee514913-8222-4096-8088-88322dde693c" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="116,69,220,104" />
+      <Node id="11" step_id="Sc0cf95980a6f4f358d57aa10d4e09311" container_id="10" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="MessageBox" bounds="122,93,208,74" />
+      <Node id="12" step_id="Sd5647885294342a093c7f2a3d2cefd25" container_id="8" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="MessageBox" bounds="978,132,208,74" />
+    </Nodes>
+    <Links>
+      <Link id="13" color="#FF888888" origin_node_id="3" dest_node_id="1" text="" bounds="1295,118,36,6" points="1298,121;1328,121" />
+      <Link id="14" color="#FF6868E1" origin_node_id="2" dest_node_id="6" text="" bounds="689,118,36,6" points="692,121;722,121" />
+      <Link id="15" color="#FF888888" origin_node_id="6" dest_node_id="8" text="" bounds="939,118,36,6" points="942,121;972,121" />
+      <Link id="16" color="#FF888888" origin_node_id="8" dest_node_id="3" text="" bounds="1189,118,36,6" points="1192,121;1222,121" />
+      <Link id="17" color="#FF888888" origin_node_id="0" dest_node_id="10" text="" bounds="83,118,36,6" points="86,121;116,121" />
+      <Link id="18" color="#FF888888" origin_node_id="10" dest_node_id="4" text="" bounds="333,118,36,6" points="336,121;366,121" />
+      <Link id="19" color="#FF888888" origin_node_id="4" dest_node_id="2" text="" bounds="583,118,36,6" points="586,121;616,121" />
+    </Links>
+  </Diagram>
+</Process>

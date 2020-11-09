@@ -1,0 +1,139 @@
+
+<Project id="3256ccdb-24f9-4f53-8b3b-9ef07e6e8a2b" namespace="" name="PJT_PracticeCovidClinics_201109" desc="" category="project" workType="foreground" version="1.00" lastPublishedDate="" lastPublishedBy="" createdDate="2020-11-06 08:36:53" createdBy="" lastPublishedServer="" latestProcess="P_CovidClinics" designerVersion="1.6.500.09031">
+  <SharedTask isExpended="false" />
+  <NormalTask isExpended="true">
+    <LinkItem id="e7170587-13c3-45d2-9837-304021f641f1" category="NormalTask" isChanged="Y" desc="" name="T_AirPollutionLevel">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="ad8a7906-08aa-48e3-851c-09f3538bf864" category="NormalTask" isChanged="Y" desc="" name="T_DATE">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="414d794c-f293-41e7-80e1-d77cae3d568f" category="NormalTask" isChanged="Y" desc="" name="T_FillDraftExcel">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="ada707d8-484a-4d9a-9675-53089b2931bf" category="NormalTask" isChanged="Y" desc="" name="T_MoveToDB">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="8df4b626-b6ea-4ba3-87da-4f1856bf02ae" category="NormalTask" isChanged="Y" desc="" name="T_S_BeforeTime">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="0323a907-69bd-4843-bb24-3d87d5980d2d" category="NormalTask" isChanged="Y" desc="" name="T_S_Date">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="88e6b38f-b18d-4da3-b77d-5968f6da0961" category="NormalTask" isChanged="Y" desc="" name="T_S_DeleteData">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="c0dea798-00a1-4e28-b6ca-f5c814821b1f" category="NormalTask" isChanged="Y" desc="" name="T_S_InputData">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="58e8e04c-af60-4ab0-ba38-6e84626dd3b4" category="NormalTask" isChanged="Y" desc="" name="T_S_OtherCityName">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="a192568b-06d9-4ce2-b64c-43cd297d3c7d" category="NormalTask" isChanged="Y" desc="" name="T_S_PlusZero">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="f8e2acd6-ccbf-401a-ade1-be08c83fda82" category="NormalTask" isChanged="Y" desc="" name="T_S_UpdateDB">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="0e8e1274-49f4-4148-bdd5-6486e9ac5dd1" category="NormalTask" isChanged="Y" desc="" name="T_S_WriteInDB">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="072c531f-f27c-4faa-afee-7e32fbc1e260" category="NormalTask" isChanged="Y" desc="" name="T_S_WriteInDBAfterUpdate">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="5094f3c2-6e65-4cdd-9d24-2e693e5213e8" category="NormalTask" isChanged="Y" desc="" name="test">
+      <Properties />
+    </LinkItem>
+  </NormalTask>
+  <Event isExpended="true">
+    <LinkItem id="52b5fd2c-0ed6-42de-944d-366095478814" category="Event" isChanged="Y" desc="" name="E_AddrAPI">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="e1cf529c-620a-45df-b521-fb7c1d9737c2" category="Event" isChanged="Y" desc="" name="E_CityAPI">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="59f4d723-e962-411b-9cdb-f3e01307ef48" category="Event" isChanged="Y" desc="" name="E_Error">
+      <Properties />
+    </LinkItem>
+  </Event>
+  <Process isExpended="true">
+    <LinkItem id="204e2013-2954-4982-8ff8-2d394ec0b40f" category="Process" isChanged="Y" desc="default process" name="MyProcess">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="b27951c6-fda6-4dce-87d7-da9918e8034f" category="Process" isChanged="Y" desc="" name="P_CovidClinics">
+      <Properties />
+    </LinkItem>
+  </Process>
+  <CustomLibraries isExpended="false">
+    <LinkItem id="43ffe869-39ff-4c79-923d-15d8bb36b635" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddDay">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="f416f0de-e67c-49ea-ae3c-4953a70f685d" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddHours">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="1b13c890-738a-498b-98c9-ace0f057899b" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddMinutes">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="86637f13-d194-4499-b706-0dc1a9e3f957" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddMonth">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="363ba47c-9494-48d2-a81e-9f092f799231" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddSeconds">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="d08f998d-22bc-4e5d-85e2-abd522fc0f25" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddYear">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="baa85e29-febb-4d49-b3f6-35faf9ad33e6" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetDate">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="4e3ac0f3-a85b-4de2-8084-9b814c650bae" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetDay">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="b8c3ba0d-8f16-438d-8b31-94154f0f1f45" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetFullYear">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="e5ce2b56-4fcf-4ac1-929d-5db38ebcf562" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetHours">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="bfc8fe0e-fb56-46ed-b8e0-438197cfa7ce" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetMinutes">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="04b56e00-4d70-45a7-9a9e-4927335fa8cc" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetMonth">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="259b3b1d-fb8d-4b59-821a-4c6afe0ca807" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetSeconds">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="13457f8d-e708-494a-bcab-74ec62c21a92" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetWeek">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="3b2be8b1-f1f5-4200-9001-0a7edc59ad23" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_Now">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="75d48293-b55e-4a33-8ee5-6d48909f1834" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetDate">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="4e61b11a-5c81-42f2-b23a-30620592920b" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetFullYear">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="97ccd178-24ff-400c-8fd6-4e8e6eb32a2f" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetHours">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="01b29207-d03f-4555-8ca5-c9e04645b779" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetMinutes">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="6c3669cb-833d-4650-beee-d39f3d99ec9e" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetMonth">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="927cf77c-21ac-45dc-b85b-7d8a090e054f" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetSeconds">
+      <Properties />
+    </LinkItem>
+  </CustomLibraries>
+  <LibraryTemplate isExpended="false" />
+  <Resources isExpended="false" />
+  <RemoteProcess isExpended="false" />
+  <Asset />
+  <Library />
+  <Variables />
+  <Properties />
+</Project>

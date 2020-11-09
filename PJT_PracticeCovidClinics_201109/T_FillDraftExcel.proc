@@ -1,0 +1,744 @@
+
+<Process id="414d794c-f293-41e7-80e1-d77cae3d568f" type="task" workType="foreground" name="T_FillDraftExcel" version="1.0" designerVersion="1.6.500.09031" isValid="true">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="14" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-02 16:58:55" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-05 23:40:01" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="varPathDraft" scope="Normal" valueType="Any" formatType="Any" initValue="'C:\\Temp\\선별진료소draft.xlsx'" desc="" />
+    <Variable name="outDraftExcelHandle" scope="Output" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varSampleExcelHandel" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varSamplePath" scope="Normal" valueType="Any" formatType="Any" initValue="'C:\\Temp\\데이터excel.xls'" desc="" />
+    <Variable name="outTotalRow" scope="Output" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varDayArray" scope="Normal" valueType="Any" formatType="Any" initValue="[]" desc="" />
+    <Variable name="varRowCount" scope="Normal" valueType="Any" formatType="Any" initValue="[]" desc="" />
+    <Variable name="varDirLocation" scope="Normal" valueType="Any" formatType="Any" initValue="'C:\\Users\\lenovo\\Downloads'" desc="" />
+    <Variable name="varFileList" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="outDraftSheetName" scope="Output" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varLastFile" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varDataBowser" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varSheetBoolean" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varChoiceOneTwo" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varTryExpBoolean" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+  </Variables>
+  <Steps>
+    <Step id="S95b0a35354534b018184cdbbcd9de387" ver="200825001" createVer="200825001" type="Desktop" name="DeleteFile" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="92c0c013-8ee6-481a-b3aa-c5591a4c62f6" type="Desktop">
+        <Property type="Desktop" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="--Ignore--" />
+        <Property type="Desktop" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Command_Path" controlType="File" valueType="System.String" formatType="String_FilePath" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'C:\\Temp\\데이터excel.xls'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[try{
+    SystemLib.DeleteFile('C:\\Temp\\데이터excel.xls');
+}catch(e){
+    Warn('CatchException: ' + e.message);
+}
+]]></Script>
+    </Step>
+    <Step id="Scf86680a2fb143a6879c73536acdad84" ver="200825001" createVer="200825001" type="Chrome" name="ChromeOpen" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="5aee2fdd-eda4-4541-bd19-8233fe1f5eb1" type="Chrome">
+        <Property type="Chrome" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Chrome" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Chrome" key="CHROME_Browser" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDataBowser" />
+        <Property type="Chrome" key="CHROME_BrowserType" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Chrome" key="CHROME_URL" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'https://www.mohw.go.kr/react/popup_200128_3.html'" />
+        <Property type="Chrome" key="CHROME_ChromePath" controlType="File" valueType="System.String" formatType="String_FilePath" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Chrome" key="CHROME_Maximize" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Chrome" key="CHROME_WaitTimeSec" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="60" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varDataBowser = Chrome.ChromeOpen(this.chromeopen_info_2);]]></Script>
+    </Step>
+    <Step id="Sc3be1e2853584b9fbcffa044760d7bcc" ver="200825001" createVer="200825001" type="Win" name="RightClick" apptitle="코로나19 전체 선별진료소 - 보건복지부 - Chrome" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="8e809cc5-222d-4252-8268-a969b5dfca69" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="10" />
+        <Property type="Win" key="Target_TargetNo" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" order="3" />
+        <Property type="Win" key="Target_UseName" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseAppTitle" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSetFocus" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_DrawBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseObjectPath" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSearchAround" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_SearchBounds" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Application_PID" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="3916" />
+        <Property type="Win" key="Application_ProcessName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="chrome" order="1" />
+        <Property type="Win" key="Application_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'코로나19 전체 선별진료소 - 보건복지부 - Chrome'" />
+        <Property type="Win" key="Application_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Chrome_WidgetWin_1" />
+        <Property type="Win" key="Application_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Pane" />
+        <Property type="Win" key="Application_WindowHandle" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="6030708" />
+        <Property type="Win" key="Application_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="True" encrypted="False" isChanged="Y" value="-8,-8,1936,1056" />
+        <Property type="Win" key="Target_SupportedPatterns" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="Scroll;Value;Text;ScrollItem;LegacyIAccessible" />
+        <Property type="Win" key="Target_AutomationID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="-446475024" />
+        <Property type="Win" key="Target_FrameworkID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Chrome" />
+        <Property type="Win" key="Target_RuntimeID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="42.3278194.4.-101" />
+        <Property type="Win" key="Target_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Chrome_RenderWidgetHostHWND" />
+        <Property type="Win" key="Target_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="Document" order="2" />
+        <Property type="Win" key="Target_Name" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'코로나19 전체 선별진료소 - 보건복지부'" />
+        <Property type="Win" key="Target_ObjectPath" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'Pane|Chrome_WidgetWin_1||Win32/Document|Chrome_RenderWidgetHostHWND|-446475024|Chrome'" />
+        <Property type="Win" key="Target_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="8,80,1920,968" />
+        <Property type="Win" key="Mouse_WinPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="1679,661" />
+        <Property type="Win" key="Mouse_AppPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="1687,669" />
+        <Property type="Win" key="Mouse_Point" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="1679,589" order="11" />
+        <Property type="Win" key="Target_Value" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'https://www.mohw.go.kr/react/popup_200128_3.html'" />
+        <Property type="Win" key="Target_LegacyValue" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'https://www.mohw.go.kr/react/popup_200128_3.html'" />
+        <Property type="Win" key="Target_IsReadOnly" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="True" />
+        <Property type="Win" key="Target_IsEditable" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="True" />
+        <Property type="Win" key="Mouse_UseInvoke" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" toggle="Invoke;Click" />
+        <Property type="Win" key="Target_SizeTolerance" controlType="Size" valueType="System.Windows.Size" formatType="Size" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="576,145" />
+        <Property type="Win" key="Target_TimeStamp" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="2020-11-04 14:30:02.643" />
+        <Property type="Win" key="Mouse_OriginPoint" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="LeftTop" valuelist="LeftTop;RightTop;LeftBottom;RightBottom" order="10" />
+        <Property type="Win" key="Target_Capture" controlType="Bitmap" valueType="System.Drawing.Bitmap" formatType="Bitmap" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="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" />
+        <Property type="Win" key="Target_ImageCompareBounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="0,0,200,100" />
+        <Property type="Win" key="Target_PointOnImage" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="100,50" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.RightClick(this.rightclick_info_3);]]></Script>
+    </Step>
+    <Step id="S663bbf0a301c4b7ea8c0d6f79884d578" ver="200825001" createVer="200825001" type="Win" name="Click" apptitle="코로나19 전체 선별진료소 - 보건복지부 - Chrome" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="9ce09088-a4cf-40df-bb82-8fef4e74fe29" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="10" />
+        <Property type="Win" key="Target_TargetNo" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" order="3" />
+        <Property type="Win" key="Target_UseName" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseAppTitle" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSetFocus" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="False" />
+        <Property type="Win" key="Target_DrawBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseObjectPath" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSearchAround" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_SearchBounds" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Application_PID" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="15080" />
+        <Property type="Win" key="Application_ProcessName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="chrome" order="1" />
+        <Property type="Win" key="Application_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'코로나19 전체 선별진료소 - 보건복지부 - Chrome'" />
+        <Property type="Win" key="Application_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Chrome_WidgetWin_1" />
+        <Property type="Win" key="Application_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Pane" />
+        <Property type="Win" key="Application_WindowHandle" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="1313132" />
+        <Property type="Win" key="Application_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="True" encrypted="False" isChanged="Y" value="-8,-8,1936,1056" />
+        <Property type="Win" key="Target_SupportedPatterns" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="Invoke;ScrollItem;LegacyIAccessible" />
+        <Property type="Win" key="Target_AutomationID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_FrameworkID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_RuntimeID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="42.854538.4.-1093" />
+        <Property type="Win" key="Target_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="MenuItem" order="2" />
+        <Property type="Win" key="Target_Name" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'다른 이름으로 링크 저장(K)…'" />
+        <Property type="Win" key="Target_ObjectPath" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'Pane|Chrome_WidgetWin_1||Win32/Pane|Chrome_WidgetWin_2||Win32/MenuBar|||/Pane|||/Menu|||/MenuItem|||'" />
+        <Property type="Win" key="Target_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="1628,752,299,23" />
+        <Property type="Win" key="Mouse_WinPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="1734,752" />
+        <Property type="Win" key="Mouse_AppPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="1742,760" />
+        <Property type="Win" key="Mouse_Point" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="114,8" order="11" />
+        <Property type="Win" key="Target_Value" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_LegacyValue" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_IsReadOnly" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_IsEditable" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Mouse_UseInvoke" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" toggle="Invoke;Click" />
+        <Property type="Win" key="Target_SizeTolerance" controlType="Size" valueType="System.Windows.Size" formatType="Size" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="598,15" />
+        <Property type="Win" key="Target_TimeStamp" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="2020-11-04 14:30:39.642" />
+        <Property type="Win" key="Mouse_OriginPoint" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="LeftTop" valuelist="LeftTop;RightTop;LeftBottom;RightBottom" order="10" />
+        <Property type="Win" key="Target_Capture" controlType="Bitmap" valueType="System.Drawing.Bitmap" formatType="Bitmap" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="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" />
+        <Property type="Win" key="Target_ImageCompareBounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="0,0,200,100" />
+        <Property type="Win" key="Target_PointOnImage" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="100,50" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.Click(this.click_info_4);]]></Script>
+    </Step>
+    <Step id="S6e07bb1ebef24992ada598e6ffa49cb3" ver="200825001" createVer="200825001" type="Win" name="TextInput" apptitle="코로나19 전체 선별진료소 - 보건복지부 - Chrome" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="debb60d6-f5ae-4dd2-9206-fffeccd5f5a3" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="10" />
+        <Property type="Win" key="Target_TargetNo" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" order="3" />
+        <Property type="Win" key="Target_UseName" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseAppTitle" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSetFocus" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_DrawBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseObjectPath" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSearchAround" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_SearchBounds" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Application_PID" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="9232" />
+        <Property type="Win" key="Application_ProcessName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="chrome" order="1" />
+        <Property type="Win" key="Application_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'코로나19 전체 선별진료소 - 보건복지부 - Chrome'" />
+        <Property type="Win" key="Application_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Chrome_WidgetWin_1" />
+        <Property type="Win" key="Application_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Pane" />
+        <Property type="Win" key="Application_WindowHandle" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="1902440" />
+        <Property type="Win" key="Application_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="True" encrypted="False" isChanged="Y" value="-8,-8,1936,1056" />
+        <Property type="Win" key="Target_SupportedPatterns" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="Value;Text;LegacyIAccessible" />
+        <Property type="Win" key="Target_AutomationID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="1001" />
+        <Property type="Win" key="Target_FrameworkID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Win32" />
+        <Property type="Win" key="Target_RuntimeID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="42.2164318" />
+        <Property type="Win" key="Target_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Edit" />
+        <Property type="Win" key="Target_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="Edit" order="2" />
+        <Property type="Win" key="Target_Name" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'파일 이름:'" />
+        <Property type="Win" key="Target_ObjectPath" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'Pane|Chrome_WidgetWin_1||Win32/Window|#32770||Win32/Pane|DUIViewWndClassName||Win32/Pane|HWNDView|main|DirectUI/Pane|Element|FolderLayoutContainer|DirectUI/Pane|PreviewBackground|BackgroundClear|DirectUI/ComboBox|AppControlHost|FileNameControlHost|DirectUI/Edit|Edit|1001|Win32'" />
+        <Property type="Win" key="Target_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="144,437,791,17" />
+        <Property type="Win" key="Mouse_WinPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="530,442" />
+        <Property type="Win" key="Mouse_AppPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="538,450" />
+        <Property type="Win" key="Mouse_Point" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="394,13" order="11" />
+        <Property type="Win" key="Target_Value" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'선별진료소(전체)_20201104143103.xls'" />
+        <Property type="Win" key="Target_LegacyValue" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'선별진료소(전체)_20201104143103.xls'" />
+        <Property type="Win" key="Target_IsReadOnly" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_IsEditable" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="True" />
+        <Property type="Win" key="Mouse_UseInvoke" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" toggle="Invoke;Click" />
+        <Property type="Win" key="Target_SizeTolerance" controlType="Size" valueType="System.Windows.Size" formatType="Size" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="1582,15" />
+        <Property type="Win" key="Target_TimeStamp" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="2020-11-04 14:31:16.079" />
+        <Property type="Win" key="Mouse_OriginPoint" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="LeftTop" valuelist="LeftTop;RightTop;LeftBottom;RightBottom" order="10" />
+        <Property type="Win" key="Keyboard_NewText" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'C:\\Temp\\데이터excel.xls'" order="1" />
+        <Property type="Win" key="Keyboard_ClearAll" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" order="2" />
+        <Property type="Win" key="Keyboard_UseDone" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="True" order="3" />
+        <Property type="Win" key="Keyboard_UseRawEvent" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Options_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" order="4" />
+        <Property type="Win" key="Options_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" order="5" />
+        <Property type="Win" key="Options_Interval" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" order="6" />
+        <Property type="Win" key="Target_Capture" controlType="Bitmap" valueType="System.Drawing.Bitmap" formatType="Bitmap" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="iVBORw0KGgoAAAANSUhEUgAAAMgAAABkCAYAAADDhn8LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFLSURBVHhe7dwxkcRAEATBgX2kBEX22WKwDPaMf3NVCLIjEkK5PdvMXicQs5hAzGICMYsJxCwmELOYQMxic9/3Bs4EAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEGattYEzgUAQCASBQBAIBIFAEAgEgUAQCASBQBAIBIFAmPl8N/Di/6PXzA4TiFlMIGYxgZjFBGIWE4hZTCBmMYGYxQRiFhOIWUwgZjGBmMUEYhYTiFlMIGYxgZjFBGIWE4hZTCBmMYGYxQRiFvNqAuX0BQT8EQiEua5rA2fzPM8GzgQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQvJpA8IsFQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEg8GrtH2p5MN+eqUG1AAAAAElFTkSuQmCC" />
+        <Property type="Win" key="Target_ImageCompareBounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="0,0,200,100" />
+        <Property type="Win" key="Target_PointOnImage" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="100,50" />
+        <Property type="Win" key="Target_IsPassword" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.TextInput(this.textinput_info_5);]]></Script>
+    </Step>
+    <Step id="S05683a7270644279a94f269f3e7dce5d" ver="200825001" createVer="200825001" type="Flow" name="Delay" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="5a61aba3-f6cd-466d-ba50-b793efe30c9c" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Second" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="7" />
+        <Property type="Flow" key="Conditions_Millisecond" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Delay(7000);]]></Script>
+    </Step>
+    <Step id="Sbe73c18d1b3e437abb95ae2228a225c0" ver="200825001" createVer="200825001" type="Chrome" name="ChromeClose" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="5a971495-93d6-4663-845e-e6cf6c8870ab" type="Chrome">
+        <Property type="Chrome" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Chrome" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Chrome" key="CHROME_Browser" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDataBowser" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Chrome.ChromeClose(this.chromeclose_info_7);]]></Script>
+    </Step>
+    <Step id="S2115bb45a73746e7baa34c38ea081905" ver="200825001" createVer="200825001" type="Flow" name="RunTask" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="0b130c6c-8e21-4be9-ad40-8b97676acb18" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_TaskName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="T_S_Date" />
+        <Property type="Flow" key="Output_outDraftSheetName" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.outDraftSheetName" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[RunTask(this, 'T_S_Date', null);]]></Script>
+    </Step>
+    <Step id="Sccffa71e12314ce8bbae4055a56f2def" ver="200825001" createVer="200825001" type="Excel" name="OpenExcel" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="c9480a4d-ff8b-40ae-8ae2-fe886ce6ac1c" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="draft" />
+        <Property type="Excel" key="Output_OutputExcel" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftExcelHandle" />
+        <Property type="Excel" key="File_Path" controlType="Excel" valueType="System.String" formatType="String_FilePath" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varPathDraft" order="11" />
+        <Property type="Excel" key="File_Invisible" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" order="12" />
+        <Property type="Excel" key="File_ReadOnly" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" order="16" />
+        <Property type="Excel" key="File_Maximize" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" order="13" />
+        <Property type="Excel" key="File_ExecuteShell" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" order="14" />
+        <Property type="Excel" key="File_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="False" readonly="False" encrypted="False" isChanged="N" value="60" order="15" />
+        <Property type="Excel" key="File_UsePassword" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" order="17" />
+        <Property type="Excel" key="File_OpenPassword" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" order="18" />
+        <Property type="Excel" key="File_WritePassword" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" order="19" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.outDraftExcelHandle = Excel.OpenExcel(this.openexcel_info_9);]]></Script>
+    </Step>
+    <Step id="S076d638b347b49b9be73a5802fda1efc" ver="200825001" createVer="200825001" type="Excel" name="OpenExcel" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="c9480a4d-ff8b-40ae-8ae2-fe886ce6ac1c" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Output_OutputExcel" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varSampleExcelHandel" />
+        <Property type="Excel" key="File_Path" controlType="Excel" valueType="System.String" formatType="String_FilePath" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varSamplePath" order="11" />
+        <Property type="Excel" key="File_Invisible" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" order="12" />
+        <Property type="Excel" key="File_ReadOnly" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" order="16" />
+        <Property type="Excel" key="File_Maximize" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" order="13" />
+        <Property type="Excel" key="File_ExecuteShell" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" order="14" />
+        <Property type="Excel" key="File_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="False" readonly="False" encrypted="False" isChanged="N" value="60" order="15" />
+        <Property type="Excel" key="File_UsePassword" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" order="17" />
+        <Property type="Excel" key="File_OpenPassword" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" order="18" />
+        <Property type="Excel" key="File_WritePassword" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" order="19" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varSampleExcelHandel = Excel.OpenExcel(this.openexcel_info_10);]]></Script>
+    </Step>
+    <Step id="Sd84517644ced4dae83fecba8749ff7e0" ver="200825001" createVer="200825001" type="Excel" name="GetRowCount" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="b14fccd0-11fd-4a79-a3a6-3af7c835bde7" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varSampleExcelHandel" />
+        <Property type="Excel" key="Output_OutputCount" controlType="OutputControlType" valueType="System.Int32" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outTotalRow" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'선별진료소(전체)'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.outTotalRow = Excel.GetRowCount(this.getrowcount_info_11);]]></Script>
+    </Step>
+    <Step id="S911cd09b869d4f729f4e6472efa7775d" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="039fde74-a74a-44c1-9abb-4d96624cdb93" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="F rowcount" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varRowCount[0]" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'F'+this.outTotalRow" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varRowCount[0] = 'F'+this.outTotalRow;]]></Script>
+    </Step>
+    <Step id="S9efe20da512247fda84bc0aef40efe5d" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="039fde74-a74a-44c1-9abb-4d96624cdb93" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="J rowcount" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varRowCount[1]" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'J'+this.outTotalRow" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varRowCount[1] = 'J'+this.outTotalRow;]]></Script>
+    </Step>
+    <Step id="Se3af2016eb17436396eafd3aa5e93b86" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="039fde74-a74a-44c1-9abb-4d96624cdb93" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="H rowcount" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varRowCount[2]" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'H'+this.outTotalRow" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varRowCount[2] = 'H'+this.outTotalRow;]]></Script>
+    </Step>
+    <Step id="S69c779af8f8846769c27ab4df6a4e993" ver="200825001" createVer="200825001" type="Excel" name="GetSheetName" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="53d87f2d-4c90-41ec-8399-72e04c3570c8" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftExcelHandle" />
+        <Property type="Excel" key="Output_SheetName" controlType="OutputControlType" valueType="System.String" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varSheetBoolean" />
+        <Property type="Excel" key="Sheet_Position" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="1" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varSheetBoolean = Excel.GetSheetName(this.getsheetname_info_15);]]></Script>
+    </Step>
+    <Step id="S05968dd99634478098533c136117660f" ver="200825001" createVer="200825001" type="Excel" name="CopyWorkSheet" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="ba16f69d-1a63-483b-82d5-7761fdb10d69" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="E_Error" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftExcelHandle" />
+        <Property type="Excel" key="File_SourceSheet" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'draft'" />
+        <Property type="Excel" key="File_TargetSheet" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftSheetName" />
+        <Property type="Excel" key="File_BeforeSheet" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varSheetBoolean" />
+        <Property type="Excel" key="File_AfterSheet" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[try{
+    Excel.CopyWorkSheet(this.copyworksheet_info_16);
+}catch(e){
+    Warn('CatchException: ' + e.message);
+    Warn('Call error handler: E_Error');
+    RunEvent('E_Error', {'sender':this, 'args':e});
+}
+]]></Script>
+    </Step>
+    <Step id="S06be53a02dd54d90abc37f6b554b1a41" ver="200825001" createVer="200825001" type="Flow" name="Block" apptitle="" tag="" depth="1" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="44739690-7ce3-4d76-9eef-8a425d9690c1" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Title" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'데이터 입력'" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S7452064d618541ddbfe2d93e6c0f2394" type="Flow" name="EndBlock" />
+      </RelatedSteps>
+      <Script><![CDATA[{]]></Script>
+    </Step>
+    <Step id="S59737f68c49e41adaf4f1b148911c8c2" ver="200825001" createVer="200825001" type="Excel" name="CopyPaste" apptitle="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="f56c084b-eb69-4f04-812b-06d8f26b7e44" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="File_SourceExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varSampleExcelHandel" />
+        <Property type="Excel" key="File_SourceSheet" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'선별진료소(전체)'" />
+        <Property type="Excel" key="File_SourceRange" controlType="String" valueType="System.String" formatType="String_ExcelRange" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'A2:'+this.varRowCount[0]" />
+        <Property type="Excel" key="File_TargetExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftExcelHandle" />
+        <Property type="Excel" key="File_TargetSheet" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftSheetName" />
+        <Property type="Excel" key="File_TargetRange" controlType="String" valueType="System.String" formatType="String_ExcelRange" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'A2:'+this.varRowCount[0]" />
+        <Property type="Excel" key="File_TargetAutoSave" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Input_PasteType" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="All" valuelist="All;UsingSourceTheme;Formulas;ExceptBorders;Values;ColumnWidths;Formats;FormulasAndNumberFormats;Comments;ValuesAndNumberFormats;Validation;MergingConditionalFormats" />
+        <Property type="Excel" key="Input_PasteOperation" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="None" valuelist="None;Add;Subtract;Multiply;Divide" />
+        <Property type="Excel" key="Input_PasteSkipBlanks" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Input_PasteTranspose" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Input_PasteUseLink" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Excel.CopyPaste(this.copypaste_info_18);]]></Script>
+    </Step>
+    <Step id="Sc77bfac748b54a1e8cfd336ad3b877cd" ver="200825001" createVer="200825001" type="Excel" name="CopyPaste" apptitle="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="f56c084b-eb69-4f04-812b-06d8f26b7e44" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="File_SourceExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varSampleExcelHandel" />
+        <Property type="Excel" key="File_SourceSheet" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'선별진료소(전체)'" />
+        <Property type="Excel" key="File_SourceRange" controlType="String" valueType="System.String" formatType="String_ExcelRange" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'J2:'+this.varRowCount[1]" />
+        <Property type="Excel" key="File_TargetExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftExcelHandle" />
+        <Property type="Excel" key="File_TargetSheet" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftSheetName" />
+        <Property type="Excel" key="File_TargetRange" controlType="String" valueType="System.String" formatType="String_ExcelRange" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'H2:'+this.varRowCount[2]" />
+        <Property type="Excel" key="File_TargetAutoSave" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Input_PasteType" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="All" valuelist="All;UsingSourceTheme;Formulas;ExceptBorders;Values;ColumnWidths;Formats;FormulasAndNumberFormats;Comments;ValuesAndNumberFormats;Validation;MergingConditionalFormats" />
+        <Property type="Excel" key="Input_PasteOperation" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="None" valuelist="None;Add;Subtract;Multiply;Divide" />
+        <Property type="Excel" key="Input_PasteSkipBlanks" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Input_PasteTranspose" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Input_PasteUseLink" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Excel.CopyPaste(this.copypaste_info_19);]]></Script>
+    </Step>
+    <Step id="S31e46e4cee1548d8a26c747ac940fa42" ver="200825001" createVer="200825001" type="Flow" name="Loop" apptitle="" tag="" depth="2" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="7d4d8164-4128-4f7a-8b5b-713d6d79691b" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_InitializeIndex" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.i = 2" />
+        <Property type="Flow" key="Conditions_LoopCondition" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.i &lt;=this.outTotalRow" />
+        <Property type="Flow" key="Conditions_UpdateIndex" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.i++" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S3f65fab716504a2cbcfbe21a0dd2e8a9" type="Flow" name="EndLoop" />
+      </RelatedSteps>
+      <Script><![CDATA[for (this.i = 2; this.i <=this.outTotalRow; this.i++) {]]></Script>
+    </Step>
+    <Step id="Sc422c6d8a93a44a0aeda907ae65c190b" ver="200825001" createVer="200825001" type="Excel" name="ReadRange" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="48d3fd40-ddd4-442f-8dc8-9152e8776905" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varSampleExcelHandel" />
+        <Property type="Excel" key="Output_DataArray" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDayArray[0]" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'선별진료소(전체)'" />
+        <Property type="Excel" key="Sheet_Range" controlType="String" valueType="System.String" formatType="String_ExcelRange" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'G'+this.i" />
+        <Property type="Excel" key="Input_ReadCellType" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="Data" valuelist="Data;Value;Formula;Text" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varDayArray[0] = Excel.ReadRange(this.readrange_info_21);]]></Script>
+    </Step>
+    <Step id="S800d478d1d8d431482a04016c7d7d5bd" ver="200825001" createVer="200825001" type="Excel" name="ReadRange" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="48d3fd40-ddd4-442f-8dc8-9152e8776905" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varSampleExcelHandel" />
+        <Property type="Excel" key="Output_DataArray" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDayArray[1]" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'선별진료소(전체)'" />
+        <Property type="Excel" key="Sheet_Range" controlType="String" valueType="System.String" formatType="String_ExcelRange" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'H'+this.i" />
+        <Property type="Excel" key="Input_ReadCellType" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="Data" valuelist="Data;Value;Formula;Text" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varDayArray[1] = Excel.ReadRange(this.readrange_info_22);]]></Script>
+    </Step>
+    <Step id="Sa92be66d30c6407eaeede65ebb4e53df" ver="200825001" createVer="200825001" type="Excel" name="ReadRange" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="48d3fd40-ddd4-442f-8dc8-9152e8776905" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varSampleExcelHandel" />
+        <Property type="Excel" key="Output_DataArray" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDayArray[2]" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'선별진료소(전체)'" />
+        <Property type="Excel" key="Sheet_Range" controlType="String" valueType="System.String" formatType="String_ExcelRange" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'I'+this.i" />
+        <Property type="Excel" key="Input_ReadCellType" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="Data" valuelist="Data;Value;Formula;Text" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varDayArray[2] = Excel.ReadRange(this.readrange_info_23);]]></Script>
+    </Step>
+    <Step id="S8fb3d60d53bb4bbbb981055806e6f06a" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="97d60322-91c8-4b61-817c-b43b03bddb43" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDayArray[4]" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'평일 : '+this.varDayArray[0]+'\n'+'토요일 : '+this.varDayArray[1]+&#xD;&#xA;'\n'+'일요일/공휴일 : '+this.varDayArray[2]&#xD;&#xA;" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varDayArray[4] = '평일 : '+this.varDayArray[0]+'\n'+'토요일 : '+this.varDayArray[1]+
+'\n'+'일요일/공휴일 : '+this.varDayArray[2]
+;]]></Script>
+    </Step>
+    <Step id="Sdde9ea6096df4331825785b0513836ae" ver="200825001" createVer="200825001" type="Excel" name="WriteRange" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="daf21c32-048a-45c0-8c92-961f1ee32956" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftExcelHandle" />
+        <Property type="Excel" key="Input_DataArray" controlType="Object[][]" valueType="System.Object[][]" formatType="Array2D" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDayArray[4]" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftSheetName" />
+        <Property type="Excel" key="Sheet_StartCell" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'G'+this.i" />
+        <Property type="Excel" key="File_AutoSave" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Excel.WriteRange(this.writerange_info_25);]]></Script>
+    </Step>
+    <Step id="S3f65fab716504a2cbcfbe21a0dd2e8a9" ver="200825001" createVer="200825001" type="Flow" name="EndLoop" apptitle="" tag="" depth="3" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="4a9e4fdb-711d-4d72-b5e6-516ef2b26af1" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S31e46e4cee1548d8a26c747ac940fa42" type="Flow" name="Loop" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
+    <Step id="Sb7392f42bc164e9ba12f432e6e51cfb9" ver="200825001" createVer="200825001" type="Excel" name="CloseExcel" apptitle="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="e5115fb6-feb0-4b2b-964e-61701e3f6f38" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varSampleExcelHandel" />
+        <Property type="Excel" key="File_Force" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Excel.CloseExcel(this.closeexcel_info_27);]]></Script>
+    </Step>
+    <Step id="S98ad27c753ce45c89411acee46ed662d" ver="200825001" createVer="200825001" type="Desktop" name="DeleteFile" apptitle="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="92c0c013-8ee6-481a-b3aa-c5591a4c62f6" type="Desktop">
+        <Property type="Desktop" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Command_Path" controlType="File" valueType="System.String" formatType="String_FilePath" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'C:\\Temp\\데이터excel.xls'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[SystemLib.DeleteFile('C:\\Temp\\데이터excel.xls');]]></Script>
+    </Step>
+    <Step id="S7452064d618541ddbfe2d93e6c0f2394" ver="200825001" createVer="200825001" type="Flow" name="EndBlock" apptitle="" tag="" depth="2" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="3f829443-48cf-4095-86de-fcd99d8664c0" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S06be53a02dd54d90abc37f6b554b1a41" type="Flow" name="Block" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function T_FillDraftExcel() {
+
+    this.varPathDraft = 'C:\\Temp\\선별진료소draft.xlsx';
+    this.outDraftExcelHandle;
+    this.varSampleExcelHandel;
+    this.varSamplePath = 'C:\\Temp\\데이터excel.xls';
+    this.outTotalRow;
+    this.varDayArray = [];
+    this.varRowCount = [];
+    this.varDirLocation = 'C:\\Users\\lenovo\\Downloads';
+    this.varFileList;
+    this.outDraftSheetName;
+    this.varLastFile;
+    this.varDataBowser;
+    this.varSheetBoolean;
+    this.varChoiceOneTwo;
+    this.varTryExpBoolean;
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('S95b0a35354534b018184cdbbcd9de387', '[1] DeleteFile');
+        try{
+            SystemLib.DeleteFile('C:\\Temp\\데이터excel.xls');
+        }catch(e){
+            Warn('CatchException: ' + e.message);
+        }
+
+
+        //------------------------------------------------
+        STEP('Scf86680a2fb143a6879c73536acdad84', '[2] ChromeOpen');
+        this.varDataBowser = Chrome.ChromeOpen(this.chromeopen_info_2);
+
+        //------------------------------------------------
+        STEP('Sc3be1e2853584b9fbcffa044760d7bcc', '[3] RightClick');
+        Win.RightClick(this.rightclick_info_3);
+
+        //------------------------------------------------
+        STEP('S663bbf0a301c4b7ea8c0d6f79884d578', '[4] Click');
+        Win.Click(this.click_info_4);
+
+        //------------------------------------------------
+        STEP('S6e07bb1ebef24992ada598e6ffa49cb3', '[5] TextInput');
+        Win.TextInput(this.textinput_info_5);
+
+        //------------------------------------------------
+        STEP('S05683a7270644279a94f269f3e7dce5d', '[6] Delay');
+        Delay(7000);
+
+        //------------------------------------------------
+        STEP('Sbe73c18d1b3e437abb95ae2228a225c0', '[7] ChromeClose');
+        Chrome.ChromeClose(this.chromeclose_info_7);
+
+        //------------------------------------------------
+        STEP('S2115bb45a73746e7baa34c38ea081905', '[8] RunTask');
+        RunTask(this, 'T_S_Date', null);
+
+        //------------------------------------------------
+        STEP('Sccffa71e12314ce8bbae4055a56f2def', '[9] OpenExcel');
+        this.outDraftExcelHandle = Excel.OpenExcel(this.openexcel_info_9);
+
+        //------------------------------------------------
+        STEP('S076d638b347b49b9be73a5802fda1efc', '[10] OpenExcel');
+        this.varSampleExcelHandel = Excel.OpenExcel(this.openexcel_info_10);
+
+        //------------------------------------------------
+        STEP('Sd84517644ced4dae83fecba8749ff7e0', '[11] GetRowCount');
+        this.outTotalRow = Excel.GetRowCount(this.getrowcount_info_11);
+
+        //------------------------------------------------
+        STEP('S911cd09b869d4f729f4e6472efa7775d', '[12] Assign');
+        this.varRowCount[0] = 'F'+this.outTotalRow;
+
+        //------------------------------------------------
+        STEP('S9efe20da512247fda84bc0aef40efe5d', '[13] Assign');
+        this.varRowCount[1] = 'J'+this.outTotalRow;
+
+        //------------------------------------------------
+        STEP('Se3af2016eb17436396eafd3aa5e93b86', '[14] Assign');
+        this.varRowCount[2] = 'H'+this.outTotalRow;
+
+        //------------------------------------------------
+        STEP('S69c779af8f8846769c27ab4df6a4e993', '[15] GetSheetName');
+        this.varSheetBoolean = Excel.GetSheetName(this.getsheetname_info_15);
+
+        //------------------------------------------------
+        STEP('S05968dd99634478098533c136117660f', '[16] CopyWorkSheet');
+        try{
+            Excel.CopyWorkSheet(this.copyworksheet_info_16);
+        }catch(e){
+            Warn('CatchException: ' + e.message);
+            Warn('Call error handler: E_Error');
+            RunEvent('E_Error', {'sender':this, 'args':e});
+        }
+
+
+        //------------------------------------------------
+        STEP('S06be53a02dd54d90abc37f6b554b1a41', '[17] Block');
+        {
+
+            //------------------------------------------------
+            STEP('S59737f68c49e41adaf4f1b148911c8c2', '[18] CopyPaste');
+            Excel.CopyPaste(this.copypaste_info_18);
+
+            //------------------------------------------------
+            STEP('Sc77bfac748b54a1e8cfd336ad3b877cd', '[19] CopyPaste');
+            Excel.CopyPaste(this.copypaste_info_19);
+
+            //------------------------------------------------
+            STEP('S31e46e4cee1548d8a26c747ac940fa42', '[20] For');
+            for (this.i = 2; this.i <=this.outTotalRow; this.i++) {
+
+                //------------------------------------------------
+                STEP('Sc422c6d8a93a44a0aeda907ae65c190b', '[21] ReadRange');
+                this.varDayArray[0] = Excel.ReadRange(this.readrange_info_21);
+
+                //------------------------------------------------
+                STEP('S800d478d1d8d431482a04016c7d7d5bd', '[22] ReadRange');
+                this.varDayArray[1] = Excel.ReadRange(this.readrange_info_22);
+
+                //------------------------------------------------
+                STEP('Sa92be66d30c6407eaeede65ebb4e53df', '[23] ReadRange');
+                this.varDayArray[2] = Excel.ReadRange(this.readrange_info_23);
+
+                //------------------------------------------------
+                STEP('S8fb3d60d53bb4bbbb981055806e6f06a', '[24] Assign');
+                this.varDayArray[4] = '평일 : '+this.varDayArray[0]+'\n'+'토요일 : '+this.varDayArray[1]+
+                '\n'+'일요일/공휴일 : '+this.varDayArray[2]
+                ;
+
+                //------------------------------------------------
+                STEP('Sdde9ea6096df4331825785b0513836ae', '[25] WriteRange');
+                Excel.WriteRange(this.writerange_info_25);
+
+            //------------------------------------------------
+            }
+            STEP('S3f65fab716504a2cbcfbe21a0dd2e8a9', '[26] End-For');
+
+            //------------------------------------------------
+            STEP('Sb7392f42bc164e9ba12f432e6e51cfb9', '[27] CloseExcel');
+            Excel.CloseExcel(this.closeexcel_info_27);
+
+            //------------------------------------------------
+            STEP('S98ad27c753ce45c89411acee46ed662d', '[28] DeleteFile');
+            SystemLib.DeleteFile('C:\\Temp\\데이터excel.xls');
+
+        //------------------------------------------------
+        }
+        STEP('S7452064d618541ddbfe2d93e6c0f2394', '[29] End-Block');
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+        return {'outDraftExcelHandle':this.outDraftExcelHandle, 'outTotalRow':this.outTotalRow, 'outDraftSheetName':this.outDraftSheetName};
+    }
+}
+]]></JScript>
+  <Diagram version="1.200" layout="Horizontal" nodesize="Normal">
+    <Nodes>
+      <Node id="0" step_id="" container_id="" order="" type="StartNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="START" bounds="30,288,56,56" />
+      <Node id="1" step_id="" container_id="" order="" type="EndNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="END" bounds="2428,288,56,56" />
+      <Node id="2" step_id="417b1c3b-26da-4c57-8e58-9a52c30da6fb" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Excel준비단계" bounds="586,69,220,494" />
+      <Node id="3" step_id="Sccffa71e12314ce8bbae4055a56f2def" container_id="2" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="OpenExcel" bounds="592,93,208,74" />
+      <Node id="4" step_id="S076d638b347b49b9be73a5802fda1efc" container_id="2" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="OpenExcel" bounds="592,171,208,74" />
+      <Node id="5" step_id="Sd84517644ced4dae83fecba8749ff7e0" container_id="2" order="2" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="GetRowCount" bounds="592,249,208,74" />
+      <Node id="6" step_id="S911cd09b869d4f729f4e6472efa7775d" container_id="2" order="3" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="592,327,208,74" />
+      <Node id="7" step_id="S9efe20da512247fda84bc0aef40efe5d" container_id="2" order="4" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="592,405,208,74" />
+      <Node id="8" step_id="Se3af2016eb17436396eafd3aa5e93b86" container_id="2" order="5" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="592,483,208,74" />
+      <Node id="9" step_id="096a321d-2192-4028-bd9f-8d73b96b7e95" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="836,225,220,182" />
+      <Node id="10" step_id="S69c779af8f8846769c27ab4df6a4e993" container_id="9" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="GetSheetName" bounds="842,249,208,74" />
+      <Node id="11" step_id="S2115bb45a73746e7baa34c38ea081905" container_id="" order="" type="InvokeNode" invoke_type="Task" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="T_S_Date" bounds="366,260,190,112" />
+      <Node id="12" step_id="54b99104-d568-4076-8403-370beb1e1585" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="데이터 파일 가져오기" bounds="116,30,220,572" />
+      <Node id="13" step_id="Scf86680a2fb143a6879c73536acdad84" container_id="12" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="ChromeOpen" bounds="122,132,208,74" />
+      <Node id="14" step_id="Sc3be1e2853584b9fbcffa044760d7bcc" container_id="12" order="2" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="RightClick" bounds="122,210,208,74" />
+      <Node id="15" step_id="S663bbf0a301c4b7ea8c0d6f79884d578" container_id="12" order="3" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Click" bounds="122,288,208,74" />
+      <Node id="16" step_id="S6e07bb1ebef24992ada598e6ffa49cb3" container_id="12" order="4" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="TextInput" bounds="122,366,208,74" />
+      <Node id="17" step_id="S95b0a35354534b018184cdbbcd9de387" container_id="12" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="DeleteFile" bounds="122,54,208,74" />
+      <Node id="18" step_id="Sbe73c18d1b3e437abb95ae2228a225c0" container_id="12" order="6" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="ChromeClose" bounds="122,522,208,74" />
+      <Node id="19" step_id="S05683a7270644279a94f269f3e7dce5d" container_id="12" order="5" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Delay" bounds="122,444,208,74" />
+      <Node id="20" step_id="S06be53a02dd54d90abc37f6b554b1a41" container_id="" order="" type="BlockNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="1086,279.5,35,73" />
+      <Node id="21" step_id="26021ff9-362c-44c4-9b87-aafe5e711770" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="1151,225,220,182" />
+      <Node id="22" step_id="S59737f68c49e41adaf4f1b148911c8c2" container_id="21" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="CopyPaste" bounds="1157,249,208,74" />
+      <Node id="23" step_id="Sc77bfac748b54a1e8cfd336ad3b877cd" container_id="21" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="CopyPaste" bounds="1157,327,208,74" />
+      <Node id="24" step_id="S31e46e4cee1548d8a26c747ac940fa42" container_id="" order="" type="LoopNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="1401,288,76,56" />
+      <Node id="25" step_id="64d2e917-1e41-46a3-a7b0-bddda5ecf0af" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="1507,147,220,338" />
+      <Node id="26" step_id="Sc422c6d8a93a44a0aeda907ae65c190b" container_id="25" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="ReadRange" bounds="1513,171,208,74" />
+      <Node id="27" step_id="S800d478d1d8d431482a04016c7d7d5bd" container_id="25" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="ReadRange" bounds="1513,249,208,74" />
+      <Node id="28" step_id="Sa92be66d30c6407eaeede65ebb4e53df" container_id="25" order="2" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="ReadRange" bounds="1513,327,208,74" />
+      <Node id="29" step_id="S8fb3d60d53bb4bbbb981055806e6f06a" container_id="25" order="3" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="1513,405,208,74" />
+      <Node id="30" step_id="46a1d2ce-a98b-45d4-a550-22e62d668908" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="1757,264,220,104" />
+      <Node id="31" step_id="Sdde9ea6096df4331825785b0513836ae" container_id="30" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="WriteRange" bounds="1763,288,208,74" />
+      <Node id="32" step_id="S3f65fab716504a2cbcfbe21a0dd2e8a9" container_id="" order="" type="EndLoopNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="2007,288,76,56" />
+      <Node id="33" step_id="S7452064d618541ddbfe2d93e6c0f2394" container_id="" order="" type="EndBlockNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="2363,279.5,35,73" />
+      <Node id="34" step_id="S05968dd99634478098533c136117660f" container_id="9" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="CopyWorkSheet" bounds="842,327,208,74" />
+      <Node id="35" step_id="a8037bfc-8c7b-4bff-9a4f-3019988a4508" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="2113,225,220,182" />
+      <Node id="36" step_id="Sb7392f42bc164e9ba12f432e6e51cfb9" container_id="35" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="CloseExcel" bounds="2119,249,208,74" />
+      <Node id="37" step_id="S98ad27c753ce45c89411acee46ed662d" container_id="35" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="DeleteFile" bounds="2119,327,208,74" />
+    </Nodes>
+    <Links>
+      <Link id="38" color="#FF888888" origin_node_id="2" dest_node_id="9" text="" bounds="803,313,36,6" points="806,316;836,316" />
+      <Link id="39" color="#FF888888" origin_node_id="11" dest_node_id="2" text="" bounds="553,313,36,6" points="556,316;586,316" />
+      <Link id="40" color="#FF888888" origin_node_id="12" dest_node_id="11" text="" bounds="333,313,36,6" points="336,316;366,316" />
+      <Link id="41" color="#FF888888" origin_node_id="0" dest_node_id="12" text="" bounds="83,313,36,6" points="86,316;116,316" />
+      <Link id="42" color="#FF888888" origin_node_id="20" dest_node_id="21" text="" bounds="1118,313,36,6" points="1121,316;1151,316" />
+      <Link id="43" color="#FF888888" origin_node_id="21" dest_node_id="24" text="" bounds="1368,313,36,6" points="1371,316;1401,316" />
+      <Link id="44" color="#FF6868E1" origin_node_id="24" dest_node_id="25" text="" bounds="1474,313,36,6" points="1477,316;1507,316" />
+      <Link id="45" color="#FF888888" origin_node_id="25" dest_node_id="30" text="" bounds="1724,313,36,6" points="1727,316;1757,316" />
+      <Link id="46" color="#FF888888" origin_node_id="30" dest_node_id="32" text="" bounds="1974,313,36,6" points="1977,316;2007,316" />
+      <Link id="47" color="#FF888888" origin_node_id="9" dest_node_id="20" text="" bounds="1053,313,36,6" points="1056,316;1086,316" />
+      <Link id="48" color="#FF888888" origin_node_id="33" dest_node_id="1" text="" bounds="2395,313,36,6" points="2398,316;2428,316" />
+      <Link id="49" color="#FF888888" origin_node_id="32" dest_node_id="35" text="" bounds="2080,313,36,6" points="2083,316;2113,316" />
+      <Link id="50" color="#FF888888" origin_node_id="35" dest_node_id="33" text="" bounds="2330,313,36,6" points="2333,316;2363,316" />
+    </Links>
+  </Diagram>
+</Process>

@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="105365.671875pt" height="15181.9189453125pt" viewBox="-43.1692913385827 -43.1692913385827 105365.669291339 15181.9192913387" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+  </defs>
+  <path d="M64.4999923706055,225.374984741211 C64.4999923706055,236.972961425781 55.0979766845703,246.374984741211 43.5000038146973,246.375 C31.902027130127,246.375 22.5000057220459,236.97297668457 22.4999980926514,225.375 L22.5,225.375015258789 C22.4999885559082,213.77702331543 31.9020004272461,204.375 43.4999656677246,204.375 C55.0979461669922,204.374969482422 64.4999771118164,213.776977539063 64.4999923706055,225.374984741211 C64.4999923706055,225.374984741211 64.4999923706055,225.375 64.4999923706055,225.375 " stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <text x="3.66602230072021" y="33.736442565918" dx="0" dy="0" font-family="Arial" font-size="9.74999970942737pt" fill="#7C7C7C" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 22.5 204.375)">START</text>
+  <path d="M64.4999923706055,225.374984741211 C64.4999923706055,236.972961425781 55.0979766845703,246.374984741211 43.5000038146973,246.375 C31.902027130127,246.375 22.5000057220459,236.97297668457 22.4999980926514,225.375 L22.5,225.375015258789 C22.4999885559082,213.77702331543 31.9020004272461,204.375 43.4999656677246,204.375 C55.0979461669922,204.374969482422 64.4999771118164,213.776977539063 64.4999923706055,225.374984741211 C64.4999923706055,225.374984741211 64.4999923706055,225.375 64.4999923706055,225.375 " stroke="#707070" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M1514.99987792969,225.374984741211 C1514.99987792969,236.972961425781 1505.59790039063,246.374984741211 1494,246.375 C1482.40197753906,246.375 1473,236.97297668457 1472.99987792969,225.375 L1473,225.375015258789 C1472.99987792969,213.77702331543 1482.40197753906,204.375 1493.99987792969,204.375 C1505.59790039063,204.374969482422 1514.99987792969,213.776977539063 1514.99987792969,225.374984741211 C1514.99987792969,225.374984741211 1514.99987792969,225.375 1514.99987792969,225.375 " stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <text x="10.6526889801025" y="33.736442565918" dx="0" dy="0" font-family="Arial" font-size="9.74999970942737pt" fill="#7C7C7C" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 1473 204.375)">END</text>
+  <path d="M1514.99987792969,225.374984741211 C1514.99987792969,236.972961425781 1505.59790039063,246.374984741211 1494,246.375 C1482.40197753906,246.375 1473,236.97297668457 1472.99987792969,225.375 L1473,225.375015258789 C1472.99987792969,213.77702331543 1482.40197753906,204.375 1493.99987792969,204.375 C1505.59790039063,204.374969482422 1514.99987792969,213.776977539063 1514.99987792969,225.374984741211 C1514.99987792969,225.374984741211 1514.99987792969,225.375 1514.99987792969,225.375 " stroke="#707070" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M104.25,204.375 L131.25,204.375 L131.25,244.875 L104.25,244.875 L90.75,231.375 L90.75,217.875  z" stroke="none" fill="#B4B4E4" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M104.25,204.375 L131.25,204.375 L131.25,244.875 L104.25,244.875 L90.75,231.375 L90.75,217.875  z" stroke="#6868E1" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M136.5,203.25 L136.5,246 " stroke="#6868E1" fill="none" stroke-width="10" stroke-opacity="1" />
+  <path d="M138.75,221.625 L133.5,224.625 L138.75,227.625  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="0.6" />
+  <text x="-1.97633850574493" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#666666" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 107.883750915527 219.824996948242)">For</text>
+  <text x="-5.73133850097656" y="14" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="10.4999996870756pt" fill="#666666" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 110.669998168945 185.835006713867)">열</text>
+  <path d="M1406.25,204.375 L1433.25,204.375 L1446.75,217.875 L1446.75,231.375 L1433.25,244.875 L1406.25,244.875  z" stroke="none" fill="#B4B4E4" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M1406.25,204.375 L1433.25,204.375 L1446.75,217.875 L1446.75,231.375 L1433.25,244.875 L1406.25,244.875  z" stroke="#6868E1" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M1401,203.25 L1401,246 " stroke="#6868E1" fill="none" stroke-width="10" stroke-opacity="1" />
+  <path d="M1398.75,221.625 L1404,224.625 L1398.75,227.625  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="0.6" />
+  <text x="-1.97633850574493" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#666666" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 1420.0087890625 219.824996948242)">For</text>
+  <path d="M530.25,204.375 L557.25,204.375 L557.25,244.875 L530.25,244.875 L516.75,231.375 L516.75,217.875  z" stroke="none" fill="#B4B4E4" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M530.25,204.375 L557.25,204.375 L557.25,244.875 L530.25,244.875 L516.75,231.375 L516.75,217.875  z" stroke="#6868E1" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M562.5,203.25 L562.5,246 " stroke="#6868E1" fill="none" stroke-width="10" stroke-opacity="1" />
+  <path d="M564.75,221.625 L559.5,224.625 L564.75,227.625  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="0.6" />
+  <text x="-1.97633850574493" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#666666" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 533.883728027344 219.824996948242)">For</text>
+  <text x="-5.73133850097656" y="14" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="10.4999996870756pt" fill="#666666" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 536.669982910156 185.835006713867)">행</text>
+  <path d="M1326.75,204.375 L1353.75,204.375 L1367.25,217.875 L1367.25,231.375 L1353.75,244.875 L1326.75,244.875  z" stroke="none" fill="#B4B4E4" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M1326.75,204.375 L1353.75,204.375 L1367.25,217.875 L1367.25,231.375 L1353.75,244.875 L1326.75,244.875  z" stroke="#6868E1" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M1321.5,203.25 L1321.5,246 " stroke="#6868E1" fill="none" stroke-width="10" stroke-opacity="1" />
+  <path d="M1319.25,221.625 L1324.5,224.625 L1319.25,227.625  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="0.6" />
+  <text x="-1.97633850574493" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#666666" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 1340.5087890625 219.824996948242)">For</text>
+  <path d="M616.5,204.375 L637.5,225.375 L616.5,246.375 L595.5,225.375  z" stroke="none" fill="#93D1CF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M616.5,204.375 L637.5,225.375 L616.5,246.375 L595.5,225.375  z" stroke="#0DB2AD" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M642.75,203.25 L642.75,247.125 " stroke="#0DB2AD" fill="none" stroke-width="10" stroke-opacity="1" />
+  <path d="M645,222.375 L639.75,225.375 L645,228.375  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="0.6" />
+  <text x="8.01032829284668" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#000000" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 606.483764648438 214.274993896484)">If</text>
+  <text x="-2.28633832931519" y="24.7999992370605" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#000000" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 606.483764648438 214.274993896484)">Then</text>
+  <text x="-5.73133850097656" y="14" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="10.4999996870756pt" fill="#666666" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 586.013732910156 185.835006713867)">값이 달라졌다면</text>
+  <path d="M1287.375,225 C1287.375,236.18376159668 1278.30871582031,245.25 1267.125,245.25 C1255.94116210938,245.25 1246.875,236.18376159668 1246.875,225 C1246.875,213.816223144531 1255.94116210938,204.75 1267.125,204.75 C1278.30871582031,204.75 1287.375,213.816223144531 1287.375,225 " stroke="none" fill="#93D1CF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M1287.375,225 C1287.375,236.18376159668 1278.30871582031,245.25 1267.125,245.25 C1255.94116210938,245.25 1246.875,236.18376159668 1246.875,225 C1246.875,213.816223144531 1255.94116210938,204.75 1267.125,204.75 C1278.30871582031,204.75 1287.375,213.816223144531 1287.375,225 " stroke="#0DB2AD" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M1242,203.25 L1242,247.125 " stroke="#0DB2AD" fill="none" stroke-width="10" stroke-opacity="1" />
+  <path d="M1239.75,222.375 L1245,225.375 L1239.75,228.375  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="0.6" />
+  <text x="8.01032829284668" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#000000" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 1257.85876464844 214.274993896484)">If</text>
+  <text x="-2.28633832931519" y="24.7999992370605" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#000000" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 1257.85876464844 214.274993896484)">Then</text>
+  <path d="M672,22.5 L837,22.5 L837,428.25 L672,428.25  z" stroke="none" fill="#A2D3D2" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M676.5,26.3250007629395 L804,26.3250007629395 L804,37.4249992370605 L676.5,37.4249992370605  z" stroke="none" fill="none" fill-rule="evenodd" stroke-width="0" fill-opacity="0" />
+  <text x="-2.27633857727051" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 676.5 26.3250007629395)">Switch</text>
+  <path d="M676.5,41.25 L832.5,41.25 L832.5,59.25 L676.5,59.25  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <text x="-1.15033853054047" y="11" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="8.24999975413085pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 680.25 44.1450004577637)">( </text>
+  <text x="-1.3648384809494" y="11" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="8.24999975413085pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 684.885009765625 44.1450004577637)">this.varCol</text>
+  <text x="-0.523338556289673" y="11" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="8.24999975413085pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 725.695007324219 44.1450004577637)"> </text>
+  <text x="1.31299471855164" y="11" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="8.24999975413085pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 725.695007324219 44.1450004577637)">)</text>
+  <path d="M672.375,22.875 L836.625,22.875 L836.625,427.875 L672.375,427.875  z" stroke="#B6B6B6" fill="none" stroke-width="1" stroke-opacity="1" />
+  <path d="M676.5,383.25 L832.5,383.25 L832.5,423.75 L676.5,423.75  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M676.5,383.25 L832.5,383.25 L832.5,384 L676.5,384  z" stroke="none" fill="#EDF2F2" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,383.25 L695.625,404.25 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M695.625,403.5 L758.25,403.5 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M754.5,400.5 L759.75,403.5 L754.5,406.5  z" stroke="none" fill="#17B1AD" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M762.75,390.375 L768.75,390.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,389.399993896484 L762.75,418.5 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,417.375 L768.75,417.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,390.375 L830.25,390.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M830.25,389.399993896484 L830.25,418.5 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,417.375 L830.25,417.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <text x="-2.72633838653564" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 688.5 407.399993896484)">Default</text>
+  <text x="-3.17633867263794" y="14" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="10.4999996870756pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 793.586242675781 391.991241455078)">1</text>
+  <text x="-0.463338613510132" y="8" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="5.99999982118607pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 786.663757324219 407.53125)">Item(s)</text>
+  <path d="M676.5,59.25 L832.5,59.25 L832.5,99.75 L676.5,99.75  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M676.5,59.25 L832.5,59.25 L832.5,60 L676.5,60  z" stroke="none" fill="#EDF2F2" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,77.25 L695.625,100.5 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M695.625,79.5 L758.25,79.5 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M754.5,76.5 L759.75,79.5 L754.5,82.5  z" stroke="none" fill="#17B1AD" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,66 L710.25,79.5 L695.625,93 L681,79.5  z" stroke="none" fill="#8BCACB" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,66 L710.25,79.5 L695.625,93 L681,79.5  z" stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M762.75,66.375 L768.75,66.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,65.3999938964844 L762.75,94.5 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,93.375 L768.75,93.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,66.375 L830.25,66.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M830.25,65.3999938964844 L830.25,94.5 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,93.375 L830.25,93.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <text x="-2.48133850097656" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 687 73.5749969482422)">Case</text>
+  <text x="-2.34383869171143" y="11" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="8.24999975413085pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 727.085021972656 67.7699966430664)">0</text>
+  <text x="-3.17633867263794" y="14" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="10.4999996870756pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 793.586242675781 67.9912490844727)">1</text>
+  <text x="-0.463338613510132" y="8" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="5.99999982118607pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 786.663757324219 83.53125)">Item(s)</text>
+  <path d="M676.5,99.75 L832.5,99.75 L832.5,140.25 L676.5,140.25  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M676.5,99.75 L832.5,99.75 L832.5,100.5 L676.5,100.5  z" stroke="none" fill="#EDF2F2" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,99.75 L695.625,120.75 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M695.625,117.75 L695.625,141 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M695.625,120 L758.25,120 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M754.5,117 L759.75,120 L754.5,123  z" stroke="none" fill="#17B1AD" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,106.5 L710.25,120 L695.625,133.5 L681,120  z" stroke="none" fill="#8BCACB" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,106.5 L710.25,120 L695.625,133.5 L681,120  z" stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M762.75,106.875 L768.75,106.875 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,105.899993896484 L762.75,135 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,133.875 L768.75,133.875 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,106.875 L830.25,106.875 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M830.25,105.899993896484 L830.25,135 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,133.875 L830.25,133.875 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <text x="-2.48133850097656" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 687 114.074996948242)">Case</text>
+  <text x="-2.34383869171143" y="11" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="8.24999975413085pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 727.085021972656 108.269996643066)">1</text>
+  <text x="-3.17633867263794" y="14" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="10.4999996870756pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 793.586242675781 108.491249084473)">1</text>
+  <text x="-0.463338613510132" y="8" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="5.99999982118607pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 786.663757324219 124.03125)">Item(s)</text>
+  <path d="M676.5,140.25 L832.5,140.25 L832.5,180.75 L676.5,180.75  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M676.5,140.25 L832.5,140.25 L832.5,141 L676.5,141  z" stroke="none" fill="#EDF2F2" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,140.25 L695.625,161.25 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M695.625,158.25 L695.625,181.5 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M695.625,160.5 L758.25,160.5 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M754.5,157.5 L759.75,160.5 L754.5,163.5  z" stroke="none" fill="#17B1AD" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,147 L710.25,160.5 L695.625,174 L681,160.5  z" stroke="none" fill="#8BCACB" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,147 L710.25,160.5 L695.625,174 L681,160.5  z" stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M762.75,147.375 L768.75,147.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,146.399993896484 L762.75,175.5 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,174.375 L768.75,174.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,147.375 L830.25,147.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M830.25,146.399993896484 L830.25,175.5 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,174.375 L830.25,174.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <text x="-2.48133850097656" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 687 154.574996948242)">Case</text>
+  <text x="-2.34383869171143" y="11" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="8.24999975413085pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 727.085021972656 148.770004272461)">2</text>
+  <text x="-3.17633867263794" y="14" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="10.4999996870756pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 793.586242675781 148.991256713867)">1</text>
+  <text x="-0.463338613510132" y="8" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="5.99999982118607pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 786.663757324219 164.53125)">Item(s)</text>
+  <path d="M676.5,261.75 L832.5,261.75 L832.5,302.25 L676.5,302.25  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M676.5,261.75 L832.5,261.75 L832.5,262.5 L676.5,262.5  z" stroke="none" fill="#EDF2F2" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,261.75 L695.625,282.75 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M695.625,279.75 L695.625,303 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M695.625,282 L758.25,282 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M754.5,279 L759.75,282 L754.5,285  z" stroke="none" fill="#17B1AD" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,268.5 L710.25,282 L695.625,295.5 L681,282  z" stroke="none" fill="#8BCACB" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,268.5 L710.25,282 L695.625,295.5 L681,282  z" stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M762.75,268.875 L768.75,268.875 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,267.899993896484 L762.75,297 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,295.875 L768.75,295.875 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,268.875 L830.25,268.875 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M830.25,267.899993896484 L830.25,297 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,295.875 L830.25,295.875 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <text x="-2.48133850097656" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 687 276.075012207031)">Case</text>
+  <text x="-2.34383869171143" y="11" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="8.24999975413085pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 727.085021972656 270.269989013672)">5</text>
+  <text x="-3.17633867263794" y="14" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="10.4999996870756pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 793.586242675781 270.491241455078)">1</text>
+  <text x="-0.463338613510132" y="8" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="5.99999982118607pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 786.663757324219 286.03125)">Item(s)</text>
+  <path d="M676.5,221.25 L832.5,221.25 L832.5,261.75 L676.5,261.75  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M676.5,221.25 L832.5,221.25 L832.5,222 L676.5,222  z" stroke="none" fill="#EDF2F2" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,221.25 L695.625,242.25 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M695.625,239.25 L695.625,262.5 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M695.625,241.5 L758.25,241.5 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M754.5,238.5 L759.75,241.5 L754.5,244.5  z" stroke="none" fill="#17B1AD" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,228 L710.25,241.5 L695.625,255 L681,241.5  z" stroke="none" fill="#8BCACB" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,228 L710.25,241.5 L695.625,255 L681,241.5  z" stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M762.75,228.375 L768.75,228.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,227.399993896484 L762.75,256.5 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,255.375 L768.75,255.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,228.375 L830.25,228.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M830.25,227.399993896484 L830.25,256.5 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,255.375 L830.25,255.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <text x="-2.48133850097656" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 687 235.574996948242)">Case</text>
+  <text x="-2.34383869171143" y="11" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="8.24999975413085pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 727.085021972656 229.770004272461)">4</text>
+  <text x="-3.17633867263794" y="14" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="10.4999996870756pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 793.586242675781 229.991256713867)">1</text>
+  <text x="-0.463338613510132" y="8" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="5.99999982118607pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 786.663757324219 245.53125)">Item(s)</text>
+  <path d="M676.5,180.75 L832.5,180.75 L832.5,221.25 L676.5,221.25  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M676.5,180.75 L832.5,180.75 L832.5,181.5 L676.5,181.5  z" stroke="none" fill="#EDF2F2" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,180.75 L695.625,201.75 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M695.625,198.75 L695.625,222 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M695.625,201 L758.25,201 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M754.5,198 L759.75,201 L754.5,204  z" stroke="none" fill="#17B1AD" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,187.5 L710.25,201 L695.625,214.5 L681,201  z" stroke="none" fill="#8BCACB" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,187.5 L710.25,201 L695.625,214.5 L681,201  z" stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M762.75,187.875 L768.75,187.875 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,186.899993896484 L762.75,216 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,214.875 L768.75,214.875 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,187.875 L830.25,187.875 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M830.25,186.899993896484 L830.25,216 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,214.875 L830.25,214.875 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <text x="-2.48133850097656" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 687 195.074996948242)">Case</text>
+  <text x="-2.34383869171143" y="11" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="8.24999975413085pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 727.085021972656 189.270004272461)">3</text>
+  <text x="-3.17633867263794" y="14" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="10.4999996870756pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 793.586242675781 189.491256713867)">1</text>
+  <text x="-0.463338613510132" y="8" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="5.99999982118607pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 786.663757324219 205.03125)">Item(s)</text>
+  <path d="M676.5,342.75 L832.5,342.75 L832.5,383.25 L676.5,383.25  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M676.5,342.75 L832.5,342.75 L832.5,343.5 L676.5,343.5  z" stroke="none" fill="#EDF2F2" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,342.75 L695.625,363.75 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M695.625,360.75 L695.625,384 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M695.625,363 L758.25,363 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M754.5,360 L759.75,363 L754.5,366  z" stroke="none" fill="#17B1AD" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,349.5 L710.25,363 L695.625,376.5 L681,363  z" stroke="none" fill="#8BCACB" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,349.5 L710.25,363 L695.625,376.5 L681,363  z" stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M762.75,349.875 L768.75,349.875 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,348.899993896484 L762.75,378 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,376.875 L768.75,376.875 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,349.875 L830.25,349.875 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M830.25,348.899993896484 L830.25,378 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,376.875 L830.25,376.875 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <text x="-2.48133850097656" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 687 357.075012207031)">Case</text>
+  <text x="-2.34383869171143" y="11" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="8.24999975413085pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 727.085021972656 351.269989013672)">7</text>
+  <text x="-3.17633867263794" y="14" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="10.4999996870756pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 793.586242675781 351.491241455078)">1</text>
+  <text x="-0.463338613510132" y="8" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="5.99999982118607pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 786.663757324219 367.03125)">Item(s)</text>
+  <path d="M676.5,302.25 L832.5,302.25 L832.5,342.75 L676.5,342.75  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M676.5,302.25 L832.5,302.25 L832.5,303 L676.5,303  z" stroke="none" fill="#EDF2F2" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,302.25 L695.625,323.25 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M695.625,320.25 L695.625,343.5 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M695.625,322.5 L758.25,322.5 " stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M754.5,319.5 L759.75,322.5 L754.5,325.5  z" stroke="none" fill="#17B1AD" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,309 L710.25,322.5 L695.625,336 L681,322.5  z" stroke="none" fill="#8BCACB" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M695.625,309 L710.25,322.5 L695.625,336 L681,322.5  z" stroke="#17B1AD" fill="none" stroke-width="2" stroke-opacity="1" />
+  <path d="M762.75,309.375 L768.75,309.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,308.399993896484 L762.75,337.5 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M762.75,336.375 L768.75,336.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,309.375 L830.25,309.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M830.25,308.399993896484 L830.25,337.5 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <path d="M824.25,336.375 L830.25,336.375 " stroke="#68C6C4" fill="none" stroke-width="3" stroke-opacity="0.8980392" />
+  <text x="-2.48133850097656" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 687 316.575012207031)">Case</text>
+  <text x="-2.34383869171143" y="11" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="8.24999975413085pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 727.085021972656 310.769989013672)">6</text>
+  <text x="-3.17633867263794" y="14" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="10.4999996870756pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 793.586242675781 310.991241455078)">1</text>
+  <text x="-0.463338613510132" y="8" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="5.99999982118607pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 786.663757324219 326.53125)">Item(s)</text>
+  <path d="M859.5,157.125 L1024.5,157.125 L1024.5,293.625 L859.5,293.625  z" stroke="none" fill="#D6D6D6" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M859.5,175.125 L1006.5,175.125 L1006.5,293.625 L859.5,293.625  z" stroke="none" fill="#D6D6D6" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M864,160.020004272461 L1006.5,160.020004272461 L1006.5,172.229995727539 L864,172.229995727539  z" stroke="none" fill="none" fill-rule="evenodd" stroke-width="0" fill-opacity="0" />
+  <text x="-3.25683879852295" y="11" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="8.24999975413085pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 864 160.020004272461)">Untitled</text>
+  <image x="0" y="0" rx="0" ry="0" width="16" height="16" preserveAspectRatio="none meet" xlink:href="data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAF5JREFUWEftkEEKgEAMxPqm7gf9uVJwwIOIbrs9SAI59JShBgAAGdx9C8+zlwiPMfawfcQ13j7iLi6Xj3iKy2Uj3sRl+YgvcVk2YiYu0yMycTk9oiIu058AAIAfY3YALzalKet/UwUAAAAASUVORK5CYIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" id="Image0" transform="matrix(0.750000 0.000000 0.000000 0.750000 1009.5 160.125)" />
+  <path d="M859.875,157.5 L1024.125,157.5 L1024.125,293.25 L859.875,293.25  z" stroke="#B6B6B6" fill="none" stroke-width="1" stroke-opacity="1" />
+  <path d="M864,175.125 L1020,175.125 L1020,230.625 L864,230.625  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <text x="0.437161445617676" y="1.0016211271286" dx="0" dy="0" font-family="맑은 고딕" font-size="0.749999977648259pt" fill="none" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 864 175.125)">S2fcd6fb81ec14916940740c423254eac</text>
+  <path d="M864,175.125 L1020,175.125 L1020,230.625 L864,230.625  z" stroke="none" fill="none" fill-rule="evenodd" stroke-width="0" fill-opacity="0" />
+  <image x="0" y="0" rx="0" ry="0" width="14" height="14" preserveAspectRatio="none meet" xlink:href="data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAOhJREFUSEtjuHz5Mk0xVkFqYqyC1MRYBamJ4Yxz586JHjp0yIEaGGQWhgV79+4Nmzhx4n9qYKBZocPYAhifTMw4KC1gPnHihO6OHTsyTp8+LbtmzZpZixYt2jdz5sxH+/btC0JTS7oFMHEQPnLkiCWMDcJAuRA09YPQAuQMeP78eT5cGQqKyfJBKEgchIE+sIKxQRgoF4ymnnQLgC51nDNnzrUpU6Z8QbeAKpGMjC9cuMC/Z8+eqM2bN9etXLlyEdBCazQ1lFlABCZsAXIkkoMJWkANjNUCWmGsgtTEWAWpibEKUg9fZgAACQuwPIV8g1UAAAAASUVORK5CYII=" id="Image1" transform="matrix(0.750000 0.000000 0.000000 0.750000 864.75 175.875)" />
+  <text x="-2.68733835220337" y="11.9994535446167" dx="0" dy="0" font-family="맑은 고딕" font-size="8.99999973177911pt" fill="#333333" style="text-anchor:start" font-weight="bold" transform="matrix(0.750000 0.000000 0.000000 0.750000 868.5 199.154998779297)">SendDBCommand</text>
+  <text x="-1.17633855342865" y="7.01999998092651" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 868.5 220.875)">this.varResult</text>
+  <path d="M864,233.625 L1020,233.625 L1020,289.125 L864,289.125  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <text x="0.437161445617676" y="1.0016211271286" dx="0" dy="0" font-family="맑은 고딕" font-size="0.749999977648259pt" fill="none" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 864 233.625)">S1b1bf6a57507492392c69780b6e14ce4</text>
+  <path d="M864,233.625 L1020,233.625 L1020,289.125 L864,289.125  z" stroke="none" fill="none" fill-rule="evenodd" stroke-width="0" fill-opacity="0" />
+  <image x="0" y="0" rx="0" ry="0" width="14" height="14" preserveAspectRatio="none meet" xlink:href="data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAS1JREFUSEvtlTFOhEAUhre38QgewSN4E/cS1noEQiiAhAAlJYSKxkgiDQUkFDYWe4RtrHX/4iUzw7+zaGastviK9w+8LzOEN7tlWf4VGvqEhj6hoU9oKFRVVXRdt2drf4WGALIgCL6BSykNVZlr6SpgMmGrdBiG+6ZpnsdxvDPXtMImE9I0/SjL8tVGlmWTPH/qmfd9/0CF2IHanCHCoijeUCdJ8nlBWKg71YTAJlWPdJ7nG2Rt2z6p7wMcaV3XL9M03ZprWiEwqfn9bEIbNASq1JQB50IAEZMBL0IbV+E5aLiFq/AcNNyCTYhRhmlj5mAVbEWEYRh+YYypyCWQ5/n76T9+VN/TmvwGEV4iiqKjOjxWjVyA6yiO4wObUlrhCnZLCDT0CQ19QkN/LLsf+uSpaSfkDUEAAAAASUVORK5CYII=" id="Image2" transform="matrix(0.750000 0.000000 0.000000 0.750000 864.75 234.375)" />
+  <text x="-3.51533842086792" y="11.9994535446167" dx="0" dy="0" font-family="맑은 고딕" font-size="8.99999973177911pt" fill="#333333" style="text-anchor:start" font-weight="bold" transform="matrix(0.750000 0.000000 0.000000 0.750000 868.5 257.654998779297)">Assign</text>
+  <text x="-1.17633855342865" y="7.01999998092651" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 868.5 279.375)">this.varSQLStatement</text>
+  <path d="M190.5,204.375 L211.5,225.375 L190.5,246.375 L169.5,225.375  z" stroke="none" fill="#93D1CF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M190.5,204.375 L211.5,225.375 L190.5,246.375 L169.5,225.375  z" stroke="#0DB2AD" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M216.75,203.25 L216.75,247.125 " stroke="#0DB2AD" fill="none" stroke-width="10" stroke-opacity="1" />
+  <path d="M219,222.375 L213.75,225.375 L219,228.375  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="0.6" />
+  <text x="8.01032829284668" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#000000" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 180.483749389648 214.274993896484)">If</text>
+  <text x="-2.28633832931519" y="24.7999992370605" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#000000" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 180.483749389648 214.274993896484)">Then</text>
+  <text x="-4.10033845901489" y="14" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="10.4999996870756pt" fill="#666666" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 149.429992675781 170.294998168945)">DB </text>
+  <text x="16.2186622619629" y="14" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="10.4999996870756pt" fill="#666666" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 149.429992675781 170.294998168945)">열 마지막 도달 시 </text>
+  <text x="38.0563278198242" y="34.7200012207031" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="10.4999996870756pt" fill="#666666" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 149.429992675781 170.294998168945)">Break</text>
+  <path d="M486.375,225 C486.375,236.18376159668 477.308746337891,245.25 466.125,245.25 C454.941223144531,245.25 445.875,236.18376159668 445.875,225 C445.875,213.816223144531 454.941223144531,204.75 466.125,204.75 C477.308746337891,204.75 486.375,213.816223144531 486.375,225 " stroke="none" fill="#93D1CF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M486.375,225 C486.375,236.18376159668 477.308746337891,245.25 466.125,245.25 C454.941223144531,245.25 445.875,236.18376159668 445.875,225 C445.875,213.816223144531 454.941223144531,204.75 466.125,204.75 C477.308746337891,204.75 486.375,213.816223144531 486.375,225 " stroke="#0DB2AD" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M441,203.25 L441,247.125 " stroke="#0DB2AD" fill="none" stroke-width="10" stroke-opacity="1" />
+  <path d="M438.75,222.375 L444,225.375 L438.75,228.375  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="0.6" />
+  <text x="8.01032829284668" y="10" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#000000" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 456.858764648438 214.274993896484)">If</text>
+  <text x="-2.28633832931519" y="24.7999992370605" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#000000" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 456.858764648438 214.274993896484)">Then</text>
+  <path d="M246,157.125 L411,157.125 L411,293.625 L246,293.625  z" stroke="none" fill="#D6D6D6" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M246,175.125 L393,175.125 L393,293.625 L246,293.625  z" stroke="none" fill="#D6D6D6" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M250.5,160.020004272461 L393,160.020004272461 L393,172.229995727539 L250.5,172.229995727539  z" stroke="none" fill="none" fill-rule="evenodd" stroke-width="0" fill-opacity="0" />
+  <text x="-3.25683879852295" y="11" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="8.24999975413085pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 250.5 160.020004272461)">Untitled</text>
+  <image x="0" y="0" rx="0" ry="0" width="16" height="16" preserveAspectRatio="none meet" xlink:href="data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAF5JREFUWEftkEEKgEAMxPqm7gf9uVJwwIOIbrs9SAI59JShBgAAGdx9C8+zlwiPMfawfcQ13j7iLi6Xj3iKy2Uj3sRl+YgvcVk2YiYu0yMycTk9oiIu058AAIAfY3YALzalKet/UwUAAAAASUVORK5CYIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" id="Image3" transform="matrix(0.750000 0.000000 0.000000 0.750000 396 160.125)" />
+  <path d="M246.375,157.5 L410.625,157.5 L410.625,293.25 L246.375,293.25  z" stroke="#B6B6B6" fill="none" stroke-width="1" stroke-opacity="1" />
+  <path d="M250.5,233.625 L406.5,233.625 L406.5,289.125 L250.5,289.125  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <text x="0.437161445617676" y="1.0016211271286" dx="0" dy="0" font-family="맑은 고딕" font-size="0.749999977648259pt" fill="none" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 250.5 233.625)">Sc0c883fe28434d3ca1d6d789c02f4f51</text>
+  <path d="M250.5,233.625 L406.5,233.625 L406.5,289.125 L250.5,289.125  z" stroke="none" fill="none" fill-rule="evenodd" stroke-width="0" fill-opacity="0" />
+  <image x="0" y="0" rx="0" ry="0" width="14" height="14" preserveAspectRatio="none meet" xlink:href="data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAS1JREFUSEvtlTFOhEAUhre38QgewSN4E/cS1noEQiiAhAAlJYSKxkgiDQUkFDYWe4RtrHX/4iUzw7+zaGastviK9w+8LzOEN7tlWf4VGvqEhj6hoU9oKFRVVXRdt2drf4WGALIgCL6BSykNVZlr6SpgMmGrdBiG+6ZpnsdxvDPXtMImE9I0/SjL8tVGlmWTPH/qmfd9/0CF2IHanCHCoijeUCdJ8nlBWKg71YTAJlWPdJ7nG2Rt2z6p7wMcaV3XL9M03ZprWiEwqfn9bEIbNASq1JQB50IAEZMBL0IbV+E5aLiFq/AcNNyCTYhRhmlj5mAVbEWEYRh+YYypyCWQ5/n76T9+VN/TmvwGEV4iiqKjOjxWjVyA6yiO4wObUlrhCnZLCDT0CQ19QkN/LLsf+uSpaSfkDUEAAAAASUVORK5CYII=" id="Image4" transform="matrix(0.750000 0.000000 0.000000 0.750000 251.25 234.375)" />
+  <text x="-3.11333847045898" y="11.9994535446167" dx="0" dy="0" font-family="맑은 고딕" font-size="8.99999973177911pt" fill="#333333" style="text-anchor:start" font-weight="bold" transform="matrix(0.750000 0.000000 0.000000 0.750000 255 257.654998779297)">Break</text>
+  <path d="M250.5,175.125 L406.5,175.125 L406.5,230.625 L250.5,230.625  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <text x="0.437161445617676" y="1.0016211271286" dx="0" dy="0" font-family="맑은 고딕" font-size="0.749999977648259pt" fill="none" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 250.5 175.125)">S3c7d3421e57d4a01b5f94e1cf869cb1f</text>
+  <path d="M250.5,175.125 L406.5,175.125 L406.5,230.625 L250.5,230.625  z" stroke="none" fill="none" fill-rule="evenodd" stroke-width="0" fill-opacity="0" />
+  <image x="0" y="0" rx="0" ry="0" width="14" height="14" preserveAspectRatio="none meet" xlink:href="data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAS1JREFUSEvtlTFOhEAUhre38QgewSN4E/cS1noEQiiAhAAlJYSKxkgiDQUkFDYWe4RtrHX/4iUzw7+zaGastviK9w+8LzOEN7tlWf4VGvqEhj6hoU9oKFRVVXRdt2drf4WGALIgCL6BSykNVZlr6SpgMmGrdBiG+6ZpnsdxvDPXtMImE9I0/SjL8tVGlmWTPH/qmfd9/0CF2IHanCHCoijeUCdJ8nlBWKg71YTAJlWPdJ7nG2Rt2z6p7wMcaV3XL9M03ZprWiEwqfn9bEIbNASq1JQB50IAEZMBL0IbV+E5aLiFq/AcNNyCTYhRhmlj5mAVbEWEYRh+YYypyCWQ5/n76T9+VN/TmvwGEV4iiqKjOjxWjVyA6yiO4wObUlrhCnZLCDT0CQ19QkN/LLsf+uSpaSfkDUEAAAAASUVORK5CYII=" id="Image5" transform="matrix(0.750000 0.000000 0.000000 0.750000 251.25 175.875)" />
+  <text x="-3.51533842086792" y="11.9994535446167" dx="0" dy="0" font-family="맑은 고딕" font-size="8.99999973177911pt" fill="#333333" style="text-anchor:start" font-weight="bold" transform="matrix(0.750000 0.000000 0.000000 0.750000 255 199.154998779297)">Assign</text>
+  <text x="-1.17633855342865" y="7.01999998092651" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 255 220.875)">this.outRow</text>
+  <path d="M1047,186.375 L1212,186.375 L1212,264.375 L1047,264.375  z" stroke="none" fill="#D6D6D6" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M1047,204.375 L1194,204.375 L1194,264.375 L1047,264.375  z" stroke="none" fill="#D6D6D6" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M1051.5,189.270004272461 L1194,189.270004272461 L1194,201.479995727539 L1051.5,201.479995727539  z" stroke="none" fill="none" fill-rule="evenodd" stroke-width="0" fill-opacity="0" />
+  <text x="-3.25683879852295" y="11" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="8.24999975413085pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 1051.5 189.270004272461)">Untitled</text>
+  <image x="0" y="0" rx="0" ry="0" width="16" height="16" preserveAspectRatio="none meet" xlink:href="data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAF5JREFUWEftkEEKgEAMxPqm7gf9uVJwwIOIbrs9SAI59JShBgAAGdx9C8+zlwiPMfawfcQ13j7iLi6Xj3iKy2Uj3sRl+YgvcVk2YiYu0yMycTk9oiIu058AAIAfY3YALzalKet/UwUAAAAASUVORK5CYIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" id="Image6" transform="matrix(0.750000 0.000000 0.000000 0.750000 1197 189.375)" />
+  <path d="M1047.375,186.75 L1211.625,186.75 L1211.625,264 L1047.375,264  z" stroke="#B6B6B6" fill="none" stroke-width="1" stroke-opacity="1" />
+  <path d="M1051.5,204.375 L1207.5,204.375 L1207.5,259.875 L1051.5,259.875  z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <text x="0.437161445617676" y="1.0016211271286" dx="0" dy="0" font-family="맑은 고딕" font-size="0.749999977648259pt" fill="none" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 1051.5 204.375)">Sb6f238a041534698a7084565675b2899</text>
+  <path d="M1051.5,204.375 L1207.5,204.375 L1207.5,259.875 L1051.5,259.875  z" stroke="none" fill="none" fill-rule="evenodd" stroke-width="0" fill-opacity="0" />
+  <image x="0" y="0" rx="0" ry="0" width="14" height="14" preserveAspectRatio="none meet" xlink:href="data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAS1JREFUSEvtlTFOhEAUhre38QgewSN4E/cS1noEQiiAhAAlJYSKxkgiDQUkFDYWe4RtrHX/4iUzw7+zaGastviK9w+8LzOEN7tlWf4VGvqEhj6hoU9oKFRVVXRdt2drf4WGALIgCL6BSykNVZlr6SpgMmGrdBiG+6ZpnsdxvDPXtMImE9I0/SjL8tVGlmWTPH/qmfd9/0CF2IHanCHCoijeUCdJ8nlBWKg71YTAJlWPdJ7nG2Rt2z6p7wMcaV3XL9M03ZprWiEwqfn9bEIbNASq1JQB50IAEZMBL0IbV+E5aLiFq/AcNNyCTYhRhmlj5mAVbEWEYRh+YYypyCWQ5/n76T9+VN/TmvwGEV4iiqKjOjxWjVyA6yiO4wObUlrhCnZLCDT0CQ19QkN/LLsf+uSpaSfkDUEAAAAASUVORK5CYII=" id="Image7" transform="matrix(0.750000 0.000000 0.000000 0.750000 1052.25 205.125)" />
+  <text x="-3.76733827590942" y="11.9994535446167" dx="0" dy="0" font-family="맑은 고딕" font-size="8.99999973177911pt" fill="#333333" style="text-anchor:start" font-weight="bold" transform="matrix(0.750000 0.000000 0.000000 0.750000 1056 228.404998779297)">Delay</text>
+  <text x="-0.681338548660278" y="7.01999998092651" dx="0" dy="0" font-family="Microsoft Sans Serif" font-size="7.49999977648259pt" fill="#333333" style="text-anchor:start" transform="matrix(0.750000 0.000000 0.000000 0.750000 1056 250.125)">.5 sec</text>
+  <path d="M64.5,225.375 L82.0124969482422,225.375 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M87,225.374984741211 L82.0124969482422,227.317489624023 L82.0124969482422,223.432495117188 L87,225.374984741211 " stroke="none" fill="#888888" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M87,225.374984741211 L82.0124969482422,227.317489624023 L82.0124969482422,223.432495117188 L87,225.374984741211 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M1450.5,225.375 L1468.01245117188,225.375 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M1473,225.374984741211 L1468.01245117188,227.317489624023 L1468.01245117188,223.432495117188 L1473,225.374984741211 " stroke="none" fill="#888888" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M1473,225.374984741211 L1468.01245117188,227.317489624023 L1468.01245117188,223.432495117188 L1473,225.374984741211 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M1291.5,225.375 L1309.01245117188,225.375 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M1314,225.374984741211 L1309.01245117188,227.317489624023 L1309.01245117188,223.432495117188 L1314,225.374984741211 " stroke="none" fill="#888888" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M1314,225.374984741211 L1309.01245117188,227.317489624023 L1309.01245117188,223.432495117188 L1314,225.374984741211 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M570,225.375 L587.512451171875,225.375 " stroke="#6868E1" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M592.5,225.374984741211 L587.512451171875,227.317489624023 L587.512451171875,223.432495117188 L592.5,225.374984741211 " stroke="none" fill="#6868E1" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M592.5,225.374984741211 L587.512451171875,227.317489624023 L587.512451171875,223.432495117188 L592.5,225.374984741211 " stroke="#6868E1" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M649.5,225.375 L667.012451171875,225.375 " stroke="#0DB2AD" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M672,225.374984741211 L667.012451171875,227.317489624023 L667.012451171875,223.432495117188 L672,225.374984741211 " stroke="none" fill="#0DB2AD" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M672,225.374984741211 L667.012451171875,227.317489624023 L667.012451171875,223.432495117188 L672,225.374984741211 " stroke="#0DB2AD" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M837,225.375 L854.512451171875,225.375 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M859.5,225.374984741211 L854.512451171875,227.317489624023 L854.512451171875,223.432495117188 L859.5,225.374984741211 " stroke="none" fill="#888888" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M859.5,225.374984741211 L854.512451171875,227.317489624023 L854.512451171875,223.432495117188 L859.5,225.374984741211 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M144,225.375 L161.512496948242,225.375 " stroke="#6868E1" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M166.5,225.374984741211 L161.512496948242,227.317489624023 L161.512496948242,223.432495117188 L166.5,225.374984741211 " stroke="none" fill="#6868E1" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M166.5,225.374984741211 L161.512496948242,227.317489624023 L161.512496948242,223.432495117188 L166.5,225.374984741211 " stroke="#6868E1" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M490.5,225.375 L508.012481689453,225.375 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M513,225.374984741211 L508.012481689453,227.317489624023 L508.012481689453,223.432495117188 L513,225.374984741211 " stroke="none" fill="#888888" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M513,225.374984741211 L508.012481689453,227.317489624023 L508.012481689453,223.432495117188 L513,225.374984741211 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M1371,225.375 L1388.51245117188,225.375 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M1393.5,225.374984741211 L1388.51245117188,227.317489624023 L1388.51245117188,223.432495117188 L1393.5,225.374984741211 " stroke="none" fill="#888888" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M1393.5,225.374984741211 L1388.51245117188,227.317489624023 L1388.51245117188,223.432495117188 L1393.5,225.374984741211 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M223.5,225.375 L241.012496948242,225.375 " stroke="#0DB2AD" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M246,225.374984741211 L241.012496948242,227.317489624023 L241.012496948242,223.432495117188 L246,225.374984741211 " stroke="none" fill="#0DB2AD" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M246,225.374984741211 L241.012496948242,227.317489624023 L241.012496948242,223.432495117188 L246,225.374984741211 " stroke="#0DB2AD" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M411,225.375 L428.512481689453,225.375 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M433.5,225.374984741211 L428.512481689453,227.317489624023 L428.512481689453,223.432495117188 L433.5,225.374984741211 " stroke="none" fill="#888888" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M433.5,225.374984741211 L428.512481689453,227.317489624023 L428.512481689453,223.432495117188 L433.5,225.374984741211 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M1024.5,225.375 L1042.01245117188,225.375 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M1047,225.374984741211 L1042.01245117188,227.317489624023 L1042.01245117188,223.432495117188 L1047,225.374984741211 " stroke="none" fill="#888888" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M1047,225.374984741211 L1042.01245117188,227.317489624023 L1042.01245117188,223.432495117188 L1047,225.374984741211 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M1212,225.375 L1229.51245117188,225.375 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+  <path d="M1234.5,225.374984741211 L1229.51245117188,227.317489624023 L1229.51245117188,223.432495117188 L1234.5,225.374984741211 " stroke="none" fill="#888888" fill-rule="evenodd" stroke-width="0" fill-opacity="1" />
+  <path d="M1234.5,225.374984741211 L1229.51245117188,227.317489624023 L1229.51245117188,223.432495117188 L1234.5,225.374984741211 " stroke="#888888" fill="none" stroke-width="3" stroke-opacity="1" />
+</svg>
