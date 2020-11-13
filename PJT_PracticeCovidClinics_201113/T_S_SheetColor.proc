@@ -1,0 +1,1013 @@
+
+<Process id="def472ff-f29f-4352-92b3-f4cc549c3ee9" type="task" workType="foreground" name="T_S_SheetColor" version="1.0" designerVersion="1.6.500.09031" readonly="false" isValid="true">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="0" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-11 17:44:43" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-13 08:54:30" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="INDay" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="outDraftExcelHandle" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="outDraftSheetName" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+  </Variables>
+  <Steps>
+    <Step id="S617788b88eb942daaecd1188ea9651ff" ver="200825001" createVer="200825001" type="Flow" name="SwitchGroup" apptitle="" tag="" depth="1" stmttype="OpenSwichBlock" enabled="True" mainSet="0">
+      <Properties id="d04a51ee-4c1d-4662-9dfe-525a00aa2f6a" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Condition" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.INDay" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[switch (this.INDay) {]]></Script>
+    </Step>
+    <Step id="S0cd55fff09b34e0f88326a79c50975d7" ver="200825001" createVer="200825001" type="Flow" name="SwitchCase" apptitle="" tag="" depth="2" stmttype="OpenSwichBlock" enabled="True" mainSet="0">
+      <Properties id="c1e5e826-d681-4961-986e-376685a41c32" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Case" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="1" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S91cafc84a84c44faa462163f947fc61f" type="Flow" name="EndSwitchCase" />
+      </RelatedSteps>
+      <Script><![CDATA[case 1:{ ]]></Script>
+    </Step>
+    <Step id="S6ec7134c7c534f1eb04c22535e32d963" ver="200825001" createVer="200825001" type="Excel" name="SendShortCut" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="59c9df7d-3814-4d48-b6ab-cc62405d1e40" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftExcelHandle" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftSheetName" />
+        <Property type="Excel" key="Key_ALT" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Excel" key="Key_CTRL" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Key_SHIFT" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Key_Keys" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'oht'" />
+        <Property type="Excel" key="Key_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Excel" key="Key_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Excel" key="Key_ShortCutName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Excel.SendShortCut(this.sendshortcut_info_3);]]></Script>
+    </Step>
+    <Step id="S9924f5286ea74166a7a6bec7748430db" ver="200825001" createVer="200825001" type="Win" name="Click" apptitle="선별진료소draft.xlsx - Excel" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="2370a93c-140f-4195-bdc6-ce402c7fe3db" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="빨" />
+        <Property type="Win" key="Target_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="10" />
+        <Property type="Win" key="Target_TargetNo" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" order="3" />
+        <Property type="Win" key="Target_UseName" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseAppTitle" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSetFocus" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_DrawBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseObjectPath" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSearchAround" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_SearchBounds" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Application_PID" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="13336" />
+        <Property type="Win" key="Application_ProcessName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="EXCEL" order="1" />
+        <Property type="Win" key="Application_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'선별진료소draft.xlsx - Excel'" />
+        <Property type="Win" key="Application_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="XLMAIN" />
+        <Property type="Win" key="Application_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Window" />
+        <Property type="Win" key="Application_WindowHandle" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="722888" />
+        <Property type="Win" key="Application_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="True" encrypted="False" isChanged="Y" value="-8,-8,1936,1056" />
+        <Property type="Win" key="Target_SupportedPatterns" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="LegacyIAccessible" />
+        <Property type="Win" key="Target_AutomationID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_FrameworkID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_RuntimeID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="42.7407576.4.-2147483647.7407576.-4.19" />
+        <Property type="Win" key="Target_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="Image" order="2" />
+        <Property type="Win" key="Target_Name" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'색(C):'" />
+        <Property type="Win" key="Target_ObjectPath" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'Window|XLMAIN||Win32/Window|bosa_sdm_XL9||Win32/Image|||'" />
+        <Property type="Win" key="Target_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="815,411,210,210" />
+        <Property type="Win" key="Mouse_WinPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="905,545" />
+        <Property type="Win" key="Mouse_AppPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="913,553" />
+        <Property type="Win" key="Mouse_Point" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="98,142" order="11" />
+        <Property type="Win" key="Target_Value" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_LegacyValue" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_IsReadOnly" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_IsEditable" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="True" />
+        <Property type="Win" key="Mouse_UseInvoke" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" toggle="Invoke;Click" />
+        <Property type="Win" key="Target_SizeTolerance" controlType="Size" valueType="System.Windows.Size" formatType="Size" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="63,31" />
+        <Property type="Win" key="Target_TimeStamp" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="2020-11-09 10:23:01.766" />
+        <Property type="Win" key="Mouse_OriginPoint" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="LeftTop" valuelist="LeftTop;RightTop;LeftBottom;RightBottom" order="10" />
+        <Property type="Win" key="Target_Capture" controlType="Bitmap" valueType="System.Drawing.Bitmap" formatType="Bitmap" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="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" />
+        <Property type="Win" key="Target_ImageCompareBounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="0,0,200,100" />
+        <Property type="Win" key="Target_PointOnImage" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="100,50" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.Click(this.click_info_4);]]></Script>
+    </Step>
+    <Step id="S60f854030a794d649fb50017df0e4af1" ver="200825001" createVer="200825001" type="Win" name="KeyInput" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="7dee783b-c4fd-424b-89f1-f09c2a7d27b1" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Keyboard_KeyInput" controlType="PropertyItemKeyInputView" valueType="System.Text.StringBuilder" formatType="StringBuilder" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Return," order="1" ready="True" />
+        <Property type="Win" key="Options_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Win" key="Options_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Win" key="Options_Interval" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="100" />
+        <Property type="Win" key="Keyboard_ClearKeyState" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.KeyInput(this.keyinput_info_5);]]></Script>
+    </Step>
+    <Step id="S91cafc84a84c44faa462163f947fc61f" ver="200825001" createVer="200825001" type="Flow" name="EndSwitchCase" apptitle="" tag="" depth="3" stmttype="CloseSwichBlock" enabled="True" mainSet="0">
+      <Properties id="ed2a4cd4-0a61-4248-b71e-ccdd1e4d1314" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S0cd55fff09b34e0f88326a79c50975d7" type="Flow" name="SwitchCase" />
+      </RelatedSteps>
+      <Script><![CDATA[break;
+}]]></Script>
+    </Step>
+    <Step id="S099da72dd1774349915ef2414709e3da" ver="200825001" createVer="200825001" type="Flow" name="SwitchCase" apptitle="" tag="" depth="2" stmttype="OpenSwichBlock" enabled="True" mainSet="0">
+      <Properties id="ad8e518e-2ac4-420b-b450-81c1df74059a" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Case" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="2" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S1eb1679a815043ec816aa8b5f4ca30ff" type="Flow" name="EndSwitchCase" />
+      </RelatedSteps>
+      <Script><![CDATA[case 2:{ ]]></Script>
+    </Step>
+    <Step id="S475a18c36cd54ef5ac21772e030031dd" ver="200825001" createVer="200825001" type="Excel" name="SendShortCut" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="59c9df7d-3814-4d48-b6ab-cc62405d1e40" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftExcelHandle" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftSheetName" />
+        <Property type="Excel" key="Key_ALT" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Excel" key="Key_CTRL" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Key_SHIFT" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Key_Keys" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'oht'" />
+        <Property type="Excel" key="Key_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Excel" key="Key_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Excel" key="Key_ShortCutName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Excel.SendShortCut(this.sendshortcut_info_8);]]></Script>
+    </Step>
+    <Step id="S5dc9caa4453f4b3e95f47e87f35ae699" ver="200825001" createVer="200825001" type="Win" name="Click" apptitle="선별진료소draft.xlsx - Excel" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="2370a93c-140f-4195-bdc6-ce402c7fe3db" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="주" />
+        <Property type="Win" key="Target_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="10" />
+        <Property type="Win" key="Target_TargetNo" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="" order="3" />
+        <Property type="Win" key="Target_UseName" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseAppTitle" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSetFocus" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_DrawBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseObjectPath" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSearchAround" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_SearchBounds" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Application_PID" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="13336" />
+        <Property type="Win" key="Application_ProcessName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="EXCEL" order="1" />
+        <Property type="Win" key="Application_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'선별진료소draft.xlsx - Excel'" />
+        <Property type="Win" key="Application_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="XLMAIN" />
+        <Property type="Win" key="Application_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Window" />
+        <Property type="Win" key="Application_WindowHandle" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="722888" />
+        <Property type="Win" key="Application_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="True" encrypted="False" isChanged="Y" value="-8,-8,1936,1056" />
+        <Property type="Win" key="Target_SupportedPatterns" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="LegacyIAccessible" />
+        <Property type="Win" key="Target_AutomationID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_FrameworkID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_RuntimeID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="42.7407576.4.-2147483647.7407576.-4.19" />
+        <Property type="Win" key="Target_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="Image" order="2" />
+        <Property type="Win" key="Target_Name" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'색(C):'" />
+        <Property type="Win" key="Target_ObjectPath" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'Window|XLMAIN||Win32/Window|bosa_sdm_XL9||Win32/Image|||'" />
+        <Property type="Win" key="Target_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="815,411,210,210" />
+        <Property type="Win" key="Mouse_WinPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="900,536" />
+        <Property type="Win" key="Mouse_AppPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="908,544" />
+        <Property type="Win" key="Mouse_Point" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="93,133" order="11" />
+        <Property type="Win" key="Target_Value" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_LegacyValue" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_IsReadOnly" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_IsEditable" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="True" />
+        <Property type="Win" key="Mouse_UseInvoke" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" toggle="Invoke;Click" />
+        <Property type="Win" key="Target_SizeTolerance" controlType="Size" valueType="System.Windows.Size" formatType="Size" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="63,31" />
+        <Property type="Win" key="Target_TimeStamp" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="2020-11-09 10:23:29.260" />
+        <Property type="Win" key="Mouse_OriginPoint" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="LeftTop" valuelist="LeftTop;RightTop;LeftBottom;RightBottom" order="10" />
+        <Property type="Win" key="Target_Capture" controlType="Bitmap" valueType="System.Drawing.Bitmap" formatType="Bitmap" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="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" />
+        <Property type="Win" key="Target_ImageCompareBounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="0,0,200,100" />
+        <Property type="Win" key="Target_PointOnImage" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="100,50" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.Click(this.click_info_9);]]></Script>
+    </Step>
+    <Step id="Sd3f664441c3049d9b8abebaf4b503aee" ver="200825001" createVer="200825001" type="Win" name="KeyInput" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="7dee783b-c4fd-424b-89f1-f09c2a7d27b1" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Keyboard_KeyInput" controlType="PropertyItemKeyInputView" valueType="System.Text.StringBuilder" formatType="StringBuilder" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Return," order="1" ready="True" />
+        <Property type="Win" key="Options_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Win" key="Options_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Win" key="Options_Interval" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="100" />
+        <Property type="Win" key="Keyboard_ClearKeyState" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.KeyInput(this.keyinput_info_10);]]></Script>
+    </Step>
+    <Step id="S1eb1679a815043ec816aa8b5f4ca30ff" ver="200825001" createVer="200825001" type="Flow" name="EndSwitchCase" apptitle="" tag="" depth="3" stmttype="CloseSwichBlock" enabled="True" mainSet="0">
+      <Properties id="a0d7a2b3-504d-4ba9-9890-7ebe642f6d09" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S099da72dd1774349915ef2414709e3da" type="Flow" name="SwitchCase" />
+      </RelatedSteps>
+      <Script><![CDATA[break;
+}]]></Script>
+    </Step>
+    <Step id="S56bb7595237846948a470dc4ffcbe0e6" ver="200825001" createVer="200825001" type="Flow" name="SwitchCase" apptitle="" tag="" depth="2" stmttype="OpenSwichBlock" enabled="True" mainSet="0">
+      <Properties id="bd7ac7ed-3b01-4de4-b933-02bad7de4bab" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Case" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="3" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="Sd48cc499bbcf435281217773d7e5931d" type="Flow" name="EndSwitchCase" />
+      </RelatedSteps>
+      <Script><![CDATA[case 3:{ ]]></Script>
+    </Step>
+    <Step id="S8c88741ef5da42788ac149974f9ccf3f" ver="200825001" createVer="200825001" type="Excel" name="SendShortCut" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="59c9df7d-3814-4d48-b6ab-cc62405d1e40" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftExcelHandle" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftSheetName" />
+        <Property type="Excel" key="Key_ALT" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Excel" key="Key_CTRL" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Key_SHIFT" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Key_Keys" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'oht'" />
+        <Property type="Excel" key="Key_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Excel" key="Key_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Excel" key="Key_ShortCutName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Excel.SendShortCut(this.sendshortcut_info_13);]]></Script>
+    </Step>
+    <Step id="Sff62262aa6bf478ba116c486a2ce81da" ver="200825001" createVer="200825001" type="Win" name="Click" apptitle="선별진료소draft.xlsx - Excel" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="2370a93c-140f-4195-bdc6-ce402c7fe3db" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="노" />
+        <Property type="Win" key="Target_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="10" />
+        <Property type="Win" key="Target_TargetNo" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="" order="3" />
+        <Property type="Win" key="Target_UseName" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseAppTitle" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSetFocus" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_DrawBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseObjectPath" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSearchAround" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_SearchBounds" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Application_PID" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="13336" />
+        <Property type="Win" key="Application_ProcessName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="EXCEL" order="1" />
+        <Property type="Win" key="Application_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'선별진료소draft.xlsx - Excel'" />
+        <Property type="Win" key="Application_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="XLMAIN" />
+        <Property type="Win" key="Application_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Window" />
+        <Property type="Win" key="Application_WindowHandle" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="722888" />
+        <Property type="Win" key="Application_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="True" encrypted="False" isChanged="Y" value="-8,-8,1936,1056" />
+        <Property type="Win" key="Target_SupportedPatterns" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="LegacyIAccessible" />
+        <Property type="Win" key="Target_AutomationID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_FrameworkID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_RuntimeID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="42.525956.4.-2147483647.525956.-4.19" />
+        <Property type="Win" key="Target_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="Image" order="2" />
+        <Property type="Win" key="Target_Name" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'색(C):'" />
+        <Property type="Win" key="Target_ObjectPath" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'Window|XLMAIN||Win32/Window|bosa_sdm_XL9||Win32/Image|||'" />
+        <Property type="Win" key="Target_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="815,411,210,210" />
+        <Property type="Win" key="Mouse_WinPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="868,533" />
+        <Property type="Win" key="Mouse_AppPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="876,541" />
+        <Property type="Win" key="Mouse_Point" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="61,130" order="11" />
+        <Property type="Win" key="Target_Value" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_LegacyValue" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_IsReadOnly" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_IsEditable" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="True" />
+        <Property type="Win" key="Mouse_UseInvoke" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" toggle="Invoke;Click" />
+        <Property type="Win" key="Target_SizeTolerance" controlType="Size" valueType="System.Windows.Size" formatType="Size" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="63,31" />
+        <Property type="Win" key="Target_TimeStamp" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="2020-11-09 10:30:08.288" />
+        <Property type="Win" key="Mouse_OriginPoint" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="LeftTop" valuelist="LeftTop;RightTop;LeftBottom;RightBottom" order="10" />
+        <Property type="Win" key="Target_Capture" controlType="Bitmap" valueType="System.Drawing.Bitmap" formatType="Bitmap" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="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" />
+        <Property type="Win" key="Target_ImageCompareBounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="0,0,200,100" />
+        <Property type="Win" key="Target_PointOnImage" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="100,50" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.Click(this.click_info_14);]]></Script>
+    </Step>
+    <Step id="S041dd576c7974e3182fdee9ceeb3909f" ver="200825001" createVer="200825001" type="Win" name="KeyInput" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="7dee783b-c4fd-424b-89f1-f09c2a7d27b1" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Keyboard_KeyInput" controlType="PropertyItemKeyInputView" valueType="System.Text.StringBuilder" formatType="StringBuilder" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Return," order="1" ready="True" />
+        <Property type="Win" key="Options_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Win" key="Options_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Win" key="Options_Interval" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="100" />
+        <Property type="Win" key="Keyboard_ClearKeyState" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.KeyInput(this.keyinput_info_15);]]></Script>
+    </Step>
+    <Step id="Sd48cc499bbcf435281217773d7e5931d" ver="200825001" createVer="200825001" type="Flow" name="EndSwitchCase" apptitle="" tag="" depth="3" stmttype="CloseSwichBlock" enabled="True" mainSet="0">
+      <Properties id="1216fbdc-0d48-42fd-9c61-ec0daf11f7c6" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S56bb7595237846948a470dc4ffcbe0e6" type="Flow" name="SwitchCase" />
+      </RelatedSteps>
+      <Script><![CDATA[break;
+}]]></Script>
+    </Step>
+    <Step id="Sd992b1c87ae249af8debb002bd39b636" ver="200825001" createVer="200825001" type="Flow" name="SwitchCase" apptitle="" tag="" depth="2" stmttype="OpenSwichBlock" enabled="True" mainSet="0">
+      <Properties id="7f0deef2-9352-49fb-a8eb-b10668d66c22" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Case" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="4" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S3a88b2056bac47a994049db225e367b6" type="Flow" name="EndSwitchCase" />
+      </RelatedSteps>
+      <Script><![CDATA[case 4:{ ]]></Script>
+    </Step>
+    <Step id="S08f69b2b0e674390b3cff2caf5b9b00d" ver="200825001" createVer="200825001" type="Excel" name="SendShortCut" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="59c9df7d-3814-4d48-b6ab-cc62405d1e40" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftExcelHandle" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftSheetName" />
+        <Property type="Excel" key="Key_ALT" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Excel" key="Key_CTRL" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Key_SHIFT" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Key_Keys" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'oht'" />
+        <Property type="Excel" key="Key_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Excel" key="Key_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Excel" key="Key_ShortCutName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Excel.SendShortCut(this.sendshortcut_info_18);]]></Script>
+    </Step>
+    <Step id="Sc3ef43668fdb47e2ae047500e8fb66f5" ver="200825001" createVer="200825001" type="Win" name="Click" apptitle="선별진료소draft.xlsx - Excel" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="2370a93c-140f-4195-bdc6-ce402c7fe3db" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="10" />
+        <Property type="Win" key="Target_TargetNo" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="" order="3" />
+        <Property type="Win" key="Target_UseName" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseAppTitle" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSetFocus" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_DrawBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseObjectPath" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSearchAround" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_SearchBounds" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Application_PID" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="13336" />
+        <Property type="Win" key="Application_ProcessName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="EXCEL" order="1" />
+        <Property type="Win" key="Application_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'선별진료소draft.xlsx - Excel'" />
+        <Property type="Win" key="Application_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="XLMAIN" />
+        <Property type="Win" key="Application_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Window" />
+        <Property type="Win" key="Application_WindowHandle" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="722888" />
+        <Property type="Win" key="Application_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="True" encrypted="False" isChanged="Y" value="-8,-8,1936,1056" />
+        <Property type="Win" key="Target_SupportedPatterns" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="LegacyIAccessible" />
+        <Property type="Win" key="Target_AutomationID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_FrameworkID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_RuntimeID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="42.525956.4.-2147483647.525956.-4.19" />
+        <Property type="Win" key="Target_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="Image" order="2" />
+        <Property type="Win" key="Target_Name" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'색(C):'" />
+        <Property type="Win" key="Target_ObjectPath" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'Window|XLMAIN||Win32/Window|bosa_sdm_XL9||Win32/Image|||'" />
+        <Property type="Win" key="Target_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="815,411,210,210" />
+        <Property type="Win" key="Mouse_WinPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="820,471" />
+        <Property type="Win" key="Mouse_AppPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="828,479" />
+        <Property type="Win" key="Mouse_Point" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="13,68" order="11" />
+        <Property type="Win" key="Target_Value" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_LegacyValue" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_IsReadOnly" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_IsEditable" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="True" />
+        <Property type="Win" key="Mouse_UseInvoke" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" toggle="Invoke;Click" />
+        <Property type="Win" key="Target_SizeTolerance" controlType="Size" valueType="System.Windows.Size" formatType="Size" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="63,31" />
+        <Property type="Win" key="Target_TimeStamp" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="2020-11-09 10:30:36.148" />
+        <Property type="Win" key="Mouse_OriginPoint" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="LeftTop" valuelist="LeftTop;RightTop;LeftBottom;RightBottom" order="10" />
+        <Property type="Win" key="Target_Capture" controlType="Bitmap" valueType="System.Drawing.Bitmap" formatType="Bitmap" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="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" />
+        <Property type="Win" key="Target_ImageCompareBounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="0,0,200,100" />
+        <Property type="Win" key="Target_PointOnImage" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="100,50" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.Click(this.click_info_19);]]></Script>
+    </Step>
+    <Step id="S86a72fa9c2d245b19398bc602d3d8fb7" ver="200825001" createVer="200825001" type="Win" name="KeyInput" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="7dee783b-c4fd-424b-89f1-f09c2a7d27b1" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Keyboard_KeyInput" controlType="PropertyItemKeyInputView" valueType="System.Text.StringBuilder" formatType="StringBuilder" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Return," order="1" ready="True" />
+        <Property type="Win" key="Options_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Win" key="Options_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Win" key="Options_Interval" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="100" />
+        <Property type="Win" key="Keyboard_ClearKeyState" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.KeyInput(this.keyinput_info_20);]]></Script>
+    </Step>
+    <Step id="S3a88b2056bac47a994049db225e367b6" ver="200825001" createVer="200825001" type="Flow" name="EndSwitchCase" apptitle="" tag="" depth="3" stmttype="CloseSwichBlock" enabled="True" mainSet="0">
+      <Properties id="41dd0442-c187-41fe-89c2-1836c0e163cd" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="Sd992b1c87ae249af8debb002bd39b636" type="Flow" name="SwitchCase" />
+      </RelatedSteps>
+      <Script><![CDATA[break;
+}]]></Script>
+    </Step>
+    <Step id="Sc0ecd0c9484448d48a484d874a468161" ver="200825001" createVer="200825001" type="Flow" name="SwitchCase" apptitle="" tag="" depth="2" stmttype="OpenSwichBlock" enabled="True" mainSet="0">
+      <Properties id="7f849f4d-63ba-4da4-93b5-01ac6ea7cd7c" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Case" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="5" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S31c9130b1cb74661ba192df739a17c42" type="Flow" name="EndSwitchCase" />
+      </RelatedSteps>
+      <Script><![CDATA[case 5:{ ]]></Script>
+    </Step>
+    <Step id="Sf95bea945a0d4a76a3d8eb0a5b8835ca" ver="200825001" createVer="200825001" type="Excel" name="SendShortCut" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="59c9df7d-3814-4d48-b6ab-cc62405d1e40" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftExcelHandle" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftSheetName" />
+        <Property type="Excel" key="Key_ALT" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Excel" key="Key_CTRL" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Key_SHIFT" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Key_Keys" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'oht'" />
+        <Property type="Excel" key="Key_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Excel" key="Key_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Excel" key="Key_ShortCutName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Excel.SendShortCut(this.sendshortcut_info_23);]]></Script>
+    </Step>
+    <Step id="S158a4d0e89094226b7c5f7752ef95a30" ver="200825001" createVer="200825001" type="Win" name="Click" apptitle="선별진료소draft.xlsx - Excel" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="2370a93c-140f-4195-bdc6-ce402c7fe3db" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="파" />
+        <Property type="Win" key="Target_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="10" />
+        <Property type="Win" key="Target_TargetNo" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="" order="3" />
+        <Property type="Win" key="Target_UseName" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseAppTitle" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSetFocus" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_DrawBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseObjectPath" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSearchAround" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_SearchBounds" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Application_PID" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="13336" />
+        <Property type="Win" key="Application_ProcessName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="EXCEL" order="1" />
+        <Property type="Win" key="Application_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'선별진료소draft.xlsx - Excel'" />
+        <Property type="Win" key="Application_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="XLMAIN" />
+        <Property type="Win" key="Application_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Window" />
+        <Property type="Win" key="Application_WindowHandle" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="722888" />
+        <Property type="Win" key="Application_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="True" encrypted="False" isChanged="Y" value="-8,-8,1936,1056" />
+        <Property type="Win" key="Target_SupportedPatterns" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="LegacyIAccessible" />
+        <Property type="Win" key="Target_AutomationID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_FrameworkID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_RuntimeID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="42.7407576.4.-2147483647.7407576.-4.19" />
+        <Property type="Win" key="Target_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="Image" order="2" />
+        <Property type="Win" key="Target_Name" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'색(C):'" />
+        <Property type="Win" key="Target_ObjectPath" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'Window|XLMAIN||Win32/Window|bosa_sdm_XL9||Win32/Image|||'" />
+        <Property type="Win" key="Target_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="815,411,210,210" />
+        <Property type="Win" key="Mouse_WinPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="934,427" />
+        <Property type="Win" key="Mouse_AppPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="942,435" />
+        <Property type="Win" key="Mouse_Point" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="127,24" order="11" />
+        <Property type="Win" key="Target_Value" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_LegacyValue" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_IsReadOnly" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_IsEditable" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="True" />
+        <Property type="Win" key="Mouse_UseInvoke" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" toggle="Invoke;Click" />
+        <Property type="Win" key="Target_SizeTolerance" controlType="Size" valueType="System.Windows.Size" formatType="Size" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="63,31" />
+        <Property type="Win" key="Target_TimeStamp" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="2020-11-09 10:23:39.427" />
+        <Property type="Win" key="Mouse_OriginPoint" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="LeftTop" valuelist="LeftTop;RightTop;LeftBottom;RightBottom" order="10" />
+        <Property type="Win" key="Target_Capture" controlType="Bitmap" valueType="System.Drawing.Bitmap" formatType="Bitmap" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="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" />
+        <Property type="Win" key="Target_ImageCompareBounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="0,0,200,100" />
+        <Property type="Win" key="Target_PointOnImage" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="100,50" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.Click(this.click_info_24);]]></Script>
+    </Step>
+    <Step id="S8be9a71f16b54c9ba2ee449e01bd8258" ver="200825001" createVer="200825001" type="Win" name="KeyInput" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="7dee783b-c4fd-424b-89f1-f09c2a7d27b1" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Keyboard_KeyInput" controlType="PropertyItemKeyInputView" valueType="System.Text.StringBuilder" formatType="StringBuilder" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Return," order="1" ready="True" />
+        <Property type="Win" key="Options_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Win" key="Options_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Win" key="Options_Interval" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="100" />
+        <Property type="Win" key="Keyboard_ClearKeyState" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.KeyInput(this.keyinput_info_25);]]></Script>
+    </Step>
+    <Step id="S31c9130b1cb74661ba192df739a17c42" ver="200825001" createVer="200825001" type="Flow" name="EndSwitchCase" apptitle="" tag="" depth="3" stmttype="CloseSwichBlock" enabled="True" mainSet="0">
+      <Properties id="beffffed-4b2a-47c7-ab9e-6a2183d788d5" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="Sc0ecd0c9484448d48a484d874a468161" type="Flow" name="SwitchCase" />
+      </RelatedSteps>
+      <Script><![CDATA[break;
+}]]></Script>
+    </Step>
+    <Step id="S23257dd52a1540cdae2e99950987c71f" ver="200825001" createVer="200825001" type="Flow" name="SwitchCase" apptitle="" tag="" depth="2" stmttype="OpenSwichBlock" enabled="True" mainSet="0">
+      <Properties id="a8bae19b-e924-446b-aa22-18bca01911c3" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Case" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="6" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S319831f4214d4ddabd2019eb3df49fb2" type="Flow" name="EndSwitchCase" />
+      </RelatedSteps>
+      <Script><![CDATA[case 6:{ ]]></Script>
+    </Step>
+    <Step id="S9dddfaa7223b4e2282cd200bced30bab" ver="200825001" createVer="200825001" type="Excel" name="SendShortCut" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="59c9df7d-3814-4d48-b6ab-cc62405d1e40" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftExcelHandle" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftSheetName" />
+        <Property type="Excel" key="Key_ALT" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Excel" key="Key_CTRL" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Key_SHIFT" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Key_Keys" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'oht'" />
+        <Property type="Excel" key="Key_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Excel" key="Key_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Excel" key="Key_ShortCutName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Excel.SendShortCut(this.sendshortcut_info_28);]]></Script>
+    </Step>
+    <Step id="S1c378cabd3774c179204ea210eda147a" ver="200825001" createVer="200825001" type="Win" name="Click" apptitle="선별진료소draft.xlsx - Excel" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="2370a93c-140f-4195-bdc6-ce402c7fe3db" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="남" />
+        <Property type="Win" key="Target_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="10" />
+        <Property type="Win" key="Target_TargetNo" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="" order="3" />
+        <Property type="Win" key="Target_UseName" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseAppTitle" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSetFocus" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_DrawBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseObjectPath" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSearchAround" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_SearchBounds" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Application_PID" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="13336" />
+        <Property type="Win" key="Application_ProcessName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="EXCEL" order="1" />
+        <Property type="Win" key="Application_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'선별진료소draft.xlsx - Excel'" />
+        <Property type="Win" key="Application_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="XLMAIN" />
+        <Property type="Win" key="Application_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Window" />
+        <Property type="Win" key="Application_WindowHandle" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="722888" />
+        <Property type="Win" key="Application_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="True" encrypted="False" isChanged="Y" value="-8,-8,1936,1056" />
+        <Property type="Win" key="Target_SupportedPatterns" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="LegacyIAccessible" />
+        <Property type="Win" key="Target_AutomationID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="" />
+        <Property type="Win" key="Target_FrameworkID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_RuntimeID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="42.525956.4.-2147483647.525956.-4.19" />
+        <Property type="Win" key="Target_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="Image" order="2" />
+        <Property type="Win" key="Target_Name" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'색(C):'" />
+        <Property type="Win" key="Target_ObjectPath" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'Window|XLMAIN||Win32/Window|bosa_sdm_XL9||Win32/Image|||'" />
+        <Property type="Win" key="Target_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="815,411,210,210" />
+        <Property type="Win" key="Mouse_WinPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="916,411" />
+        <Property type="Win" key="Mouse_AppPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="924,419" />
+        <Property type="Win" key="Mouse_Point" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="109,8" order="11" />
+        <Property type="Win" key="Target_Value" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_LegacyValue" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_IsReadOnly" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_IsEditable" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="True" />
+        <Property type="Win" key="Mouse_UseInvoke" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" toggle="Invoke;Click" />
+        <Property type="Win" key="Target_SizeTolerance" controlType="Size" valueType="System.Windows.Size" formatType="Size" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="63,31" />
+        <Property type="Win" key="Target_TimeStamp" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="2020-11-09 10:29:38.914" />
+        <Property type="Win" key="Mouse_OriginPoint" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="LeftTop" valuelist="LeftTop;RightTop;LeftBottom;RightBottom" order="10" />
+        <Property type="Win" key="Target_Capture" controlType="Bitmap" valueType="System.Drawing.Bitmap" formatType="Bitmap" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="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" />
+        <Property type="Win" key="Target_ImageCompareBounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="0,0,200,100" />
+        <Property type="Win" key="Target_PointOnImage" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="100,50" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.Click(this.click_info_29);]]></Script>
+    </Step>
+    <Step id="S1c64243dbb6142e4a0948a31dd9b193d" ver="200825001" createVer="200825001" type="Win" name="KeyInput" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="7dee783b-c4fd-424b-89f1-f09c2a7d27b1" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Keyboard_KeyInput" controlType="PropertyItemKeyInputView" valueType="System.Text.StringBuilder" formatType="StringBuilder" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Return," order="1" ready="True" />
+        <Property type="Win" key="Options_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Win" key="Options_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Win" key="Options_Interval" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="100" />
+        <Property type="Win" key="Keyboard_ClearKeyState" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.KeyInput(this.keyinput_info_30);]]></Script>
+    </Step>
+    <Step id="S319831f4214d4ddabd2019eb3df49fb2" ver="200825001" createVer="200825001" type="Flow" name="EndSwitchCase" apptitle="" tag="" depth="3" stmttype="CloseSwichBlock" enabled="True" mainSet="0">
+      <Properties id="afd2fba4-097e-4851-ac96-faedd1a520ab" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S23257dd52a1540cdae2e99950987c71f" type="Flow" name="SwitchCase" />
+      </RelatedSteps>
+      <Script><![CDATA[break;
+}]]></Script>
+    </Step>
+    <Step id="S5eb4b761302540e7ac3fc1f550237ef6" ver="200825001" createVer="200825001" type="Flow" name="SwitchCase" apptitle="" tag="" depth="2" stmttype="OpenSwichBlock" enabled="True" mainSet="0">
+      <Properties id="aada01e4-9a63-4e01-bcdd-a38226899dc2" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Case" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="0" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="Sac925decadfe4ece976fd45ba9133f24" type="Flow" name="EndSwitchCase" />
+      </RelatedSteps>
+      <Script><![CDATA[case 0:{ ]]></Script>
+    </Step>
+    <Step id="Sfbb8af2d34f146bbb26405d5e05f1773" ver="200825001" createVer="200825001" type="Excel" name="SendShortCut" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="59c9df7d-3814-4d48-b6ab-cc62405d1e40" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftExcelHandle" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftSheetName" />
+        <Property type="Excel" key="Key_ALT" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Excel" key="Key_CTRL" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Key_SHIFT" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Key_Keys" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'oht'" />
+        <Property type="Excel" key="Key_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Excel" key="Key_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Excel" key="Key_ShortCutName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Excel.SendShortCut(this.sendshortcut_info_33);]]></Script>
+    </Step>
+    <Step id="S09890addf26445cab44b2eabf7f9e6f2" ver="200825001" createVer="200825001" type="Win" name="Click" apptitle="선별진료소draft.xlsx - Excel" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="2370a93c-140f-4195-bdc6-ce402c7fe3db" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="보" />
+        <Property type="Win" key="Target_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="10" />
+        <Property type="Win" key="Target_TargetNo" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="" order="3" />
+        <Property type="Win" key="Target_UseName" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseAppTitle" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSetFocus" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_DrawBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseObjectPath" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSearchAround" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_SearchBounds" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Application_PID" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="13336" />
+        <Property type="Win" key="Application_ProcessName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="EXCEL" order="1" />
+        <Property type="Win" key="Application_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'선별진료소draft.xlsx - Excel'" />
+        <Property type="Win" key="Application_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="XLMAIN" />
+        <Property type="Win" key="Application_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="Window" />
+        <Property type="Win" key="Application_WindowHandle" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="722888" />
+        <Property type="Win" key="Application_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="True" encrypted="False" isChanged="Y" value="-8,-8,1936,1056" />
+        <Property type="Win" key="Target_SupportedPatterns" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="LegacyIAccessible" />
+        <Property type="Win" key="Target_AutomationID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_FrameworkID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_RuntimeID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="42.525956.4.-2147483647.525956.-4.19" />
+        <Property type="Win" key="Target_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="Image" order="2" />
+        <Property type="Win" key="Target_Name" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'색(C):'" />
+        <Property type="Win" key="Target_ObjectPath" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'Window|XLMAIN||Win32/Window|bosa_sdm_XL9||Win32/Image|||'" />
+        <Property type="Win" key="Target_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="815,411,210,210" />
+        <Property type="Win" key="Mouse_WinPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="961,521" />
+        <Property type="Win" key="Mouse_AppPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="969,529" />
+        <Property type="Win" key="Mouse_Point" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="154,118" order="11" />
+        <Property type="Win" key="Target_Value" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_LegacyValue" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_IsReadOnly" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_IsEditable" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="True" />
+        <Property type="Win" key="Mouse_UseInvoke" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" toggle="Invoke;Click" />
+        <Property type="Win" key="Target_SizeTolerance" controlType="Size" valueType="System.Windows.Size" formatType="Size" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="63,31" />
+        <Property type="Win" key="Target_TimeStamp" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="2020-11-09 10:29:55.168" />
+        <Property type="Win" key="Mouse_OriginPoint" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="LeftTop" valuelist="LeftTop;RightTop;LeftBottom;RightBottom" order="10" />
+        <Property type="Win" key="Target_Capture" controlType="Bitmap" valueType="System.Drawing.Bitmap" formatType="Bitmap" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="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" />
+        <Property type="Win" key="Target_ImageCompareBounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="0,0,200,100" />
+        <Property type="Win" key="Target_PointOnImage" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="100,50" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.Click(this.click_info_34);]]></Script>
+    </Step>
+    <Step id="Sc886f79f146e4a2986bfeee5577b9263" ver="200825001" createVer="200825001" type="Win" name="KeyInput" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="7dee783b-c4fd-424b-89f1-f09c2a7d27b1" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Keyboard_KeyInput" controlType="PropertyItemKeyInputView" valueType="System.Text.StringBuilder" formatType="StringBuilder" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Return," order="1" ready="True" />
+        <Property type="Win" key="Options_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Win" key="Options_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Win" key="Options_Interval" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="100" />
+        <Property type="Win" key="Keyboard_ClearKeyState" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.KeyInput(this.keyinput_info_35);]]></Script>
+    </Step>
+    <Step id="Sac925decadfe4ece976fd45ba9133f24" ver="200825001" createVer="200825001" type="Flow" name="EndSwitchCase" apptitle="" tag="" depth="3" stmttype="CloseSwichBlock" enabled="True" mainSet="0">
+      <Properties id="a91a8300-e987-4102-b63b-f74b9a796d2b" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S5eb4b761302540e7ac3fc1f550237ef6" type="Flow" name="SwitchCase" />
+      </RelatedSteps>
+      <Script><![CDATA[break;
+}]]></Script>
+    </Step>
+    <Step id="S8392a251ae194510a027c7ef876c33b9" ver="200825001" createVer="200825001" type="Flow" name="SwitchDefault" apptitle="" tag="" depth="2" stmttype="OpenSwichBlock" enabled="True" mainSet="0">
+      <Properties id="9a805018-4625-4639-8480-6c16006b2288" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S14e0e54dceb14d29b4304a6f8259b59b" type="Flow" name="EndSwitchDefault" />
+      </RelatedSteps>
+      <Script><![CDATA[default:{ ]]></Script>
+    </Step>
+    <Step id="S14e0e54dceb14d29b4304a6f8259b59b" ver="200825001" createVer="200825001" type="Flow" name="EndSwitchDefault" apptitle="" tag="" depth="3" stmttype="CloseSwichBlock" enabled="True" mainSet="0">
+      <Properties id="da048987-2df9-4624-9285-8fb825263e20" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S8392a251ae194510a027c7ef876c33b9" type="Flow" name="SwitchDefault" />
+      </RelatedSteps>
+      <Script><![CDATA[break;
+}]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function T_S_SheetColor(args) {
+
+    this.INDay = (typeof args != 'undefined') ? args.INDay : null;
+    this.outDraftExcelHandle = (typeof args != 'undefined') ? args.outDraftExcelHandle : null;
+    this.outDraftSheetName = (typeof args != 'undefined') ? args.outDraftSheetName : null;
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('S617788b88eb942daaecd1188ea9651ff', '[1] SwitchGroup');
+        switch (this.INDay) {
+
+            //------------------------------------------------
+            case 1:{ 
+            STEP('S0cd55fff09b34e0f88326a79c50975d7', '[2] SwitchCase');
+
+                //------------------------------------------------
+                STEP('S6ec7134c7c534f1eb04c22535e32d963', '[3] SendShortCut');
+                Excel.SendShortCut(this.sendshortcut_info_3);
+
+                //------------------------------------------------
+                STEP('S9924f5286ea74166a7a6bec7748430db', '[4] Click');
+                Win.Click(this.click_info_4);
+
+                //------------------------------------------------
+                STEP('S60f854030a794d649fb50017df0e4af1', '[5] KeyInput');
+                Win.KeyInput(this.keyinput_info_5);
+
+            //------------------------------------------------
+            STEP('S91cafc84a84c44faa462163f947fc61f', '[6] EndSwitchCase');
+            break;
+            }
+
+            //------------------------------------------------
+            case 2:{ 
+            STEP('S099da72dd1774349915ef2414709e3da', '[7] SwitchCase');
+
+                //------------------------------------------------
+                STEP('S475a18c36cd54ef5ac21772e030031dd', '[8] SendShortCut');
+                Excel.SendShortCut(this.sendshortcut_info_8);
+
+                //------------------------------------------------
+                STEP('S5dc9caa4453f4b3e95f47e87f35ae699', '[9] Click');
+                Win.Click(this.click_info_9);
+
+                //------------------------------------------------
+                STEP('Sd3f664441c3049d9b8abebaf4b503aee', '[10] KeyInput');
+                Win.KeyInput(this.keyinput_info_10);
+
+            //------------------------------------------------
+            STEP('S1eb1679a815043ec816aa8b5f4ca30ff', '[11] EndSwitchCase');
+            break;
+            }
+
+            //------------------------------------------------
+            case 3:{ 
+            STEP('S56bb7595237846948a470dc4ffcbe0e6', '[12] SwitchCase');
+
+                //------------------------------------------------
+                STEP('S8c88741ef5da42788ac149974f9ccf3f', '[13] SendShortCut');
+                Excel.SendShortCut(this.sendshortcut_info_13);
+
+                //------------------------------------------------
+                STEP('Sff62262aa6bf478ba116c486a2ce81da', '[14] Click');
+                Win.Click(this.click_info_14);
+
+                //------------------------------------------------
+                STEP('S041dd576c7974e3182fdee9ceeb3909f', '[15] KeyInput');
+                Win.KeyInput(this.keyinput_info_15);
+
+            //------------------------------------------------
+            STEP('Sd48cc499bbcf435281217773d7e5931d', '[16] EndSwitchCase');
+            break;
+            }
+
+            //------------------------------------------------
+            case 4:{ 
+            STEP('Sd992b1c87ae249af8debb002bd39b636', '[17] SwitchCase');
+
+                //------------------------------------------------
+                STEP('S08f69b2b0e674390b3cff2caf5b9b00d', '[18] SendShortCut');
+                Excel.SendShortCut(this.sendshortcut_info_18);
+
+                //------------------------------------------------
+                STEP('Sc3ef43668fdb47e2ae047500e8fb66f5', '[19] Click');
+                Win.Click(this.click_info_19);
+
+                //------------------------------------------------
+                STEP('S86a72fa9c2d245b19398bc602d3d8fb7', '[20] KeyInput');
+                Win.KeyInput(this.keyinput_info_20);
+
+            //------------------------------------------------
+            STEP('S3a88b2056bac47a994049db225e367b6', '[21] EndSwitchCase');
+            break;
+            }
+
+            //------------------------------------------------
+            case 5:{ 
+            STEP('Sc0ecd0c9484448d48a484d874a468161', '[22] SwitchCase');
+
+                //------------------------------------------------
+                STEP('Sf95bea945a0d4a76a3d8eb0a5b8835ca', '[23] SendShortCut');
+                Excel.SendShortCut(this.sendshortcut_info_23);
+
+                //------------------------------------------------
+                STEP('S158a4d0e89094226b7c5f7752ef95a30', '[24] Click');
+                Win.Click(this.click_info_24);
+
+                //------------------------------------------------
+                STEP('S8be9a71f16b54c9ba2ee449e01bd8258', '[25] KeyInput');
+                Win.KeyInput(this.keyinput_info_25);
+
+            //------------------------------------------------
+            STEP('S31c9130b1cb74661ba192df739a17c42', '[26] EndSwitchCase');
+            break;
+            }
+
+            //------------------------------------------------
+            case 6:{ 
+            STEP('S23257dd52a1540cdae2e99950987c71f', '[27] SwitchCase');
+
+                //------------------------------------------------
+                STEP('S9dddfaa7223b4e2282cd200bced30bab', '[28] SendShortCut');
+                Excel.SendShortCut(this.sendshortcut_info_28);
+
+                //------------------------------------------------
+                STEP('S1c378cabd3774c179204ea210eda147a', '[29] Click');
+                Win.Click(this.click_info_29);
+
+                //------------------------------------------------
+                STEP('S1c64243dbb6142e4a0948a31dd9b193d', '[30] KeyInput');
+                Win.KeyInput(this.keyinput_info_30);
+
+            //------------------------------------------------
+            STEP('S319831f4214d4ddabd2019eb3df49fb2', '[31] EndSwitchCase');
+            break;
+            }
+
+            //------------------------------------------------
+            case 0:{ 
+            STEP('S5eb4b761302540e7ac3fc1f550237ef6', '[32] SwitchCase');
+
+                //------------------------------------------------
+                STEP('Sfbb8af2d34f146bbb26405d5e05f1773', '[33] SendShortCut');
+                Excel.SendShortCut(this.sendshortcut_info_33);
+
+                //------------------------------------------------
+                STEP('S09890addf26445cab44b2eabf7f9e6f2', '[34] Click');
+                Win.Click(this.click_info_34);
+
+                //------------------------------------------------
+                STEP('Sc886f79f146e4a2986bfeee5577b9263', '[35] KeyInput');
+                Win.KeyInput(this.keyinput_info_35);
+
+            //------------------------------------------------
+            STEP('Sac925decadfe4ece976fd45ba9133f24', '[36] EndSwitchCase');
+            break;
+            }
+
+            //------------------------------------------------
+            default:{ 
+            STEP('S8392a251ae194510a027c7ef876c33b9', '[37] SwitchDefault');
+
+            //------------------------------------------------
+            STEP('S14e0e54dceb14d29b4304a6f8259b59b', '[38] EndSwitchDefault');
+            break;
+            }
+
+        }
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+    }
+}
+]]></JScript>
+  <Diagram version="1.200" layout="Horizontal" nodesize="Normal">
+    <Nodes>
+      <Node id="0" step_id="" container_id="" order="" type="StartNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="START" bounds="30,245.5,56,56" />
+      <Node id="1" step_id="" container_id="" order="" type="EndNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="END" bounds="366,245.5,56,56" />
+      <Node id="2" step_id="S617788b88eb942daaecd1188ea9651ff" container_id="" order="" type="SwitchGroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="True" expanded="True" text="this.INDay" bounds="116,30,220,487" />
+      <Node id="3" step_id="S0cd55fff09b34e0f88326a79c50975d7" container_id="5" order="" type="SwitchCaseNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="338,424,56,56" />
+      <Node id="4" step_id="S91cafc84a84c44faa462163f947fc61f" container_id="5" order="" type="EndSwitchCaseNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="674,424,56,56" />
+      <Node id="5" step_id="" container_id="2" order="0" type="FlowControlGroupNode" invoke_type="" flowcontrol_type="SwitchCase" flowcontrol_enabled="True" expanded="" text="" desc="1" bounds="122,79,208,54" />
+      <Node id="6" step_id="S099da72dd1774349915ef2414709e3da" container_id="8" order="" type="SwitchCaseNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="338,424,56,56" />
+      <Node id="7" step_id="S1eb1679a815043ec816aa8b5f4ca30ff" container_id="8" order="" type="EndSwitchCaseNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="674,424,56,56" />
+      <Node id="8" step_id="" container_id="2" order="1" type="FlowControlGroupNode" invoke_type="" flowcontrol_type="SwitchCase" flowcontrol_enabled="True" expanded="" text="" desc="2" bounds="122,133,208,54" />
+      <Node id="9" step_id="S56bb7595237846948a470dc4ffcbe0e6" container_id="11" order="" type="SwitchCaseNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="338,424,56,56" />
+      <Node id="10" step_id="Sd48cc499bbcf435281217773d7e5931d" container_id="11" order="" type="EndSwitchCaseNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="674,424,56,56" />
+      <Node id="11" step_id="" container_id="2" order="2" type="FlowControlGroupNode" invoke_type="" flowcontrol_type="SwitchCase" flowcontrol_enabled="True" expanded="" text="" desc="3" bounds="122,187,208,54" />
+      <Node id="12" step_id="Sd992b1c87ae249af8debb002bd39b636" container_id="14" order="" type="SwitchCaseNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="338,347,56,56" />
+      <Node id="13" step_id="S3a88b2056bac47a994049db225e367b6" container_id="14" order="" type="EndSwitchCaseNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="674,347,56,56" />
+      <Node id="14" step_id="" container_id="2" order="3" type="FlowControlGroupNode" invoke_type="" flowcontrol_type="SwitchCase" flowcontrol_enabled="True" expanded="" text="" desc="4" bounds="122,241,208,54" />
+      <Node id="15" step_id="Sc0ecd0c9484448d48a484d874a468161" container_id="17" order="" type="SwitchCaseNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="232,240,56,56" />
+      <Node id="16" step_id="S31c9130b1cb74661ba192df739a17c42" container_id="17" order="" type="EndSwitchCaseNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="568,240,56,56" />
+      <Node id="17" step_id="" container_id="2" order="4" type="FlowControlGroupNode" invoke_type="" flowcontrol_type="SwitchCase" flowcontrol_enabled="True" expanded="" text="" desc="5" bounds="122,295,208,54" />
+      <Node id="18" step_id="S23257dd52a1540cdae2e99950987c71f" container_id="20" order="" type="SwitchCaseNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="126,210,56,56" />
+      <Node id="19" step_id="S319831f4214d4ddabd2019eb3df49fb2" container_id="20" order="" type="EndSwitchCaseNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="462,210,56,56" />
+      <Node id="20" step_id="" container_id="2" order="5" type="FlowControlGroupNode" invoke_type="" flowcontrol_type="SwitchCase" flowcontrol_enabled="True" expanded="" text="" desc="6" bounds="122,349,208,54" />
+      <Node id="21" step_id="S5eb4b761302540e7ac3fc1f550237ef6" container_id="23" order="" type="SwitchCaseNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="126,210,56,56" />
+      <Node id="22" step_id="Sac925decadfe4ece976fd45ba9133f24" container_id="23" order="" type="EndSwitchCaseNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="462,210,56,56" />
+      <Node id="23" step_id="" container_id="2" order="6" type="FlowControlGroupNode" invoke_type="" flowcontrol_type="SwitchCase" flowcontrol_enabled="True" expanded="" text="" desc="0" bounds="122,403,208,54" />
+      <Node id="24" step_id="S8392a251ae194510a027c7ef876c33b9" container_id="26" order="" type="SwitchDefaultNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="1510,2018,56,56" />
+      <Node id="25" step_id="S14e0e54dceb14d29b4304a6f8259b59b" container_id="26" order="" type="EndSwitchDefaultNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="1510,2018,56,56" />
+      <Node id="26" step_id="" container_id="2" order="7" type="FlowControlGroupNode" invoke_type="" flowcontrol_type="SwitchCase" flowcontrol_enabled="True" expanded="" text="" bounds="122,457,208,54" />
+      <Node id="27" step_id="813052ae-c903-41d5-bbba-8ab4e2813c69" container_id="5" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="424.000000000001,322,220,260" />
+      <Node id="28" step_id="S6ec7134c7c534f1eb04c22535e32d963" container_id="27" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="SendShortCut" bounds="430.000000000001,346,208,74" />
+      <Node id="29" step_id="S9924f5286ea74166a7a6bec7748430db" container_id="27" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Click" bounds="430.000000000001,424,208,74" />
+      <Node id="30" step_id="S60f854030a794d649fb50017df0e4af1" container_id="27" order="2" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="KeyInput" bounds="430.000000000001,502,208,74" />
+      <Node id="31" step_id="102b27ef-e9e1-42d6-a660-09a88acd5c8e" container_id="8" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="424,322,220,260" />
+      <Node id="32" step_id="S475a18c36cd54ef5ac21772e030031dd" container_id="31" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="SendShortCut" bounds="430,346,208,74" />
+      <Node id="33" step_id="S5dc9caa4453f4b3e95f47e87f35ae699" container_id="31" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Click" bounds="430,424,208,74" />
+      <Node id="34" step_id="Sd3f664441c3049d9b8abebaf4b503aee" container_id="31" order="2" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="KeyInput" bounds="430,502,208,74" />
+      <Node id="35" step_id="0bbee44f-1b38-47e2-8929-f489f9530604" container_id="11" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="424,322,220,260" />
+      <Node id="36" step_id="S8c88741ef5da42788ac149974f9ccf3f" container_id="35" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="SendShortCut" bounds="430,346,208,74" />
+      <Node id="37" step_id="Sff62262aa6bf478ba116c486a2ce81da" container_id="35" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Click" bounds="430,424,208,74" />
+      <Node id="38" step_id="S041dd576c7974e3182fdee9ceeb3909f" container_id="35" order="2" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="KeyInput" bounds="430,502,208,74" />
+      <Node id="39" step_id="ef9823a5-f865-4604-84b8-44699aa3c26c" container_id="14" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="424,245,220,260" />
+      <Node id="40" step_id="S08f69b2b0e674390b3cff2caf5b9b00d" container_id="39" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="SendShortCut" bounds="430,269,208,74" />
+      <Node id="41" step_id="Sc3ef43668fdb47e2ae047500e8fb66f5" container_id="39" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Click" bounds="430,347,208,74" />
+      <Node id="42" step_id="S86a72fa9c2d245b19398bc602d3d8fb7" container_id="39" order="2" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="KeyInput" bounds="430,425,208,74" />
+      <Node id="43" step_id="feb16d9c-456f-49ac-9432-135306d5dad2" container_id="17" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="318,138,220,260" />
+      <Node id="44" step_id="Sf95bea945a0d4a76a3d8eb0a5b8835ca" container_id="43" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="SendShortCut" bounds="324,162,208,74" />
+      <Node id="45" step_id="S158a4d0e89094226b7c5f7752ef95a30" container_id="43" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Click" bounds="324,240,208,74" />
+      <Node id="46" step_id="S8be9a71f16b54c9ba2ee449e01bd8258" container_id="43" order="2" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="KeyInput" bounds="324,318,208,74" />
+      <Node id="47" step_id="602e7acf-9300-42d7-b719-5b165615e7ae" container_id="20" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="212,108,220,260" />
+      <Node id="48" step_id="S9dddfaa7223b4e2282cd200bced30bab" container_id="47" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="SendShortCut" bounds="218,132,208,74" />
+      <Node id="49" step_id="S1c378cabd3774c179204ea210eda147a" container_id="47" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Click" bounds="218,210,208,74" />
+      <Node id="50" step_id="S1c64243dbb6142e4a0948a31dd9b193d" container_id="47" order="2" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="KeyInput" bounds="218,288,208,74" />
+      <Node id="51" step_id="385145a8-9e9f-437a-86fd-0c27f25e2d77" container_id="23" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="212,108,220,260" />
+      <Node id="52" step_id="Sfbb8af2d34f146bbb26405d5e05f1773" container_id="51" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="SendShortCut" bounds="218,132,208,74" />
+      <Node id="53" step_id="S09890addf26445cab44b2eabf7f9e6f2" container_id="51" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Click" bounds="218,210,208,74" />
+      <Node id="54" step_id="Sc886f79f146e4a2986bfeee5577b9263" container_id="51" order="2" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="KeyInput" bounds="218,288,208,74" />
+    </Nodes>
+    <Links>
+      <Link id="55" color="#FF888888" origin_node_id="24" dest_node_id="25" text="" bounds="223,481,1042,918" points="226,484;1262,1396;1262,1396;1262,1396;226,484" />
+      <Link id="56" color="#FF888888" origin_node_id="0" dest_node_id="2" text="" bounds="83,270.5,36,6" points="86,273.5;116,273.5" />
+      <Link id="57" color="#FF888888" origin_node_id="2" dest_node_id="1" text="" bounds="333,270.5,36,6" points="336,273.5;366,273.5" />
+      <Link id="58" color="#FF888888" origin_node_id="3" dest_node_id="27" text="" bounds="119,103,214,6" points="330,106;122,106" />
+      <Link id="59" color="#FF888888" origin_node_id="27" dest_node_id="4" text="" bounds="119,103,214,6" points="330,106;122,106" />
+      <Link id="60" color="#FF888888" origin_node_id="6" dest_node_id="31" text="" bounds="119,157,214,6" points="330,160;122,160" />
+      <Link id="61" color="#FF888888" origin_node_id="31" dest_node_id="7" text="" bounds="119,157,214,6" points="330,160;122,160" />
+      <Link id="62" color="#FF888888" origin_node_id="9" dest_node_id="35" text="" bounds="119,211,214,6" points="330,214;122,214" />
+      <Link id="63" color="#FF888888" origin_node_id="35" dest_node_id="10" text="" bounds="119,211,214,6" points="330,214;122,214" />
+      <Link id="64" color="#FF888888" origin_node_id="12" dest_node_id="39" text="" bounds="119,265,214,6" points="330,268;122,268" />
+      <Link id="65" color="#FF888888" origin_node_id="39" dest_node_id="13" text="" bounds="119,265,214,6" points="330,268;122,268" />
+      <Link id="66" color="#FF888888" origin_node_id="15" dest_node_id="43" text="" bounds="119,319,214,6" points="330,322;122,322" />
+      <Link id="67" color="#FF888888" origin_node_id="43" dest_node_id="16" text="" bounds="119,319,214,6" points="330,322;122,322" />
+      <Link id="68" color="#FF888888" origin_node_id="18" dest_node_id="47" text="" bounds="119,373,214,6" points="330,376;122,376" />
+      <Link id="69" color="#FF888888" origin_node_id="47" dest_node_id="19" text="" bounds="119,373,214,6" points="330,376;122,376" />
+      <Link id="70" color="#FF888888" origin_node_id="21" dest_node_id="51" text="" bounds="7,-21.4999999999999,56,6" points="60,-18.4999999999999;10,-18.4999999999999" />
+      <Link id="71" color="#FF888888" origin_node_id="51" dest_node_id="22" text="" bounds="7,-21.4999999999999,56,6" points="60,-18.4999999999999;10,-18.4999999999999" />
+    </Links>
+  </Diagram>
+</Process>

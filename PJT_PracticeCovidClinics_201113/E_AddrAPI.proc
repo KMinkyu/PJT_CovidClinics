@@ -1,0 +1,112 @@
+
+<Process id="aa9071bf-bbf8-4754-9d47-8620f3c26f0a" type="event" workType="foreground" name="E_AddrAPI" version="1.0" designerVersion="1.6.500.09031" isValid="true">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="0" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-08 21:03:45" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-09 21:46:43" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="sender" scope="Input" valueType="Any" formatType="Any" initValue="this" desc="Task Object" />
+  </Variables>
+  <Steps>
+    <Step id="Saff559761d4240cf96a64570d5398c88" ver="200825001" createVer="200825001" type="Desktop" name="MessageBox" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="b7fa4964-e749-45d4-b370-8cf77e4e2a0e" type="Desktop">
+        <Property type="Desktop" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Conditions_Arguments" controlType="Object" valueType="System.Object" formatType="Any" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'API 에러로 인해 15초 후 다시 요청 시작합니다.'" />
+        <Property type="Desktop" key="Command_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="5" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[MsgBox('API 에러로 인해 15초 후 다시 요청 시작합니다.', 5);]]></Script>
+    </Step>
+    <Step id="S599844d396c743639a8ba4c27ac12d15" ver="200825001" createVer="200825001" type="Flow" name="Delay" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="e9790d6c-3a9e-4732-b815-c6d570bbeaae" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Second" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="10" />
+        <Property type="Flow" key="Conditions_Millisecond" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Delay(10000);]]></Script>
+    </Step>
+    <Step id="Sa2a11648c27648deb7e52adaab09debf" ver="200825001" createVer="200825001" type="Net" name="SendRequest" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="d5f2bce8-1ceb-4c23-91e5-19703d4367fe" type="Net">
+        <Property type="Net" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="--Ignore--" />
+        <Property type="Net" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Net" key="REST_Response" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.sender.varResponse" />
+        <Property type="Net" key="REST_URL" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?ServiceKey=KqBE9gjG72nYHmtxmOJ21%2FvmIEONwImA%2BmS7NfiGuNfSUEmSkZdmUjOETdtYBC6IoemdO7jJlE5%2FuPFbjBfcGQ%3D%3D&amp;ver=1.3&amp;stationName=' + this.sender.inNowArea + '&amp;dataTerm=daily&amp;_returnType=json'" />
+        <Property type="Net" key="REST_Method" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="GET" valuelist="GET;POST;PUT;DEL" />
+        <Property type="Net" key="REST_Authorization" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Net" key="REST_ContentType" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="application/json" valuelist="Text;text/plain;application/json;application/xml;multipart/form-data" />
+        <Property type="Net" key="REST_Headers" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'{\&quot;key\&quot;:\&quot;value\&quot;}'" />
+        <Property type="Net" key="REST_Continuos" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Net" key="REST_Body" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Net" key="REST_FormData" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'{\&quot;key\&quot;:\&quot;value\&quot;}'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[try{
+    this.sender.varResponse = Net.SendRequest(this.sendrequest_info_3);
+}catch(e){
+    Warn('CatchException: ' + e.message);
+}
+]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function E_AddrAPI(args) {
+
+    this.sender = (typeof args != 'undefined') ? args.sender : this;
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('Saff559761d4240cf96a64570d5398c88', '[1] MessageBox');
+        MsgBox('API 에러로 인해 15초 후 다시 요청 시작합니다.', 5);
+
+        //------------------------------------------------
+        STEP('S599844d396c743639a8ba4c27ac12d15', '[2] Delay');
+        Delay(10000);
+
+        //------------------------------------------------
+        STEP('Sa2a11648c27648deb7e52adaab09debf', '[3] SendRequest');
+        try{
+            this.sender.varResponse = Net.SendRequest(this.sendrequest_info_3);
+        }catch(e){
+            Warn('CatchException: ' + e.message);
+        }
+
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+    }
+}
+]]></JScript>
+  <Diagram version="1.200" layout="Horizontal" nodesize="Normal">
+    <Nodes>
+      <Node id="0" step_id="" container_id="" order="" type="StartNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="START" bounds="30,132,56,56" />
+      <Node id="1" step_id="" container_id="" order="" type="EndNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="END" bounds="366,132,56,56" />
+      <Node id="2" step_id="9d17be92-48f6-4755-917c-81df4caadced" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="116,30,220,260" />
+      <Node id="3" step_id="Sa2a11648c27648deb7e52adaab09debf" container_id="2" order="2" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="SendRequest" bounds="122,210,208,74" />
+      <Node id="4" step_id="S599844d396c743639a8ba4c27ac12d15" container_id="2" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Delay" bounds="122,132,208,74" />
+      <Node id="5" step_id="Saff559761d4240cf96a64570d5398c88" container_id="2" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="MessageBox" bounds="122,54,208,74" />
+    </Nodes>
+    <Links>
+      <Link id="6" color="#FF888888" origin_node_id="0" dest_node_id="2" text="" bounds="83,157,36,6" points="86,160;116,160" />
+      <Link id="7" color="#FF888888" origin_node_id="2" dest_node_id="1" text="" bounds="333,157,36,6" points="336,160;366,160" />
+    </Links>
+  </Diagram>
+</Process>

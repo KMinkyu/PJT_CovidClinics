@@ -1,0 +1,278 @@
+
+<Process id="d4d9ee66-63cf-4e80-81f9-2267d8d06ea3" type="task" workType="foreground" name="T_S_Hyperlink" version="1.0" designerVersion="1.6.500.09031" isValid="true">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="6" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-10 23:04:28" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-12 11:20:29" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="outDraftSheetName" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="outDraftExcelHandle" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varAddressData" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varAddressRange" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varApiAddress" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="outTotalRow" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+  </Variables>
+  <Steps>
+    <Step id="Sb78b14a4a5bc47f8811d90da3f7b8388" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="16aaf917-911e-454e-a679-895bf1b39593" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varAddressData" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="&quot;&quot;" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varAddressData = "";]]></Script>
+    </Step>
+    <Step id="Sfe19c0db1f644dacb109cd5c6db287b6" ver="200825001" createVer="200825001" type="Flow" name="Loop" apptitle="" tag="" depth="1" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="90231cf0-be29-4ce6-89e3-510fb2e05a7e" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_InitializeIndex" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.i = 5" />
+        <Property type="Flow" key="Conditions_LoopCondition" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.i &lt; this.outTotalRow" />
+        <Property type="Flow" key="Conditions_UpdateIndex" controlType="Object" valueType="System.Object" formatType="Expression" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.i++" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="Sfc2ea30e0bf847a790f7ed8799bbf56b" type="Flow" name="EndLoop" />
+      </RelatedSteps>
+      <Script><![CDATA[for (this.i = 5; this.i < this.outTotalRow; this.i++) {]]></Script>
+    </Step>
+    <Step id="Sd2e36f61cb8e4cf8a02459d4f1fa213f" ver="200825001" createVer="200825001" type="Excel" name="ReadRange" apptitle="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="0126ccc3-48d9-4069-91bb-59e40c7e4651" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftExcelHandle" />
+        <Property type="Excel" key="Output_DataArray" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varAddressRange" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftSheetName" />
+        <Property type="Excel" key="Sheet_Range" controlType="String" valueType="System.String" formatType="String_ExcelRange" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'E'+this.i" />
+        <Property type="Excel" key="Input_ReadCellType" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="Data" valuelist="Data;Value;Formula;Text" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varAddressRange = Excel.ReadRange(this.readrange_info_3);]]></Script>
+    </Step>
+    <Step id="S2ec9470fab2e4b3690f9bf949e04fa26" ver="200825001" createVer="200825001" type="Net" name="SendRequest" apptitle="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="5f81f1e6-0283-405f-8f53-fec44bf53d97" type="Net">
+        <Property type="Net" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Net" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Net" key="REST_Response" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varApiAddress" />
+        <Property type="Net" key="REST_URL" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'https://openapi.naver.com/v1/search/local.json?query='+this.varAddressRange" />
+        <Property type="Net" key="REST_Method" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="GET" valuelist="GET;POST;PUT;DEL" />
+        <Property type="Net" key="REST_Authorization" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Net" key="REST_ContentType" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="application/json" valuelist="Text;text/plain;application/json;application/xml;multipart/form-data" />
+        <Property type="Net" key="REST_Headers" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'{\&quot;X-Naver-Client-Id\&quot;:\&quot;FkDfCMFIgdyilzmviLr2\&quot;,\&quot;X-Naver-Client-Secret\&quot;:\&quot;577XGjMpEl\&quot;}'" />
+        <Property type="Net" key="REST_Continuos" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Net" key="REST_Body" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Net" key="REST_FormData" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'{\&quot;key\&quot;:\&quot;value\&quot;}'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varApiAddress = Net.SendRequest(this.sendrequest_info_4);]]></Script>
+    </Step>
+    <Step id="S69be6bd04cf64359ac32a319d3368de7" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="edb228ff-4d38-4172-ac55-7b461632db3e" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varApiAddress" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="JSON.parse(this.varApiAddress.Content)" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varApiAddress = JSON.parse(this.varApiAddress.Content);]]></Script>
+    </Step>
+    <Step id="S2f55d25864e74ffeba9883fe7f9678c0" ver="200825001" createVer="200825001" type="Flow" name="DecisionThen" apptitle="" tag="" depth="2" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="e12095c1-1c11-4ec8-b3cd-df8c905c9790" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Expression" controlType="PropertyItemTextEditorView" valueType="System.Object" formatType="Condition" required="True" visible="False" readonly="True" encrypted="False" isChanged="Y" value="this.varApiAddress.items != &quot;&quot; &amp;&amp; this.varApiAddress.items[0].link != &quot;&quot;" order="1" />
+        <Property type="Flow" key="Conditions_CombineCondition" controlType="PropertyItemCombineConditionView" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" order="2" />
+        <Property type="Flow" key="Conditions_Expression1" controlType="PropertyItemExpressionView" valueType="System.Object" formatType="Condition" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varApiAddress.items != &quot;&quot; &amp;&amp; this.varApiAddress.items[0].link != &quot;&quot;" order="3" />
+        <Property type="Flow" key="Conditions_AddCondition" controlType="PropertyItemAddConditionView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="Sddd07541013444adb0681b52b50b4fae" type="Flow" name="EndDecisionThen" />
+      </RelatedSteps>
+      <Script><![CDATA[if (this.varApiAddress.items != "" && this.varApiAddress.items[0].link != "") {]]></Script>
+    </Step>
+    <Step id="S955f1e4c42314c6b9db2159ac4ef83f7" ver="200825001" createVer="200825001" type="Desktop" name="SetClipboard" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="5ee9cae9-310e-4738-89f1-052a28504741" type="Desktop">
+        <Property type="Desktop" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Command_Input" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varApiAddress.items[0].link" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[SystemLib.SetClipboard(this.varApiAddress.items[0].link);]]></Script>
+    </Step>
+    <Step id="S1a6811899f2e4efc994637487a530177" ver="200825001" createVer="200825001" type="Excel" name="SelectRange" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="15ea9283-f43b-476e-80a6-1ccbe8e9aa6b" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftExcelHandle" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftSheetName" />
+        <Property type="Excel" key="Sheet_Range" controlType="String" valueType="System.String" formatType="String_ExcelRange" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'E'+this.i" />
+        <Property type="Excel" key="Sheet_MouseType" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="None" valuelist="None;LeftClick;RightClick;DoubleClick;Hover" />
+        <Property type="Excel" key="Sheet_MousePos" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="True" visible="False" readonly="False" encrypted="False" isChanged="N" value="-1,-1" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Excel.SelectRange(this.selectrange_info_8);]]></Script>
+    </Step>
+    <Step id="Sae1a27f8f3da499cb18b02d7a33ae65e" ver="200825001" createVer="200825001" type="Excel" name="SendShortCut" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="df47442a-b6a2-496e-912b-4bffeef98419" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftExcelHandle" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outDraftSheetName" />
+        <Property type="Excel" key="Key_ALT" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="False" />
+        <Property type="Excel" key="Key_CTRL" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="True" />
+        <Property type="Excel" key="Key_SHIFT" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Key_Keys" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'k'" />
+        <Property type="Excel" key="Key_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Excel" key="Key_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Excel" key="Key_ShortCutName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Excel.SendShortCut(this.sendshortcut_info_9);]]></Script>
+    </Step>
+    <Step id="S026c5af6961f494996a0e0737259e74b" ver="200825001" createVer="200825001" type="Win" name="KeyInput" apptitle="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="81a7b9aa-e97d-4c64-8bd6-d94d77b2a4b0" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Keyboard_KeyInput" controlType="PropertyItemKeyInputView" valueType="System.Text.StringBuilder" formatType="StringBuilder" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="LControlKey,V,,-LControlKey,Return," order="1" ready="True" />
+        <Property type="Win" key="Options_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Win" key="Options_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Win" key="Options_Interval" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="100" />
+        <Property type="Win" key="Keyboard_ClearKeyState" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.KeyInput(this.keyinput_info_10);]]></Script>
+    </Step>
+    <Step id="Sddd07541013444adb0681b52b50b4fae" ver="200825001" createVer="200825001" type="Flow" name="EndDecisionThen" apptitle="" tag="" depth="3" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="6d2893a4-da46-4a97-8293-49cd4dd1025c" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S2f55d25864e74ffeba9883fe7f9678c0" type="Flow" name="DecisionThen" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
+    <Step id="Sfc2ea30e0bf847a790f7ed8799bbf56b" ver="200825001" createVer="200825001" type="Flow" name="EndLoop" apptitle="" tag="" depth="2" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="6d93c5b6-ff92-43cc-ad65-efb1f553c20c" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="Sfe19c0db1f644dacb109cd5c6db287b6" type="Flow" name="Loop" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function T_S_Hyperlink(args) {
+
+    this.outDraftSheetName = (typeof args != 'undefined') ? args.outDraftSheetName : null;
+    this.outDraftExcelHandle = (typeof args != 'undefined') ? args.outDraftExcelHandle : null;
+    this.varAddressData;
+    this.varAddressRange;
+    this.varApiAddress;
+    this.outTotalRow = (typeof args != 'undefined') ? args.outTotalRow : null;
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('Sb78b14a4a5bc47f8811d90da3f7b8388', '[1] Assign');
+        this.varAddressData = "";
+
+        //------------------------------------------------
+        STEP('Sfe19c0db1f644dacb109cd5c6db287b6', '[2] For');
+        for (this.i = 5; this.i < this.outTotalRow; this.i++) {
+
+            //------------------------------------------------
+            STEP('Sd2e36f61cb8e4cf8a02459d4f1fa213f', '[3] ReadRange');
+            this.varAddressRange = Excel.ReadRange(this.readrange_info_3);
+
+            //------------------------------------------------
+            STEP('S2ec9470fab2e4b3690f9bf949e04fa26', '[4] SendRequest');
+            this.varApiAddress = Net.SendRequest(this.sendrequest_info_4);
+
+            //------------------------------------------------
+            STEP('S69be6bd04cf64359ac32a319d3368de7', '[5] Assign');
+            this.varApiAddress = JSON.parse(this.varApiAddress.Content);
+
+            //------------------------------------------------
+            STEP('S2f55d25864e74ffeba9883fe7f9678c0', '[6] IfThen');
+            if (this.varApiAddress.items != "" && this.varApiAddress.items[0].link != "") {
+
+                //------------------------------------------------
+                STEP('S955f1e4c42314c6b9db2159ac4ef83f7', '[7] SetClipboard');
+                SystemLib.SetClipboard(this.varApiAddress.items[0].link);
+
+                //------------------------------------------------
+                STEP('S1a6811899f2e4efc994637487a530177', '[8] SelectRange');
+                Excel.SelectRange(this.selectrange_info_8);
+
+                //------------------------------------------------
+                STEP('Sae1a27f8f3da499cb18b02d7a33ae65e', '[9] SendShortCut');
+                Excel.SendShortCut(this.sendshortcut_info_9);
+
+                //------------------------------------------------
+                STEP('S026c5af6961f494996a0e0737259e74b', '[10] KeyInput');
+                Win.KeyInput(this.keyinput_info_10);
+
+            //------------------------------------------------
+            }
+            STEP('Sddd07541013444adb0681b52b50b4fae', '[11] End-IfThen');
+
+        //------------------------------------------------
+        }
+        STEP('Sfc2ea30e0bf847a790f7ed8799bbf56b', '[12] End-For');
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+    }
+}
+]]></JScript>
+  <Diagram version="1.200" layout="Horizontal" nodesize="Normal">
+    <Nodes>
+      <Node id="0" step_id="" container_id="" order="" type="StartNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="START" bounds="30,171,56,56" />
+      <Node id="1" step_id="" container_id="" order="" type="EndNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="END" bounds="1540,171,56,56" />
+      <Node id="2" step_id="Sfe19c0db1f644dacb109cd5c6db287b6" container_id="" order="" type="LoopNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="366,171,76,56" />
+      <Node id="3" step_id="56556c6a-9064-4373-9318-8bc2004aad30" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="472,147,220,104" />
+      <Node id="4" step_id="Sd2e36f61cb8e4cf8a02459d4f1fa213f" container_id="3" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="ReadRange" bounds="478,171,208,74" />
+      <Node id="5" step_id="4f5c6f1e-e264-479d-b0aa-7ed9feebcb09" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="722,108,220,182" />
+      <Node id="6" step_id="S2ec9470fab2e4b3690f9bf949e04fa26" container_id="5" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="SendRequest" bounds="728,132,208,74" />
+      <Node id="7" step_id="S69be6bd04cf64359ac32a319d3368de7" container_id="5" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="728,210,208,74" />
+      <Node id="8" step_id="Sfc2ea30e0bf847a790f7ed8799bbf56b" container_id="" order="" type="EndLoopNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="1434,171,76,56" />
+      <Node id="9" step_id="S2f55d25864e74ffeba9883fe7f9678c0" container_id="" order="" type="DecisionThenNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="972,171,76,56" />
+      <Node id="10" step_id="Sddd07541013444adb0681b52b50b4fae" container_id="" order="" type="EndDecisionThenNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="1328,171,76,56" />
+      <Node id="11" step_id="807c2b6c-0739-4f32-bf9b-266f1fdeaacd" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="116,147,220,104" />
+      <Node id="12" step_id="Sb78b14a4a5bc47f8811d90da3f7b8388" container_id="11" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="122,171,208,74" />
+      <Node id="20" step_id="ad3950a5-3901-4964-b177-6d0a630f0fd7" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="선별진료소draft.xlsx - Excel" bounds="1078,30,220,338" />
+      <Node id="21" step_id="S955f1e4c42314c6b9db2159ac4ef83f7" container_id="20" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="SetClipboard" bounds="1084,54,208,74" />
+      <Node id="22" step_id="S1a6811899f2e4efc994637487a530177" container_id="20" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="SelectRange" bounds="1084,132,208,74" />
+      <Node id="23" step_id="Sae1a27f8f3da499cb18b02d7a33ae65e" container_id="20" order="2" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="SendShortCut" bounds="1084,210,208,74" />
+      <Node id="24" step_id="S026c5af6961f494996a0e0737259e74b" container_id="20" order="3" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="KeyInput" bounds="1084,288,208,74" />
+    </Nodes>
+    <Links>
+      <Link id="13" color="#FF6868E1" origin_node_id="2" dest_node_id="3" text="" bounds="439,196,36,6" points="442,199;472,199" />
+      <Link id="14" color="#FF888888" origin_node_id="3" dest_node_id="5" text="" bounds="689,196,36,6" points="692,199;722,199" />
+      <Link id="15" color="#FF888888" origin_node_id="8" dest_node_id="1" text="" bounds="1507,196,36,6" points="1510,199;1540,199" />
+      <Link id="16" color="#FF888888" origin_node_id="10" dest_node_id="8" text="" bounds="1401,196,36,6" points="1404,199;1434,199" />
+      <Link id="17" color="#FF888888" origin_node_id="0" dest_node_id="11" text="" bounds="83,196,36,6" points="86,199;116,199" />
+      <Link id="18" color="#FF888888" origin_node_id="11" dest_node_id="2" text="" bounds="333,196,36,6" points="336,199;366,199" />
+      <Link id="19" color="#FF888888" origin_node_id="5" dest_node_id="9" text="" bounds="939,196,36,6" points="942,199;972,199" />
+      <Link id="25" color="#FF0DB2AD" origin_node_id="9" dest_node_id="20" text="" bounds="1045,196,36,6" points="1048,199;1078,199" />
+      <Link id="26" color="#FF888888" origin_node_id="20" dest_node_id="10" text="" bounds="1295,196,36,6" points="1298,199;1328,199" />
+    </Links>
+  </Diagram>
+</Process>

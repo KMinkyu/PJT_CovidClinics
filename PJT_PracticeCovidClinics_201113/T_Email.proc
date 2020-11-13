@@ -1,0 +1,80 @@
+
+<Process id="dd6275c0-e2b3-45e6-9f46-e06f52afd1e2" type="task" workType="foreground" name="T_Email" version="" designerVersion="1.6.500.09031" lastPublishedServer="" readonly="false" isValid="true">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="8" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-12 08:59:57" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-13 09:04:59" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="varReceivers" scope="Normal" valueType="Any" formatType="Any" initValue="'lkk563098@interst.co.kr'" desc="" />
+  </Variables>
+  <Steps>
+    <Step id="Sa384584fa34746379f26fbdb6f3a5c3d" ver="200825001" createVer="200825001" type="Net" name="SendMail" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="2ecfd3ca-34a6-4907-88e6-ceb26cad600e" type="Net">
+        <Property type="Net" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Net" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Net" key="Mail_HostName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'smtps.hiworks.com'" />
+        <Property type="Net" key="Mail_Port" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="587" />
+        <Property type="Net" key="Mail_UseSSL" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="True" />
+        <Property type="Net" key="Mail_ID" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'jongseo1235@interst.co.kr'" />
+        <Property type="Net" key="Mail_Password" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="True" encryptedFrom="" isChanged="Y" value="JOuDeLgyPTNuDy3tn3RGwg==" />
+        <Property type="Net" key="Mail_Sender" controlType="String" valueType="System.String" formatType="String_Email" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'jongseo1235@interst.co.kr'" />
+        <Property type="Net" key="Mail_Receivers" controlType="String" valueType="System.String" formatType="String_Email" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varReceivers" />
+        <Property type="Net" key="Mail_CCs" controlType="String" valueType="System.String" formatType="String_Email" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="''" />
+        <Property type="Net" key="Mail_BCCs" controlType="String" valueType="System.String" formatType="String_Email" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="''" />
+        <Property type="Net" key="Mail_Subject" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'메일 전송 완료'" />
+        <Property type="Net" key="Mail_Body" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'DB 업로드 및 완료 Draft 파일 '" />
+        <Property type="Net" key="Mail_IsHtml" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Net" key="Mail_Attachments" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'C:\\Users\\lenovo\\Documents\\Brity RPA Projects\\PJT_PracticeCovidClinics_201112\\Resources\\선별진료소draft.xlsx'" />
+        <Property type="Net" key="Mail_CheckFileSize" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="20" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Net.SendMail(this.sendmail_info_1);]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function T_Email() {
+
+    this.varReceivers = 'lkk563098@interst.co.kr';
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('Sa384584fa34746379f26fbdb6f3a5c3d', '[1] SendMail');
+        Net.SendMail(this.sendmail_info_1);
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+    }
+}
+]]></JScript>
+  <Diagram version="1.200" layout="Horizontal" nodesize="Normal">
+    <Nodes>
+      <Node id="0" step_id="" container_id="" order="" type="StartNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="START" bounds="30,54,56,56" />
+      <Node id="1" step_id="" container_id="" order="" type="EndNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="END" bounds="366,54,56,56" />
+      <Node id="2" step_id="70c8c711-c9d2-44c4-9189-0cdf11ff4ce3" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="116,30,220,104" />
+      <Node id="3" step_id="Sa384584fa34746379f26fbdb6f3a5c3d" container_id="2" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="SendMail" bounds="122,54,208,74" />
+    </Nodes>
+    <Links>
+      <Link id="4" color="#FF888888" origin_node_id="2" dest_node_id="1" text="" bounds="333,79,36,6" points="336,82;366,82" />
+      <Link id="5" color="#FF888888" origin_node_id="0" dest_node_id="2" text="" bounds="83,79,36,6" points="86,82;116,82" />
+    </Links>
+  </Diagram>
+</Process>

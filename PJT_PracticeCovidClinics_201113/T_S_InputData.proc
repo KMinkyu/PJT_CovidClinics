@@ -1,0 +1,104 @@
+
+<Process id="98842971-3140-47e0-bedb-ae63bc1afa20" type="task" workType="foreground" name="T_S_InputData" version="1.0" designerVersion="1.6.500.09031" isValid="true">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="13" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-03 16:05:20" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-08 20:50:01" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="inDraftID" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="inStartRow" scope="Input" valueType="Any" formatType="Any" initValue="1" desc="" />
+    <Variable name="inEndRow" scope="Input" valueType="Any" formatType="Any" initValue="3" desc="" />
+    <Variable name="inSheetName" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+  </Variables>
+  <Steps>
+    <Step id="Sa57830797d3c4ac0a3215e7bd06b5b5c" ver="200825001" createVer="200825001" type="Excel" name="CopyPaste" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="0ed166a5-7985-4b5e-a9fa-2f2c5194b358" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="File_SourceExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.inDraftID" />
+        <Property type="Excel" key="File_SourceSheet" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.inSheetName" />
+        <Property type="Excel" key="File_SourceRange" controlType="String" valueType="System.String" formatType="String_ExcelRange" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'i' + this.inStartRow" />
+        <Property type="Excel" key="File_TargetExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.inDraftID" />
+        <Property type="Excel" key="File_TargetSheet" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.inSheetName" />
+        <Property type="Excel" key="File_TargetRange" controlType="String" valueType="System.String" formatType="String_ExcelRange" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'i' + this.inStartRow +': i' + this.inEndRow" />
+        <Property type="Excel" key="File_TargetAutoSave" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Input_PasteType" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="All" valuelist="All;UsingSourceTheme;Formulas;ExceptBorders;Values;ColumnWidths;Formats;FormulasAndNumberFormats;Comments;ValuesAndNumberFormats;Validation;MergingConditionalFormats" />
+        <Property type="Excel" key="Input_PasteOperation" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="None" valuelist="None;Add;Subtract;Multiply;Divide" />
+        <Property type="Excel" key="Input_PasteSkipBlanks" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Input_PasteTranspose" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Excel" key="Input_PasteUseLink" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Excel.CopyPaste(this.copypaste_info_1);]]></Script>
+    </Step>
+    <Step id="S525e59c9dfee4597952e284a04d866a9" ver="200825001" createVer="200825001" type="Win" name="KeyInput" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="5a51bb39-e868-4448-8e58-5eec1ea82dc4" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Keyboard_KeyInput" controlType="PropertyItemKeyInputView" valueType="System.Text.StringBuilder" formatType="StringBuilder" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Escape," order="1" ready="True" />
+        <Property type="Win" key="Options_BeforeDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1000" />
+        <Property type="Win" key="Options_AfterDelay" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="500" />
+        <Property type="Win" key="Options_Interval" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="100" />
+        <Property type="Win" key="Keyboard_ClearKeyState" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Win.KeyInput(this.keyinput_info_2);]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function T_S_InputData(args) {
+
+    this.inDraftID = (typeof args != 'undefined') ? args.inDraftID : null;
+    this.inStartRow = (typeof args != 'undefined') ? args.inStartRow : 1;
+    this.inEndRow = (typeof args != 'undefined') ? args.inEndRow : 3;
+    this.inSheetName = (typeof args != 'undefined') ? args.inSheetName : null;
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('Sa57830797d3c4ac0a3215e7bd06b5b5c', '[1] CopyPaste');
+        Excel.CopyPaste(this.copypaste_info_1);
+
+        //------------------------------------------------
+        STEP('S525e59c9dfee4597952e284a04d866a9', '[2] KeyInput');
+        Win.KeyInput(this.keyinput_info_2);
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+    }
+}
+]]></JScript>
+  <Diagram version="1.200" layout="Horizontal" nodesize="Normal">
+    <Nodes>
+      <Node id="0" step_id="" container_id="" order="" type="StartNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="START" bounds="30,54,56,56" />
+      <Node id="1" step_id="" container_id="" order="" type="EndNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="END" bounds="616,54,56,56" />
+      <Node id="2" step_id="da6a095b-7e91-4691-b672-14517a816a00" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="366,30,220,104" />
+      <Node id="3" step_id="S525e59c9dfee4597952e284a04d866a9" container_id="2" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="KeyInput" bounds="372,54,208,74" />
+      <Node id="4" step_id="32c701e4-9382-42db-a9c7-fd8085132b3b" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="116,30,220,104" />
+      <Node id="5" step_id="Sa57830797d3c4ac0a3215e7bd06b5b5c" container_id="4" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="CopyPaste" bounds="122,54,208,74" />
+    </Nodes>
+    <Links>
+      <Link id="6" color="#FF888888" origin_node_id="2" dest_node_id="1" text="" bounds="583,79,36,6" points="586,82;616,82" />
+      <Link id="7" color="#FF888888" origin_node_id="4" dest_node_id="2" text="" bounds="333,79,36,6" points="336,82;366,82" />
+      <Link id="8" color="#FF888888" origin_node_id="0" dest_node_id="4" text="" bounds="83,79,36,6" points="86,82;116,82" />
+    </Links>
+  </Diagram>
+</Process>

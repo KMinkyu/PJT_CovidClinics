@@ -1,0 +1,276 @@
+
+<Process id="9afb516e-efa1-4fb7-8345-a4a88d0f2669" type="task" workType="foreground" name="T_MoveToDB" version="1.0" designerVersion="1.6.500.09031" isValid="true">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="226" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-02 22:01:36" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-05 23:45:41" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="inExcelHandle" scope="Input" valueType="Any" formatType="Any" initValue="" desc="완성 후 Excel 변수 받아오기" />
+    <Variable name="inTotalRow" scope="Input" valueType="Any" formatType="Any" initValue="" desc="Excel 열 - 1" />
+    <Variable name="varDBSource" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varDBConn" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varDBData2DArr" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varDBRowArr" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varExcelData2DArr" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varExcelRowArr" scope="Normal" valueType="Any" formatType="Any" initValue="[]" desc="엑셀 열 별 비교 데이터" />
+    <Variable name="varRow" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="엑셀 비교 열" />
+    <Variable name="varCol" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varCounter" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varTemp2DArr" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="임시 데이터" />
+    <Variable name="varBool" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="검체채취 가능여부 Boolean" />
+  </Variables>
+  <Steps>
+    <Step id="S7d9dc80e071549b785a9dd724fc07d01" ver="200825001" createVer="200825001" type="Excel" name="OpenExcel" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="2ce868c8-b29b-4309-870d-72bcc87a5f58" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Output_OutputExcel" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="RESULT" />
+        <Property type="Excel" key="File_Path" controlType="Excel" valueType="System.String" formatType="String_FilePath" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'C:\\Users\\lenovo\\Downloads\\222222.xlsx'" order="11" />
+        <Property type="Excel" key="File_Invisible" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" order="12" />
+        <Property type="Excel" key="File_ReadOnly" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" order="16" />
+        <Property type="Excel" key="File_Maximize" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" order="13" />
+        <Property type="Excel" key="File_ExecuteShell" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" order="14" />
+        <Property type="Excel" key="File_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="False" readonly="False" encrypted="False" isChanged="N" value="60" order="15" />
+        <Property type="Excel" key="File_UsePassword" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" order="17" />
+        <Property type="Excel" key="File_OpenPassword" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" order="18" />
+        <Property type="Excel" key="File_WritePassword" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" order="19" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[RESULT = Excel.OpenExcel(this.openexcel_info_1);]]></Script>
+    </Step>
+    <Step id="S7601f871845147caaefaeb205696525d" ver="200825001" createVer="200825001" type="Excel" name="GetRowCount" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="2e13f05a-06bd-41b1-a7bd-424e3441bce1" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="ACTIVE_EXCEL" />
+        <Property type="Excel" key="Output_OutputCount" controlType="OutputControlType" valueType="System.Int32" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="RESULT" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="ACTIVE_SHEET" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[RESULT = Excel.GetRowCount(this.getrowcount_info_2);]]></Script>
+    </Step>
+    <Step id="Sfef6901f460b481cb44ae14c315db6a7" ver="200825001" createVer="200825001" type="Excel" name="ReadRange" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="97b12a1f-d92c-4db4-bf02-9315e158a3cc" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="ACTIVE_EXCEL" />
+        <Property type="Excel" key="Output_DataArray" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varExcelData2DArr" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="ACTIVE_SHEET" />
+        <Property type="Excel" key="Sheet_Range" controlType="String" valueType="System.String" formatType="String_ExcelRange" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'A2:I'+RESULT" />
+        <Property type="Excel" key="Input_ReadCellType" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="Value" valuelist="Data;Value;Formula;Text" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varExcelData2DArr = Excel.ReadRange(this.readrange_info_3);]]></Script>
+    </Step>
+    <Step id="Sbf75272636d145e6aa397052f68bb568" ver="200825001" createVer="200825001" type="Desktop" name="DBConnection" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="9807cb59-ea14-4fcd-af32-48151fcf4dc3" type="Desktop">
+        <Property type="Desktop" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Connection_Connection" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDBConn" />
+        <Property type="Desktop" key="DataSource_DataSource" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDBSource" />
+        <Property type="Desktop" key="Connection_DSN" controlType="PropertyItemDBLibraryView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="clinics" />
+        <Property type="Desktop" key="Connection_UID" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'kmk'" />
+        <Property type="Desktop" key="Connection_PWD" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="True" id="aff42fc2-2539-4e02-abea-4d50f77f754a" encryptedFrom="" isChanged="Y" value="j9nE3KSV0+mwzdQDOn8piQ==" />
+        <Property type="Desktop" key="DataSource_SourceType" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="TABLE" valuelist="TABLE;VIEW" />
+        <Property type="Desktop" key="DataSource_Source" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="covidclinics" valuelist="covidclinics" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varDBConn = SystemLib.DBConnection(this.dbconnection_info_4); this.varDBSource = 'TABLE?covidclinics']]></Script>
+    </Step>
+    <Step id="S8ab0b00173044360b0391b74593cecac" ver="200825001" createVer="200825001" type="Desktop" name="GetDBData" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="d8874f8c-dacc-4abb-bb3e-b602eb1a105d" type="Desktop">
+        <Property type="Desktop" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="DataSource_Output" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDBData2DArr" />
+        <Property type="Desktop" key="Connection_Connection" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDBConn" />
+        <Property type="Desktop" key="DataSource_DataSource" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDBSource" />
+        <Property type="Desktop" key="DataSource_UseSource" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Desktop" key="DataSource_Command" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="''" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varDBData2DArr = SystemLib.GetDBData(this.getdbdata_info_5);]]></Script>
+    </Step>
+    <Step id="S66d06324a1404889a585125f7ee1ec87" ver="200825001" createVer="200825001" type="Desktop" name="MessageBox" apptitle="" tag="" depth="1" stmttype="Normal" enabled="False" mainSet="0">
+      <Properties id="e516d37c-22ce-4619-9cd4-a361dad55a07" type="Desktop">
+        <Property type="Desktop" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Conditions_Arguments" controlType="Object" valueType="System.Object" formatType="Any" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="typeof(this.varExcelData2DArr[0][6])" />
+        <Property type="Desktop" key="Command_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[MsgBox(typeof(this.varExcelData2DArr[0][6]));]]></Script>
+    </Step>
+    <Step id="Sb4a3771e6d744a3da423168516a2c806" ver="200825001" createVer="200825001" type="Flow" name="Decision" apptitle="" tag="" depth="1" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="2ff7824e-3ab1-4341-803c-44ed2084d1e2" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="빈 테이블?" />
+        <Property type="Flow" key="Conditions_Expression" controlType="PropertyItemTextEditorView" valueType="System.Object" formatType="Condition" required="True" visible="False" readonly="True" encrypted="False" isChanged="Y" value="this.varDBData2DArr == null" order="1" />
+        <Property type="Flow" key="Conditions_CombineCondition" controlType="PropertyItemCombineConditionView" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" order="2" />
+        <Property type="Flow" key="Conditions_Expression1" controlType="PropertyItemExpressionView" valueType="System.Object" formatType="Condition" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDBData2DArr == null" order="3" />
+        <Property type="Flow" key="Conditions_AddCondition" controlType="PropertyItemAddConditionView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S3055cf4e5f53498390f8045665bdde67" type="Flow" name="Else" />
+        <RelatedStep id="Scd2cd792440149c0afea22d9c65871b1" type="Flow" name="EndDecision" />
+      </RelatedSteps>
+      <Script><![CDATA[if (this.varDBData2DArr == null) {]]></Script>
+    </Step>
+    <Step id="S1c2536ee73354ea48c50061a375b7e59" ver="200825001" createVer="200825001" type="Flow" name="RunTask" apptitle="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="64821321-491e-4cb2-8dbf-455491cc4b1a" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_TaskName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="T_S_WriteInDB" />
+        <Property type="Flow" key="Input_inExcelData2DArr" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varExcelData2DArr" order="2" />
+        <Property type="Flow" key="Input_inDBConn" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDBConn" order="1" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[RunTask(this, 'T_S_WriteInDB', {'inExcelData2DArr':this.varExcelData2DArr, 'inDBConn':this.varDBConn});]]></Script>
+    </Step>
+    <Step id="S3055cf4e5f53498390f8045665bdde67" ver="200825001" createVer="200825001" type="Flow" name="Else" apptitle="" tag="" depth="2" stmttype="CloseOpenBlock" enabled="True" mainSet="0">
+      <Properties id="4c6ad464-b742-40d8-b8bd-06b8c9edc517" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="Sb4a3771e6d744a3da423168516a2c806" type="Flow" name="Decision" />
+      </RelatedSteps>
+      <Script><![CDATA[}else{]]></Script>
+    </Step>
+    <Step id="S41d1b64232d8482ea1b62075c9c6e1d9" ver="200825001" createVer="200825001" type="Flow" name="RunTask" apptitle="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="46b077fc-5227-43f6-9e7b-81f942caf278" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_TaskName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="T_S_UpdateDB" />
+        <Property type="Flow" key="Input_inDBConn" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDBConn" order="1" />
+        <Property type="Flow" key="Input_inExcelData2DArr" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varExcelData2DArr" order="2" />
+        <Property type="Flow" key="Input_inDBData2DArr" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDBData2DArr" order="3" />
+        <Property type="Flow" key="Output_outRow" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varRow" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[RunTask(this, 'T_S_UpdateDB', {'inDBConn':this.varDBConn, 'inExcelData2DArr':this.varExcelData2DArr, 'inDBData2DArr':this.varDBData2DArr});]]></Script>
+    </Step>
+    <Step id="Scd2cd792440149c0afea22d9c65871b1" ver="200825001" createVer="200825001" type="Flow" name="EndDecision" apptitle="" tag="" depth="2" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="89e6b2d8-c37e-48cf-9fad-6d951232efe5" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="Sb4a3771e6d744a3da423168516a2c806" type="Flow" name="Decision" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function T_MoveToDB(args) {
+
+    this.inExcelHandle = (typeof args != 'undefined') ? args.inExcelHandle : null;
+    this.inTotalRow = (typeof args != 'undefined') ? args.inTotalRow : null;
+    this.varDBSource;
+    this.varDBConn;
+    this.varDBData2DArr;
+    this.varDBRowArr;
+    this.varExcelData2DArr;
+    this.varExcelRowArr = [];
+    this.varRow;
+    this.varCol;
+    this.varCounter;
+    this.varTemp2DArr;
+    this.varBool;
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('S7d9dc80e071549b785a9dd724fc07d01', '[1] OpenExcel');
+        RESULT = Excel.OpenExcel(this.openexcel_info_1);
+
+        //------------------------------------------------
+        STEP('S7601f871845147caaefaeb205696525d', '[2] GetRowCount');
+        RESULT = Excel.GetRowCount(this.getrowcount_info_2);
+
+        //------------------------------------------------
+        STEP('Sfef6901f460b481cb44ae14c315db6a7', '[3] ReadRange');
+        this.varExcelData2DArr = Excel.ReadRange(this.readrange_info_3);
+
+        //------------------------------------------------
+        STEP('Sbf75272636d145e6aa397052f68bb568', '[4] DBConnection');
+        this.varDBConn = SystemLib.DBConnection(this.dbconnection_info_4); this.varDBSource = 'TABLE?covidclinics'
+
+        //------------------------------------------------
+        STEP('S8ab0b00173044360b0391b74593cecac', '[5] GetDBData');
+        this.varDBData2DArr = SystemLib.GetDBData(this.getdbdata_info_5);
+
+        ////------------------------------------------------
+        //STEP('S66d06324a1404889a585125f7ee1ec87', '[6] MessageBox');
+        //MsgBox(typeof(this.varExcelData2DArr[0][6]));
+
+        //------------------------------------------------
+        STEP('Sb4a3771e6d744a3da423168516a2c806', '[7] If');
+        if (this.varDBData2DArr == null) {
+
+            //------------------------------------------------
+            STEP('S1c2536ee73354ea48c50061a375b7e59', '[8] RunTask');
+            RunTask(this, 'T_S_WriteInDB', {'inExcelData2DArr':this.varExcelData2DArr, 'inDBConn':this.varDBConn});
+
+        //------------------------------------------------
+        }else{
+            STEP('S3055cf4e5f53498390f8045665bdde67', '[9] Else');
+
+            //------------------------------------------------
+            STEP('S41d1b64232d8482ea1b62075c9c6e1d9', '[10] RunTask');
+            RunTask(this, 'T_S_UpdateDB', {'inDBConn':this.varDBConn, 'inExcelData2DArr':this.varExcelData2DArr, 'inDBData2DArr':this.varDBData2DArr});
+
+        //------------------------------------------------
+        }
+        STEP('Scd2cd792440149c0afea22d9c65871b1', '[11] End-If');
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+    }
+}
+]]></JScript>
+  <Diagram version="1.200" layout="Horizontal" nodesize="Normal">
+    <Nodes>
+      <Node id="0" step_id="" container_id="" order="" type="StartNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="START" bounds="30,132,56,56" />
+      <Node id="1" step_id="" container_id="" order="" type="EndNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="END" bounds="1306,348,56,56" />
+      <Node id="2" step_id="8ca96109-abe7-4b30-b346-e2a1d2fe353d" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="DB연결, DB 데이터 저장" bounds="366,69,220,182" />
+      <Node id="3" step_id="Sbf75272636d145e6aa397052f68bb568" container_id="2" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="DBConnection" bounds="372,93,208,74" />
+      <Node id="4" step_id="S8ab0b00173044360b0391b74593cecac" container_id="2" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="GetDBData" bounds="372,171,208,74" />
+      <Node id="5" step_id="Sb4a3771e6d744a3da423168516a2c806" container_id="" order="" type="DecisionNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="923,132,76,56" />
+      <Node id="6" step_id="Scd2cd792440149c0afea22d9c65871b1" container_id="" order="" type="EndDecisionNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="1143,348,76,56" />
+      <Node id="7" step_id="8196a78b-f25f-4daa-bbae-68848173c841" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="616,108,220,104" />
+      <Node id="8" step_id="S66d06324a1404889a585125f7ee1ec87" container_id="7" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="MessageBox" bounds="622,132,208,74" />
+      <Node id="9" step_id="5d1136a1-662e-4aa6-966c-f53a1eafc797" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="임시 Excel 핸들" bounds="116,30,220,260" />
+      <Node id="10" step_id="S7d9dc80e071549b785a9dd724fc07d01" container_id="9" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="OpenExcel" bounds="122,54,208,74" />
+      <Node id="11" step_id="S7601f871845147caaefaeb205696525d" container_id="9" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="GetRowCount" bounds="122,132,208,74" />
+      <Node id="12" step_id="Sfef6901f460b481cb44ae14c315db6a7" container_id="9" order="2" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="ReadRange" bounds="122,210,208,74" />
+      <Node id="13" step_id="S1c2536ee73354ea48c50061a375b7e59" container_id="" order="" type="InvokeNode" invoke_type="Task" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="T_S_WriteInDB" bounds="1086,104,190,112" />
+      <Node id="21" step_id="S41d1b64232d8482ea1b62075c9c6e1d9" container_id="" order="" type="InvokeNode" invoke_type="Task" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="T_S_UpdateDB" bounds="866,320,190,112" />
+    </Nodes>
+    <Links>
+      <Link id="14" color="#FF888888" origin_node_id="2" dest_node_id="7" text="" bounds="583,157,36,6" points="586,160;616,160" />
+      <Link id="15" color="#FF888888" origin_node_id="7" dest_node_id="5" text="" bounds="833,157,93,6" points="836,160;923,160" />
+      <Link id="16" color="#FF888888" origin_node_id="0" dest_node_id="9" text="" bounds="83,157,36,6" points="86,160;116,160" />
+      <Link id="17" color="#FF888888" origin_node_id="9" dest_node_id="2" text="" bounds="333,157,36,6" points="336,160;366,160" />
+      <Link id="18" color="#FF0DB2AD" origin_node_id="5" dest_node_id="13" text="TRUE" bounds="996,157,93,6" points="999,160;1086,160" />
+      <Link id="19" color="#FF888888" origin_node_id="13" dest_node_id="6" text="" bounds="1178,213,6,138" points="1181,216;1181,348" />
+      <Link id="20" color="#FF888888" origin_node_id="6" dest_node_id="1" text="" bounds="1216,373,93,6" points="1219,376;1306,376" />
+      <Link id="22" color="#FF0DB2AD" origin_node_id="5" dest_node_id="21" text="FALSE" bounds="958,185,6,138" points="961,188;961,320" />
+      <Link id="23" color="#FF888888" origin_node_id="21" dest_node_id="6" text="" bounds="1053,373,93,6" points="1056,376;1143,376" />
+    </Links>
+  </Diagram>
+</Process>

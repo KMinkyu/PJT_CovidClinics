@@ -1,0 +1,161 @@
+
+<Process id="a5e04573-1c0a-42ea-96c6-430614d5a920" type="task" workType="foreground" name="T_S_MixTwoArray" version="1.0" designerVersion="1.6.500.09031" readonly="false" isValid="true">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="0" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-12 15:21:01" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-13 08:49:40" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="inArray1" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="inArray2" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="outTwoArray" scope="Output" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varOneData" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varTwoData" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+  </Variables>
+  <Steps>
+    <Step id="S1a0418d0a81646e98d5fb9bec6ebd593" ver="200825001" createVer="200825001" type="Flow" name="CustomLibrary" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="4f3ea84c-9990-45f0-978c-fa7201dc3420" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_LibraryScope" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Global" />
+        <Property type="Flow" key="Conditions_LibraryNamespace" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="DataConverter" />
+        <Property type="Flow" key="Conditions_LibraryName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="Array1D_ToString" />
+        <Property type="Flow" key="Conditions_LibraryType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="DotNetDll" />
+        <Property type="Flow" key="Conditions_Result" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varOneData" />
+        <Property type="Flow" key="Options_Instance" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Arguments_data" controlType="Object" valueType="System.Object" formatType="Any" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.inArray1" order="1" />
+        <Property type="Flow" key="Arguments_seperator" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="&quot;,&quot;" order="2" />
+        <Property type="Flow" key="Conditions_TargetAssembly" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="IPA.ExtendLibrary.dll" />
+        <Property type="Flow" key="Conditions_TargetClass" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="RPAGO.ExtendLibrary.DataConverter.DataConverter_Array" />
+        <Property type="Flow" key="Conditions_TargetMethod" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="System.Object ArrayToString(System.Object, System.String)" />
+        <Property type="Flow" key="Conditions_ExternLibrary" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="IPA.ExtendLibrary.dll" />
+        <Property type="Flow" key="Conditions_ExternLibraryModule" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="RPAGO.ExtendLibrary.DataConverter.DataConverter_Array" />
+        <Property type="Flow" key="Conditions_ExternLibraryMethodFullName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="System.Object ArrayToString(System.Object, System.String)" />
+        <Property type="Flow" key="Conditions_TargetMethodType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Static_Method" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varOneData = Script.DataConverter.Array1D_ToString(null, this.inArray1, ",");]]></Script>
+    </Step>
+    <Step id="S56ec8e769b7a4e00a621171dcf7afc9b" ver="200825001" createVer="200825001" type="Flow" name="CustomLibrary" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="4f3ea84c-9990-45f0-978c-fa7201dc3420" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_LibraryScope" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Global" />
+        <Property type="Flow" key="Conditions_LibraryNamespace" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="DataConverter" />
+        <Property type="Flow" key="Conditions_LibraryName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="Array1D_ToString" />
+        <Property type="Flow" key="Conditions_LibraryType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="DotNetDll" />
+        <Property type="Flow" key="Conditions_Result" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varTwoData" />
+        <Property type="Flow" key="Options_Instance" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Arguments_data" controlType="Object" valueType="System.Object" formatType="Any" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.inArray2" order="1" />
+        <Property type="Flow" key="Arguments_seperator" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="&quot;,&quot;" order="2" />
+        <Property type="Flow" key="Conditions_TargetAssembly" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="IPA.ExtendLibrary.dll" />
+        <Property type="Flow" key="Conditions_TargetClass" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="RPAGO.ExtendLibrary.DataConverter.DataConverter_Array" />
+        <Property type="Flow" key="Conditions_TargetMethod" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="System.Object ArrayToString(System.Object, System.String)" />
+        <Property type="Flow" key="Conditions_ExternLibrary" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="IPA.ExtendLibrary.dll" />
+        <Property type="Flow" key="Conditions_ExternLibraryModule" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="RPAGO.ExtendLibrary.DataConverter.DataConverter_Array" />
+        <Property type="Flow" key="Conditions_ExternLibraryMethodFullName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="System.Object ArrayToString(System.Object, System.String)" />
+        <Property type="Flow" key="Conditions_TargetMethodType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Static_Method" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varTwoData = Script.DataConverter.Array1D_ToString(null, this.inArray2, ",");]]></Script>
+    </Step>
+    <Step id="S070cbb31a292489aaef389f193fdd1aa" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="23842690-1492-4d3a-8971-5138f3b4b1f9" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outTwoArray" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varOneData+','+this.varTwoData" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.outTwoArray = this.varOneData+','+this.varTwoData;]]></Script>
+    </Step>
+    <Step id="S570e13249fa048e0a762a4b749a73452" ver="200825001" createVer="200825001" type="Flow" name="CustomLibrary" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="60412591-889b-4c62-9929-043f4d1e302a" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_LibraryScope" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Global" />
+        <Property type="Flow" key="Conditions_LibraryNamespace" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="DataConverter" />
+        <Property type="Flow" key="Conditions_LibraryName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="Array1D_StringToArray" />
+        <Property type="Flow" key="Conditions_LibraryType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="DotNetDll" />
+        <Property type="Flow" key="Conditions_Result" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outTwoArray" />
+        <Property type="Flow" key="Options_Instance" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Arguments_data" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outTwoArray" order="1" />
+        <Property type="Flow" key="Arguments_seperator" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="&quot;,&quot;" order="2" />
+        <Property type="Flow" key="Conditions_TargetAssembly" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="IPA.ExtendLibrary.dll" />
+        <Property type="Flow" key="Conditions_TargetClass" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="RPAGO.ExtendLibrary.DataConverter.DataConverter_Array" />
+        <Property type="Flow" key="Conditions_TargetMethod" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="System.Object StringToArray(System.Object, System.String)" />
+        <Property type="Flow" key="Conditions_ExternLibrary" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="IPA.ExtendLibrary.dll" />
+        <Property type="Flow" key="Conditions_ExternLibraryModule" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="RPAGO.ExtendLibrary.DataConverter.DataConverter_Array" />
+        <Property type="Flow" key="Conditions_ExternLibraryMethodFullName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="System.Object StringToArray(System.Object, System.String)" />
+        <Property type="Flow" key="Conditions_TargetMethodType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Static_Method" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.outTwoArray = Script.DataConverter.Array1D_StringToArray(null, this.outTwoArray, ",");]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function T_S_MixTwoArray(args) {
+
+    this.inArray1 = (typeof args != 'undefined') ? args.inArray1 : null;
+    this.inArray2 = (typeof args != 'undefined') ? args.inArray2 : null;
+    this.outTwoArray;
+    this.varOneData;
+    this.varTwoData;
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('S1a0418d0a81646e98d5fb9bec6ebd593', '[1] Array1D_ToString');
+        this.varOneData = Script.DataConverter.Array1D_ToString(null, this.inArray1, ",");
+
+        //------------------------------------------------
+        STEP('S56ec8e769b7a4e00a621171dcf7afc9b', '[2] Array1D_ToString');
+        this.varTwoData = Script.DataConverter.Array1D_ToString(null, this.inArray2, ",");
+
+        //------------------------------------------------
+        STEP('S070cbb31a292489aaef389f193fdd1aa', '[3] Assign');
+        this.outTwoArray = this.varOneData+','+this.varTwoData;
+
+        //------------------------------------------------
+        STEP('S570e13249fa048e0a762a4b749a73452', '[4] Array1D_StringToArray');
+        this.outTwoArray = Script.DataConverter.Array1D_StringToArray(null, this.outTwoArray, ",");
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+        return {'outTwoArray':this.outTwoArray};
+    }
+}
+]]></JScript>
+  <Diagram version="1.200" layout="Horizontal" nodesize="Normal">
+    <Nodes>
+      <Node id="0" step_id="" container_id="" order="" type="StartNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="START" bounds="30,171,56,56" />
+      <Node id="1" step_id="" container_id="" order="" type="EndNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="END" bounds="366,171,56,56" />
+      <Node id="2" step_id="02964750-7ed0-4a59-b517-11ec9e19c327" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="116,30,220,338" />
+      <Node id="3" step_id="S1a0418d0a81646e98d5fb9bec6ebd593" container_id="2" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Array1D_ToString" bounds="122,54,208,74" />
+      <Node id="4" step_id="S56ec8e769b7a4e00a621171dcf7afc9b" container_id="2" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Array1D_ToString" bounds="122,132,208,74" />
+      <Node id="5" step_id="S070cbb31a292489aaef389f193fdd1aa" container_id="2" order="2" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="122,210,208,74" />
+      <Node id="6" step_id="S570e13249fa048e0a762a4b749a73452" container_id="2" order="3" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Array1D_StringToArray" bounds="122,288,208,74" />
+    </Nodes>
+    <Links>
+      <Link id="7" color="#FF888888" origin_node_id="0" dest_node_id="2" text="" bounds="83,196,36,6" points="86,199;116,199" />
+      <Link id="8" color="#FF888888" origin_node_id="2" dest_node_id="1" text="" bounds="333,196,36,6" points="336,199;366,199" />
+    </Links>
+  </Diagram>
+</Process>

@@ -1,0 +1,123 @@
+
+<Process id="5dca0062-1d0f-452c-8d9e-ac86b2c2cc6a" type="process" workType="foreground" name="P_process" version="1.0" designerVersion="1.6.500.09031" readonly="false" isValid="true">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="0" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-05 10:17:05" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-13 09:04:55" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="varDraftExcelHandle" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varTotalRow" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varDraftSheetName" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+  </Variables>
+  <Steps>
+    <Step id="Sef7056ffd27b4a3a87fb490d43930a66" ver="200825001" createVer="200825001" type="Flow" name="RunTask" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="de7456b9-a923-4274-af88-78e642f5f4b1" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_TaskName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="T_FillDraftExcel" />
+        <Property type="Flow" key="Output_outDraftExcelHandle" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDraftExcelHandle" />
+        <Property type="Flow" key="Output_outTotalRow" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varTotalRow" />
+        <Property type="Flow" key="Output_outDraftSheetName" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDraftSheetName" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[RunTask(this, 'T_FillDraftExcel', null);]]></Script>
+    </Step>
+    <Step id="S8c6429cad8c149239dcee14868c09384" ver="200825001" createVer="200825001" type="Flow" name="RunTask" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="ea2ab097-51cf-47a4-a065-c717838baecf" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_TaskName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="Y" value="T_AirPollutionAndCovid" />
+        <Property type="Flow" key="Input_inDraftSheetName" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDraftSheetName" />
+        <Property type="Flow" key="Input_inDraftExcelHandle" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDraftExcelHandle" />
+        <Property type="Flow" key="Input_inTotalRow" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varTotalRow" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[RunTask(this, 'T_AirPollutionAndCovid', {'inDraftSheetName':this.varDraftSheetName, 'inDraftExcelHandle':this.varDraftExcelHandle, 'inTotalRow':this.varTotalRow});]]></Script>
+    </Step>
+    <Step id="S0b09bd98e85f49dea7d8646d6e474861" ver="200825001" createVer="200825001" type="Flow" name="RunTask" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="346fd904-2df7-45ad-b003-14947926cf5d" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_TaskName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="T_MoveToDB" />
+        <Property type="Flow" key="Input_inExcelHandle" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varDraftExcelHandle" />
+        <Property type="Flow" key="Input_inTotalRow" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varTotalRow" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[RunTask(this, 'T_MoveToDB', {'inExcelHandle':this.varDraftExcelHandle, 'inTotalRow':this.varTotalRow});]]></Script>
+    </Step>
+    <Step id="Sa8c17f5bea48412fab4fea8b5cd96f44" ver="200825001" createVer="200825001" type="Flow" name="RunTask" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="a49946af-512f-405d-a7d6-d2d25c9792f0" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_TaskName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="T_Email" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[RunTask(this, 'T_Email', null);]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function P_process() {
+
+    this.varDraftExcelHandle;
+    this.varTotalRow;
+    this.varDraftSheetName;
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('Sef7056ffd27b4a3a87fb490d43930a66', '[1] RunTask');
+        RunTask(this, 'T_FillDraftExcel', null);
+
+        //------------------------------------------------
+        STEP('S8c6429cad8c149239dcee14868c09384', '[2] RunTask');
+        RunTask(this, 'T_AirPollutionAndCovid', {'inDraftSheetName':this.varDraftSheetName, 'inDraftExcelHandle':this.varDraftExcelHandle, 'inTotalRow':this.varTotalRow});
+
+        //------------------------------------------------
+        STEP('S0b09bd98e85f49dea7d8646d6e474861', '[3] RunTask');
+        RunTask(this, 'T_MoveToDB', {'inExcelHandle':this.varDraftExcelHandle, 'inTotalRow':this.varTotalRow});
+
+        //------------------------------------------------
+        STEP('Sa8c17f5bea48412fab4fea8b5cd96f44', '[4] RunTask');
+        RunTask(this, 'T_Email', null);
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+    }
+}
+]]></JScript>
+  <Diagram version="1.200" layout="Horizontal" nodesize="Normal">
+    <Nodes>
+      <Node id="0" step_id="" container_id="" order="" type="StartNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="START" bounds="30,58,56,56" />
+      <Node id="1" step_id="" container_id="" order="" type="EndNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="END" bounds="996,58,56,56" />
+      <Node id="2" step_id="Sef7056ffd27b4a3a87fb490d43930a66" container_id="" order="" type="InvokeNode" invoke_type="Task" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="T_FillDraftExcel" bounds="116,30,190,112" />
+      <Node id="3" step_id="S8c6429cad8c149239dcee14868c09384" container_id="" order="" type="InvokeNode" invoke_type="Task" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="T_AirPollutionAndCovid" bounds="336,30,190,112" />
+      <Node id="4" step_id="S0b09bd98e85f49dea7d8646d6e474861" container_id="" order="" type="InvokeNode" invoke_type="Task" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="T_MoveToDB" bounds="556,30,190,112" />
+      <Node id="5" step_id="Sa8c17f5bea48412fab4fea8b5cd96f44" container_id="" order="" type="InvokeNode" invoke_type="Task" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="T_Email" bounds="776,30,190,112" />
+    </Nodes>
+    <Links>
+      <Link id="6" color="#FF888888" origin_node_id="0" dest_node_id="2" text="" bounds="83,83,36,6" points="86,86;116,86" />
+      <Link id="7" color="#FF888888" origin_node_id="2" dest_node_id="3" text="" bounds="303,83,36,6" points="306,86;336,86" />
+      <Link id="8" color="#FF888888" origin_node_id="3" dest_node_id="4" text="" bounds="523,83,36,6" points="526,86;556,86" />
+      <Link id="9" color="#FF888888" origin_node_id="4" dest_node_id="5" text="" bounds="743,83,36,6" points="746,86;776,86" />
+      <Link id="10" color="#FF888888" origin_node_id="5" dest_node_id="1" text="" bounds="963,83,36,6" points="966,86;996,86" />
+    </Links>
+  </Diagram>
+</Process>

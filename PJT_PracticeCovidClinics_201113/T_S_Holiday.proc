@@ -1,0 +1,203 @@
+
+<Process id="379104ab-b6c2-4df7-9516-e2d8d4bc9595" type="task" workType="foreground" name="T_S_Holiday" version="1.0" designerVersion="1.6.500.09031" isValid="true">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="48" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-11 13:53:13" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2020-11-11 17:50:09" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="varHolidayAPI" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varHoliday" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="inNowDate" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="varHolidayIndex" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="outNowDay" scope="Output" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="inNowDay" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+    <Variable name="inYear" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" />
+  </Variables>
+  <Steps>
+    <Step id="S1a2d1e7ea3774989b58b970b22d04a14" ver="200825001" createVer="200825001" type="Net" name="SendRequest" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="c53aab76-8896-4f23-9e6e-df1d61643b32" type="Net">
+        <Property type="Net" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Net" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Net" key="REST_Response" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varHolidayAPI" />
+        <Property type="Net" key="REST_URL" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="'http://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getHoliDeInfo?solYear='+this.inYear+'&amp;numOfRows=20&amp;ServiceKey=2kRKcurwLliEUUJYdFlDpkrbwqRIp%2BYM81DotToxHdiw05vg5RJszNiJbaSt79wwOdcZlu%2BmbVlDPxyrU7HLhA%3D%3D&amp;_type=json'" />
+        <Property type="Net" key="REST_Method" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="GET" valuelist="GET;POST;PUT;DEL" />
+        <Property type="Net" key="REST_Authorization" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Net" key="REST_ContentType" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="Text" valuelist="Text;text/plain;application/json;application/xml;multipart/form-data" />
+        <Property type="Net" key="REST_Headers" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="'{\&quot;key\&quot;:\&quot;value\&quot;}'" />
+        <Property type="Net" key="REST_Continuos" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Net" key="REST_Body" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Net" key="REST_FormData" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'{\&quot;key\&quot;:\&quot;value\&quot;}'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varHolidayAPI = Net.SendRequest(this.sendrequest_info_1);]]></Script>
+    </Step>
+    <Step id="Sf5b11b2efee64e6c8e70eb3651a4bad1" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="5cca5c6b-b7e6-4ddb-9656-2fffb211c40c" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varHoliday" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="JSON.parse(this.varHolidayAPI.Content)" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varHoliday = JSON.parse(this.varHolidayAPI.Content);]]></Script>
+    </Step>
+    <Step id="Sed69a0fd6c6a46d7ad0828e62a56c5b4" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="636af7df-f59f-4c07-8452-b01c4f6a33a8" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varHolidayIndex" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varHoliday.response.body.items.item.findIndex(i =&gt; i.locdate&#xD;&#xA;== this.inNowDate)" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.varHolidayIndex = this.varHoliday.response.body.items.item.findIndex(i => i.locdate
+== this.inNowDate);]]></Script>
+    </Step>
+    <Step id="S2c4f56968fcb4354a8b58071c72caef9" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="5cca5c6b-b7e6-4ddb-9656-2fffb211c40c" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outNowDay" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.inNowDay" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.outNowDay = this.inNowDay;]]></Script>
+    </Step>
+    <Step id="S83652cccd74741dd88080e4d60d93ff4" ver="200825001" createVer="200825001" type="Flow" name="Decision" apptitle="" tag="" depth="1" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="e660ea01-d6ad-4e40-a01c-8702883c7606" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Expression" controlType="PropertyItemTextEditorView" valueType="System.Object" formatType="Condition" required="True" visible="False" readonly="True" encrypted="False" isChanged="Y" value="this.varHolidayIndex &gt;= 0 &amp;&amp; this.varHoliday.response.body.items.item[this.varHolidayIndex].isHoliday == 'Y'" order="1" />
+        <Property type="Flow" key="Conditions_CombineCondition" controlType="PropertyItemCombineConditionView" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" order="2" />
+        <Property type="Flow" key="Conditions_Expression1" controlType="PropertyItemExpressionView" valueType="System.Object" formatType="Condition" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.varHolidayIndex &gt;= 0 &amp;&amp; this.varHoliday.response.body.items.item[this.varHolidayIndex].isHoliday == 'Y'" order="3" />
+        <Property type="Flow" key="Conditions_AddCondition" controlType="PropertyItemAddConditionView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S9c439f6a0fef4877ac15ec82cfc5c195" type="Flow" name="Else" />
+        <RelatedStep id="S7d099c5e8490442d8b372859a9ea5a9c" type="Flow" name="EndDecision" />
+      </RelatedSteps>
+      <Script><![CDATA[if (this.varHolidayIndex >= 0 && this.varHoliday.response.body.items.item[this.varHolidayIndex].isHoliday == 'Y') {]]></Script>
+    </Step>
+    <Step id="Sa99be30a6e974a8ab1bdd1ef9f6710b0" ver="200825001" createVer="200825001" type="Flow" name="Assign" apptitle="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="b764772b-39a7-43a5-b08d-1a9bce466c70" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="Y" value="this.outNowDay" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="Y" value="0" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.outNowDay = 0;]]></Script>
+    </Step>
+    <Step id="S9c439f6a0fef4877ac15ec82cfc5c195" ver="200825001" createVer="200825001" type="Flow" name="Else" apptitle="" tag="" depth="2" stmttype="CloseOpenBlock" enabled="True" mainSet="0">
+      <Properties id="fe68bce9-123e-4270-9969-61ca75a41c38" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S83652cccd74741dd88080e4d60d93ff4" type="Flow" name="Decision" />
+      </RelatedSteps>
+      <Script><![CDATA[}else{]]></Script>
+    </Step>
+    <Step id="S7d099c5e8490442d8b372859a9ea5a9c" ver="200825001" createVer="200825001" type="Flow" name="EndDecision" apptitle="" tag="" depth="2" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="145329f5-80f2-4f97-ac27-7d091e3f761d" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S83652cccd74741dd88080e4d60d93ff4" type="Flow" name="Decision" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function T_S_Holiday(args) {
+
+    this.varHolidayAPI;
+    this.varHoliday;
+    this.inNowDate = (typeof args != 'undefined') ? args.inNowDate : null;
+    this.varHolidayIndex;
+    this.outNowDay;
+    this.inNowDay = (typeof args != 'undefined') ? args.inNowDay : null;
+    this.inYear = (typeof args != 'undefined') ? args.inYear : null;
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('S1a2d1e7ea3774989b58b970b22d04a14', '[1] SendRequest');
+        this.varHolidayAPI = Net.SendRequest(this.sendrequest_info_1);
+
+        //------------------------------------------------
+        STEP('Sf5b11b2efee64e6c8e70eb3651a4bad1', '[2] Assign');
+        this.varHoliday = JSON.parse(this.varHolidayAPI.Content);
+
+        //------------------------------------------------
+        STEP('Sed69a0fd6c6a46d7ad0828e62a56c5b4', '[3] Assign');
+        this.varHolidayIndex = this.varHoliday.response.body.items.item.findIndex(i => i.locdate
+        == this.inNowDate);
+
+        //------------------------------------------------
+        STEP('S2c4f56968fcb4354a8b58071c72caef9', '[4] Assign');
+        this.outNowDay = this.inNowDay;
+
+        //------------------------------------------------
+        STEP('S83652cccd74741dd88080e4d60d93ff4', '[5] If');
+        if (this.varHolidayIndex >= 0 && this.varHoliday.response.body.items.item[this.varHolidayIndex].isHoliday == 'Y') {
+
+            //------------------------------------------------
+            STEP('Sa99be30a6e974a8ab1bdd1ef9f6710b0', '[6] Assign');
+            this.outNowDay = 0;
+
+        //------------------------------------------------
+        }else{
+            STEP('S9c439f6a0fef4877ac15ec82cfc5c195', '[7] Else');
+
+        //------------------------------------------------
+        }
+        STEP('S7d099c5e8490442d8b372859a9ea5a9c', '[8] End-If');
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+        return {'outNowDay':this.outNowDay};
+    }
+}
+]]></JScript>
+  <Diagram version="1.200" layout="Horizontal" nodesize="Normal">
+    <Nodes>
+      <Node id="0" step_id="" container_id="" order="" type="StartNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="START" bounds="30,93,56,56" />
+      <Node id="1" step_id="" container_id="" order="" type="EndNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="END" bounds="972,93,56,56" />
+      <Node id="2" step_id="572b68d7-a957-4c5b-8f92-9b9ce08d2265" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="116,30,220,182" />
+      <Node id="3" step_id="S1a2d1e7ea3774989b58b970b22d04a14" container_id="2" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="SendRequest" bounds="122,54,208,74" />
+      <Node id="4" step_id="Sf5b11b2efee64e6c8e70eb3651a4bad1" container_id="2" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="122,132,208,74" />
+      <Node id="5" step_id="f652fa05-eecb-4bdc-b6dd-ecae7552edff" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="366,30,220,182" />
+      <Node id="6" step_id="S83652cccd74741dd88080e4d60d93ff4" container_id="" order="" type="DecisionNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="688,93,76,56" />
+      <Node id="7" step_id="S7d099c5e8490442d8b372859a9ea5a9c" container_id="" order="" type="EndDecisionNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="" text="" bounds="866,93,76,56" />
+      <Node id="8" step_id="e9854568-aab7-442d-b6d2-233f922952ed" container_id="" order="" type="GroupNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="True" text="Untitled" bounds="616,242,220,104" />
+      <Node id="9" step_id="Sa99be30a6e974a8ab1bdd1ef9f6710b0" container_id="8" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="622,266,208,74" />
+      <Node id="10" step_id="Sed69a0fd6c6a46d7ad0828e62a56c5b4" container_id="5" order="0" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="372,54,208,74" />
+      <Node id="11" step_id="S2c4f56968fcb4354a8b58071c72caef9" container_id="5" order="1" type="ActivityNode" invoke_type="" flowcontrol_type="" flowcontrol_enabled="" expanded="TRUE" text="Assign" bounds="372,132,208,74" />
+    </Nodes>
+    <Links>
+      <Link id="12" color="#FF888888" origin_node_id="2" dest_node_id="5" text="" bounds="333,118,36,6" points="336,121;366,121" />
+      <Link id="13" color="#FF0DB2AD" origin_node_id="6" dest_node_id="7" text="FALSE" bounds="761,118,108,6" points="764,121;866,121" />
+      <Link id="14" color="#FF888888" origin_node_id="7" dest_node_id="1" text="" bounds="939,118,36,6" points="942,121;972,121" />
+      <Link id="15" color="#FF888888" origin_node_id="0" dest_node_id="2" text="" bounds="83,118,36,6" points="86,121;116,121" />
+      <Link id="16" color="#FF0DB2AD" origin_node_id="6" dest_node_id="8" text="TRUE" bounds="723,146,6,99" points="726,149;726,242" />
+      <Link id="17" color="#FF888888" origin_node_id="8" dest_node_id="7" text="" bounds="833,146,45.190751445087,99" points="836,242;875.190751445087,149" />
+      <Link id="18" color="#FF888888" origin_node_id="5" dest_node_id="6" text="" bounds="583,118,108,6" points="586,121;688,121" />
+    </Links>
+  </Diagram>
+</Process>

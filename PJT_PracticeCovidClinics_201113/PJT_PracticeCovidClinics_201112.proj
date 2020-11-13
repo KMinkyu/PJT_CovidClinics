@@ -1,0 +1,158 @@
+
+<Project id="78a25892-b202-4e7a-8c72-b2d35bc74fc9" namespace="" name="PJT_PracticeCovidClinics_201112" desc="" category="project" workType="foreground" version="1.00" lastPublishedDate="" lastPublishedBy="" createdDate="2020-11-12 08:51:12" createdBy="" latestProcess="P_process" designerVersion="1.6.500.09031">
+  <SharedTask isExpended="false" />
+  <NormalTask isExpended="true">
+    <LinkItem id="d4c89384-7876-4dd1-9590-bea13f11028e" category="NormalTask" isChanged="Y" desc="" name="T_AirPollutionAndCovid">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="dd6275c0-e2b3-45e6-9f46-e06f52afd1e2" category="NormalTask" isChanged="Y" desc="" name="T_Email">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="76f66e77-91bc-437c-afc8-2f43169b2315" category="NormalTask" isChanged="Y" desc="" name="T_FillDraftExcel">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="9afb516e-efa1-4fb7-8345-a4a88d0f2669" category="NormalTask" isChanged="Y" desc="" name="T_MoveToDB">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="2264f8a4-5dc3-45ba-b10f-06850068fb88" category="NormalTask" isChanged="Y" desc="" name="T_S_BeforeTime">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="6464c8b8-3b7f-43b2-911e-8d6ec12f2caa" category="NormalTask" isChanged="Y" desc="" name="T_S_CharColor">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="9d1a8315-44f1-4f4f-8455-5b269675db34" category="NormalTask" isChanged="Y" desc="" name="T_S_CoronaVirusCase">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="a90d9ff0-40a6-480b-8710-a31f5a8d30c2" category="NormalTask" isChanged="Y" desc="" name="T_S_DataCheck">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="e588c07e-70a0-413d-ab88-25a71edd8624" category="NormalTask" isChanged="Y" desc="" name="T_S_Date">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="379104ab-b6c2-4df7-9516-e2d8d4bc9595" category="NormalTask" isChanged="Y" desc="" name="T_S_Holiday">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="d4d9ee66-63cf-4e80-81f9-2267d8d06ea3" category="NormalTask" isChanged="Y" desc="" name="T_S_Hyperlink">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="98842971-3140-47e0-bedb-ae63bc1afa20" category="NormalTask" isChanged="Y" desc="" name="T_S_InputData">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="a5e04573-1c0a-42ea-96c6-430614d5a920" category="NormalTask" isChanged="Y" desc="" name="T_S_MixTwoArray">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="bd8635cd-484a-48b1-aa69-ebd9299a6153" category="NormalTask" isChanged="Y" desc="" name="T_S_OtherCityName">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="64fcd499-6c75-4c18-a2f4-7d8a418fc73d" category="NormalTask" isChanged="Y" desc="" name="T_S_OutPlus">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="cc5b8526-1928-4480-a5fe-5633d179ae3c" category="NormalTask" isChanged="Y" desc="" name="T_S_PlusZero">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="f9b8ca77-583b-4f4c-a3be-f4daf35339b6" category="NormalTask" isChanged="Y" desc="" name="T_S_SeoulInfectedRed">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="def472ff-f29f-4352-92b3-f4cc549c3ee9" category="NormalTask" isChanged="Y" desc="" name="T_S_SheetColor">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="4a44073d-e1a8-4b60-8eeb-68eee37f3ff5" category="NormalTask" isChanged="Y" desc="" name="T_S_UpdateDB">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="94573ede-c246-4ca2-be20-d87a904116f9" category="NormalTask" isChanged="Y" desc="" name="T_S_WriteInDB">
+      <Properties />
+    </LinkItem>
+  </NormalTask>
+  <Event isExpended="true">
+    <LinkItem id="aa9071bf-bbf8-4754-9d47-8620f3c26f0a" category="Event" isChanged="Y" desc="" name="E_AddrAPI">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="0cb7b8d6-cde4-47d1-ace4-8bf8f8f46c41" category="Event" isChanged="Y" desc="" name="E_CityAPI">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="a582e771-644c-480b-91ed-ab2d6d40adeb" category="Event" isChanged="Y" desc="" name="E_Error">
+      <Properties />
+    </LinkItem>
+  </Event>
+  <Process isExpended="true">
+    <LinkItem id="5dca0062-1d0f-452c-8d9e-ac86b2c2cc6a" category="Process" isChanged="Y" desc="" name="P_process">
+      <Properties />
+    </LinkItem>
+  </Process>
+  <CustomLibraries isExpended="false">
+    <LinkItem id="f8887d26-8f40-4d0c-b3e6-78dbcbccdbaa" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddDay">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="17a43533-cfd5-41e5-8446-0ad9573edcfc" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddHours">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="db332409-0822-4538-bbbd-4e25a8249a42" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddMinutes">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="59c74f23-a2fa-47ed-81a7-ba3f19890640" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddMonth">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="c3960572-d816-47e7-979f-b2ecbfe38d7e" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddSeconds">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="de5931f1-1972-4675-95b9-be695a96bbcf" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddYear">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="48963c42-4ae5-46b6-bc68-91c404596519" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetDate">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="34559727-be24-49dd-9038-c0cdad0bfa84" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetDay">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="3499d279-1c1a-4d00-abb5-c71aa49ebd07" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetFullYear">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="f58085cd-7dd5-4345-a92c-b34520b9273c" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetHours">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="1266eaa5-5278-4b5d-b73c-281bf180ee51" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetMinutes">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="39488d9d-28e5-4fdc-ae80-86b38e30ee57" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetMonth">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="01eb5a93-0dcb-4bf4-a90d-119cd86d00fe" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetSeconds">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="05eba3b4-8ab0-4610-a495-b15a3904fc8b" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetWeek">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="374e21e7-8f85-4bfc-92f2-e2609022e539" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_Now">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="58a55c8a-9262-4a42-a421-3543ef30781c" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetDate">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="0ab66fb0-48ef-49d7-a249-48b0dd7e8732" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetFullYear">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="f9da8e5d-f514-413d-97b7-6ba0639ae166" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetHours">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="8b149f7b-f6e7-455b-888f-508c3464324a" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetMinutes">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="80daba8f-8d91-4fd4-bd3b-74be77608861" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetMonth">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="f9d390cd-cd22-40a5-b313-4331f3ddba99" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetSeconds">
+      <Properties />
+    </LinkItem>
+  </CustomLibraries>
+  <LibraryTemplate isExpended="false" />
+  <Resources isExpended="true">
+    <LinkItem id="203afa63-ea0e-4ed6-892a-0a467ebd695e" category="Resource" isChanged="Y" desc="" name="선별진료소draft.xlsx">
+      <Properties />
+    </LinkItem>
+  </Resources>
+  <RemoteProcess isExpended="false" />
+  <Asset />
+  <Library />
+  <Variables />
+  <Properties />
+</Project>
